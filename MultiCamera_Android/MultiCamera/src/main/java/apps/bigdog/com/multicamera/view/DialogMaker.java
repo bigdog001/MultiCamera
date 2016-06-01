@@ -202,7 +202,7 @@ public class DialogMaker
 		// 设置对话框宽度
 		Window window = dialog.getWindow();
 		WindowManager.LayoutParams aWmLp = window.getAttributes();
-		aWmLp.width = LocalApplication.getInstance().screenW - 100;
+		aWmLp.width = LocalApplication.getInstance().getVariableHolder().getScreenW() - 100;
 		aWmLp.gravity = Gravity.CENTER;
 		window.setAttributes(aWmLp);
 

@@ -1,7 +1,6 @@
 package apps.bigdog.com.multicamera.activity;
 
-import android.net.SSLCertificateSocketFactory;
-import android.net.SSLSessionCache;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,8 +15,6 @@ import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.activity.base.BaseActivity;
 import apps.bigdog.com.multicamera.util.LogUtil;
 import org.xutils.x;
-
-import javax.net.ssl.SSLSocketFactory;
 
 /**
  * Created by jw362j on 6/1/2016.
@@ -79,6 +76,11 @@ public  class MainActivity extends BaseActivity {
 
     @Override
     protected void initParams() {
+
+    }
+
+    @Override
+    public void OnStop() {
 
     }
 }
