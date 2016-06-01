@@ -14,6 +14,7 @@ import org.xutils.x;
 import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.config.BroadCastManager;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
+import apps.bigdog.com.multicamera.config.initors.AppLogCachDirPrepare;
 import apps.bigdog.com.multicamera.exception.BaseExceptionHandler;
 import apps.bigdog.com.multicamera.exception.LocalFileHandler;
 import apps.bigdog.com.multicamera.util.JFileKit;
@@ -32,42 +33,42 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
     @Override
     public void onCreate() {
         super.onCreate();
-        x.Ext.init(this);
-        x.Ext.setDebug( true);
-
-        // 创建APP崩溃日志目录
-        File appFolder = new File(JFileKit.getDiskCacheDir(this) + "/log");
-        if (!appFolder.exists())
-        {
-            appFolder.mkdirs();
-        }
-
-        instance = this;
         init();
+    }
+
+    private void init() {
+        initXUtil();
+        initVariables();
+        setUpInitializers();
+        initTimer();
+        initBroadCastRcvs();
+    }
+
+    private void initBroadCastRcvs() {
+        new BroadCastManager(getApplicationContext());
+    }
+
+    private void initVariables() {
+        instance = this;
+        variableHolder = new VariableHolder();
         // 得到屏幕的宽度和高度
         DisplayMetrics dm = getResources().getDisplayMetrics();
         variableHolder.setScreenW(dm.widthPixels);
         variableHolder.setScreenH(dm.heightPixels);
-    }
 
-    private void init() {
-        variableHolder = new VariableHolder();
         apps = new ArrayList<InterfaceGenerator.AppLifeCycle>();
         apps.add(this);
-        initTimer();
-        initializers = new ArrayList<InterfaceGenerator.Initializer>();
-        setUpInitializers();
-        runInitializers();
-        //初始化应用程序层广播
-        BroadCastManager broadCastManager = new BroadCastManager(getApplicationContext());
-        //系统初始化 在系统初始化前 各种广播必须注册上
+    }
+
+    private void initXUtil() {
+        x.Ext.init(this);
+        x.Ext.setDebug( true);
     }
 
     private void setUpInitializers(){
-//        initializers.add(new VariableInit());
-    }
+        initializers = new ArrayList<InterfaceGenerator.Initializer>();
 
-    private void runInitializers() {
+        initializers.add(new AppLogCachDirPrepare());
         for (InterfaceGenerator.Initializer initializer:initializers) {
             if(initializer != null){
                 initializer.init(getApplicationContext());
@@ -76,7 +77,10 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
         }
         initializers.clear();
         initializers = null;
+
     }
+
+
 
     private void initTimer(){
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);

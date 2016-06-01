@@ -8,6 +8,7 @@ import java.util.List;
 
 import apps.bigdog.com.multicamera.config.BaseBroadCastRcv;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
+import apps.bigdog.com.multicamera.config.onTimers.NothingToDo;
 import apps.bigdog.com.multicamera.util.LogUtil;
 
 /**
@@ -22,8 +23,7 @@ public class TimerManager extends BaseBroadCastRcv {
     }
 
     private void initActions() {
-//        //监视刻录线程的文件切换
-//        timerActions.add(new fileSwitchTimerAction());
+        timerActions.add(new NothingToDo());
 //        //检测刻录线程是否在工作
 //        timerActions.add(new recordStatusTimerAction());
 //        //不断扫描dev下的video*是否具备0666 或者0777权限
