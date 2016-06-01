@@ -1,4 +1,5 @@
 /build
+/.gradle
 /MultiCamera/gradle
 /MultiCamera/.idea
 /MultiCamera/gradlew
