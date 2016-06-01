@@ -1,1 +1,6 @@
 /build
+/MultiCamera/gradle
+/MultiCamera/.idea
+/MultiCamera/gradlew
+/MultiCamera/gradlew.bat
+/MultiCamera/MultiCamera.iml
