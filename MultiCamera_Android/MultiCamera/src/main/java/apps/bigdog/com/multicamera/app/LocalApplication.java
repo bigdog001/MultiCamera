@@ -21,7 +21,7 @@ import apps.bigdog.com.multicamera.util.JFileKit;
 /**
  * Created by jw362j on 6/1/2016.
  */
-public class LocalApplication extends BaseApplication implements ApplicationGlobalHolder,InterfaceGenerator.AppLifeCycle{
+public class LocalApplication extends BaseApplication implements InterfaceGenerator.ApplicationGlobalHolder,InterfaceGenerator.AppLifeCycle{
     private static LocalApplication instance;
     private VariableHolder variableHolder;
     private PendingIntent pi;

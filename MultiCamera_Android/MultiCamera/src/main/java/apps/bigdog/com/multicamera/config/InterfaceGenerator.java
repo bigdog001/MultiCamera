@@ -2,10 +2,17 @@ package apps.bigdog.com.multicamera.config;
 
 import android.content.Context;
 
+import apps.bigdog.com.multicamera.beans.VariableHolder;
+
 /**
  * Created by jw362j on 6/1/2016.
  */
 public class InterfaceGenerator {
+
+    public interface ApplicationGlobalHolder {
+        public VariableHolder getVariableHolder();
+    }
+
     public interface AppLifeCycle {
         public void OnStop();
     }
