@@ -2,41 +2,222 @@ package apps.bigdog.com.multicamera.activity;
 
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.FrameLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
-import org.xutils.common.Callback;
-import org.xutils.http.RequestParams;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
+
 import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.activity.base.BaseActivity;
+import apps.bigdog.com.multicamera.fragment.HomeFourFragment;
+import apps.bigdog.com.multicamera.fragment.HomeOneFragment;
+import apps.bigdog.com.multicamera.fragment.HomeThreeFragment;
+import apps.bigdog.com.multicamera.fragment.HomeTwoFragment;
 import apps.bigdog.com.multicamera.util.LogUtil;
-import org.xutils.x;
+
+import android.support.v4.app.FragmentTransaction;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jw362j on 6/1/2016.
  */
-public  class MainActivity extends BaseActivity {
-    @ViewInject(R.id.testbtn)
-    private Button testbtn;
-    @ViewInject(R.id.myimage)
-    private ImageView myimage;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, ViewPager.OnPageChangeListener {
+    @ViewInject(R.id.main_botton_btns)
+    private RadioGroup main_botton_btns;
+    @ViewInject(R.id.radioBtn_home1)
+    private RadioButton radioBtn_home1;
+    @ViewInject(R.id.radioBtn_home2)
+    private RadioButton radioBtn_home2;
+    @ViewInject(R.id.radioBtn_home3)
+    private RadioButton radioBtn_home3;
+    @ViewInject(R.id.radioBtn_home4)
+    private RadioButton radioBtn_home4;
+    @ViewInject(R.id.main_content_fgt)
+    private ViewPager main_content_fgt;
+
+    private List<Fragment> fragments;
+
+    private HomeOneFragment one;
+    private HomeTwoFragment two;
+    private HomeThreeFragment three;
+    private HomeFourFragment four;
+
+    // 选中的索引
+    private int chooseIndex = -1;
+    private boolean isRecycled ;
+
+    @Event(value = {R.id.radioBtn_home1, R.id.radioBtn_home2, R.id.radioBtn_home3, R.id.radioBtn_home4}, type = View.OnClickListener.class)
+    private void ItemOnclick(View v) {
+
     }
 
-    @Event(value={R.id.testbtn},type=View.OnClickListener.class)
-    private void ItemOnclick(View v){
-        int idv = v.getId();
-        switch (idv){
-            case R.id.testbtn:
-                x.image().bind(myimage, "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png");
 
-//                sendHttp();
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initParams() {
+        fragments = new ArrayList<Fragment>();
+        radioBtn_home1.setChecked(true);
+        main_botton_btns.setOnCheckedChangeListener(this);
+        initFragments();
+        initViewPager();
+    }
+
+    private void initViewPager() {
+        main_content_fgt.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+//                return fragments.get(position%(fragments.size()));
+                return fragments.get(position);
+            }
+
+            @Override
+            public int getCount() {
+//                return Integer.MAX_VALUE;
+                return fragments.size();
+            }
+        });
+        main_content_fgt.setCurrentItem(0);
+        main_content_fgt.addOnPageChangeListener(this);
+    }
+
+    private void initFragments() {
+        one = new HomeOneFragment();
+        two = new HomeTwoFragment();
+        three = new HomeThreeFragment();
+        four = new HomeFourFragment();
+        fragments.add(one);
+        fragments.add(two);
+        fragments.add(three);
+        fragments.add(four);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(isRecycled){
+            main_content_fgt.setCurrentItem(chooseIndex);
+            switch (chooseIndex){
+                case 0:
+                    radioBtn_home1.setChecked(true);
+                    break;
+                case 1:
+                    radioBtn_home2.setChecked(true);
+                    break;
+                case 2:
+                    radioBtn_home3.setChecked(true);
+                    break;
+                case 3:
+                    radioBtn_home4.setChecked(true);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean("isRecycled",true);
+        outState.putInt("chooseIndex",chooseIndex);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        isRecycled = savedInstanceState.getBoolean("isRecycled");
+        chooseIndex = savedInstanceState.getInt("chooseIndex");
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (savedInstanceState == null) {
+            onCheckedChanged(main_botton_btns, R.id.radioBtn_home1);
+        }
+    }
+
+    @Override
+    public void OnStop() {
+
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+        LogUtil.log("the selected is :" + i);
+        switch (i) {
+            case R.id.radioBtn_home1:
+                if (chooseIndex != 0) {
+                    chooseIndex = 0;
+                    main_content_fgt.setCurrentItem(chooseIndex);
+                }
+
+                break;
+            case R.id.radioBtn_home2:
+                if (chooseIndex != 1) {
+                    chooseIndex = 1;
+                    main_content_fgt.setCurrentItem(chooseIndex);
+                }
+                break;
+            case R.id.radioBtn_home3:
+                if (chooseIndex != 2) {
+                    chooseIndex = 2;
+                    main_content_fgt.setCurrentItem(chooseIndex);
+                }
+                break;
+            case R.id.radioBtn_home4:
+                if (chooseIndex != 3) {
+                    chooseIndex = 3;
+                    main_content_fgt.setCurrentItem(chooseIndex);
+                }
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        LogUtil.log("onPageSelected:"+position);
+//        int position_t = position%(fragments.size());
+        switch (position){
+            case 0:
+                radioBtn_home1.setChecked(true);
+                chooseIndex = 0;
+                break;
+            case 1:
+                radioBtn_home2.setChecked(true);
+                chooseIndex = 1;
+                break;
+            case 2:
+                radioBtn_home3.setChecked(true);
+                chooseIndex = 2;
+                break;
+            case 3:
+                radioBtn_home4.setChecked(true);
+                chooseIndex = 3;
                 break;
 
             default:
@@ -44,43 +225,8 @@ public  class MainActivity extends BaseActivity {
         }
     }
 
-    private void sendHttp(){
-        RequestParams params = new RequestParams("https://www.baidu.com/s");
-//        params.setSslSocketFactory(SSLCertificateSocketFactory.getDefault(2,new SSLSessionCache(this))); // 设置ssl
-        params.addQueryStringParameter("wd", "xUtils");
-        x.http().get(params, new Callback.CommonCallback<String>() {
-            @Override
-            public void onSuccess(String result) {
-                Toast.makeText(x.app(), result, Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onError(Throwable ex, boolean isOnCallback) {
-                Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onCancelled(CancelledException cex) {
-                Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onFinished() {
-                Toast.makeText(x.app(), "onFinished", Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-    protected int getLayoutId(){
-        return R.layout.activity_main;
-    }
-
     @Override
-    protected void initParams() {
-
-    }
-
-    @Override
-    public void OnStop() {
+    public void onPageScrollStateChanged(int state) {
 
     }
 }

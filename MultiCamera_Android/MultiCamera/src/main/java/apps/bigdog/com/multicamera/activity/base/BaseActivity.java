@@ -3,17 +3,18 @@ package apps.bigdog.com.multicamera.activity.base;
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.Window;
 
 import apps.bigdog.com.multicamera.app.LocalApplication;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.util.ActivityStack;
 import apps.bigdog.com.multicamera.view.DialogMaker;
-
 import org.xutils.x;
 /**
  * Created by jw362j on 6/1/2016.
  */
-public abstract class BaseActivity extends Activity implements DialogMaker.DialogCallBack,InterfaceGenerator.AppLifeCycle {
+public abstract class BaseActivity extends FragmentActivity implements DialogMaker.DialogCallBack,InterfaceGenerator.AppLifeCycle {
 
     protected Dialog dialog;
 
@@ -21,6 +22,7 @@ public abstract class BaseActivity extends Activity implements DialogMaker.Dialo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         ActivityStack.getInstance().addActivity(this);
         LocalApplication.addAppLifeCycle(this);
         setContentView(getLayoutId());

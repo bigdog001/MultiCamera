@@ -10,6 +10,7 @@ import java.io.File;
 import android.content.Context;
 import android.os.Environment;
 
+import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.exception.BaseException;
 
 
@@ -70,6 +71,26 @@ public class JFileKit
 
 	}
 
+	public static String getMp4FileStorageDir(Context context){
+		String mp4Path;
+		File mp4_file_dir ;
+		if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) || !Environment.isExternalStorageRemovable()){
+			mp4Path = context.getExternalFilesDir(VariableHolder.Constants.MP4_FILE_STORAGE_DIR_DEFAULT).getAbsolutePath();
+			mp4_file_dir = new File(mp4Path);
+		} else{
+			mp4Path = context.getFilesDir().getAbsolutePath();
+			if(!mp4Path.endsWith(File.separator)){
+				mp4Path = mp4Path + File.separator;
+			}
+			mp4Path = mp4Path+VariableHolder.Constants.MP4_FILE_STORAGE_DIR_DEFAULT;
+			mp4_file_dir = new File(mp4Path);
+		}
+		if(mp4_file_dir!= null && !mp4_file_dir.exists()){
+			mp4_file_dir.mkdir();
+		}
+		return mp4Path;
+	}
+
 	/**
 	 * 根据传入的uniqueName获取硬盘缓存的路径地址
 	 * 
@@ -92,9 +113,7 @@ public class JFileKit
 	 * 在SDCard 创建目录 或文件
 	 * 
 	 * 如果存在同名文件则删除文件后再创建,同名文件夹不做任何操作
-	 * 
-	 * @param relativePath
-	 *            文件夹相对路径
+	 *
 	 * 
 	 * @throws BaseException
 	 */

@@ -3,6 +3,7 @@ package apps.bigdog.com.multicamera.app;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.DisplayMetrics;
 
 import java.io.File;
@@ -15,6 +16,7 @@ import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.config.BroadCastManager;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.config.initors.AppLogCachDirPrepare;
+import apps.bigdog.com.multicamera.config.initors.MP4FilesStorageDirInit;
 import apps.bigdog.com.multicamera.exception.BaseExceptionHandler;
 import apps.bigdog.com.multicamera.exception.LocalFileHandler;
 import apps.bigdog.com.multicamera.util.JFileKit;
@@ -55,7 +57,7 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
         DisplayMetrics dm = getResources().getDisplayMetrics();
         variableHolder.setScreenW(dm.widthPixels);
         variableHolder.setScreenH(dm.heightPixels);
-
+        variableHolder.setSp(instance.getSharedPreferences(VariableHolder.Constants.APP_SH_NAME,MODE_PRIVATE));
         apps = new ArrayList<InterfaceGenerator.AppLifeCycle>();
         apps.add(this);
     }
@@ -69,6 +71,7 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
         initializers = new ArrayList<InterfaceGenerator.Initializer>();
 
         initializers.add(new AppLogCachDirPrepare());
+        initializers.add(new MP4FilesStorageDirInit());
         for (InterfaceGenerator.Initializer initializer:initializers) {
             if(initializer != null){
                 initializer.init(getApplicationContext());
@@ -126,5 +129,12 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
         alarmManager.cancel(pi);
         alarmManager = null;
         pi = null;
+    }
+
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+
     }
 }

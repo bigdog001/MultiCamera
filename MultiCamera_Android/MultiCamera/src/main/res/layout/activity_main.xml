@@ -1,21 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="apps.bigdog.com.multicamera.activity.MainActivity">
-    <ImageView
-        android:id="@+id/myimage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-<Button
-    android:id="@+id/testbtn"
-    android:layout_centerInParent="true"
-    android:text="click"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
-</RelativeLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<FrameLayout
+        android:id="@+id/main_content_fgt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_content_fgt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+    <RadioGroup
+        android:id="@+id/main_botton_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/radioBtn_home1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_home_1_selector"
+            android:textColor="@drawable/home_btn_text_color_selector"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:drawablePadding="@dimen/home_btn_padding"
+            android:text="Home1"></RadioButton>
+        <RadioButton
+            android:id="@+id/radioBtn_home2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_home_2_selector"
+            android:textColor="@drawable/home_btn_text_color_selector"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:drawablePadding="@dimen/home_btn_padding"
+            android:text="Home2"></RadioButton>
+        <RadioButton
+            android:id="@+id/radioBtn_home3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_home_3_selector"
+            android:textColor="@drawable/home_btn_text_color_selector"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:drawablePadding="@dimen/home_btn_padding"
+            android:text="Home3"></RadioButton>
+        <RadioButton
+            android:id="@+id/radioBtn_home4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:paddingLeft="0dp"
+            android:drawableTop="@drawable/ic_home_4_selector"
+            android:textColor="@drawable/home_btn_text_color_selector"
+            android:gravity="center"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:drawablePadding="@dimen/home_btn_padding"
+            android:text="Home4"></RadioButton>
+    </RadioGroup>
+
+</LinearLayout>
