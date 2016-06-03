@@ -19,9 +19,13 @@ OS:           Windows 7 6.1 amd64
 
 
 density值表示每英寸有多少个显示点，与分辨率是两个不同的概念。
+
 Android主要有以下几种屏：
+
 QVGA和WQVGA屏density=120；
+
 HVGA屏density=160；
+
 WVGA屏density=240；
 
 
