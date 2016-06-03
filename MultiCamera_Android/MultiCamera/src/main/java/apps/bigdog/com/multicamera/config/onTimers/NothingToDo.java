@@ -3,7 +3,9 @@ package apps.bigdog.com.multicamera.config.onTimers;
 import android.content.Context;
 import android.provider.Settings;
 
+import apps.bigdog.com.multicamera.app.LocalApplication;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
+import apps.bigdog.com.multicamera.fragment.BaseFragment;
 import apps.bigdog.com.multicamera.util.LogUtil;
 
 /**
@@ -11,7 +13,7 @@ import apps.bigdog.com.multicamera.util.LogUtil;
  */
 public class NothingToDo implements InterfaceGenerator.timerAction {
     private long lastEventTime;
-    private long myDelta = 1000 * 10;//10 seconds
+    private long myDelta = 1000 * 1;//10 seconds
 
     @Override
     public boolean isAllowedToExecute() {
@@ -23,7 +25,12 @@ public class NothingToDo implements InterfaceGenerator.timerAction {
 
     @Override
     public void onTime(Context c, int flag, Object data) {
-        LogUtil.log("NothingToDo is working now...");
+        if (LocalApplication.getInstance().getVariableHolder().communicatables != null) {
+            LogUtil.log("the length of communicatables is :"+ LocalApplication.getInstance().getVariableHolder().communicatables.size());
+            for (InterfaceGenerator.ICommunicatable cx: LocalApplication.getInstance().getVariableHolder().communicatables) {
+                if( cx != null )cx.DataIn("...");
+            }
+        }
         lastEventTime = System.currentTimeMillis();
     }
 }

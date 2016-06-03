@@ -53,6 +53,7 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
     private void initVariables() {
         instance = this;
         variableHolder = new VariableHolder();
+        variableHolder.communicatables = new ArrayList<InterfaceGenerator.ICommunicatable>();
         // 得到屏幕的宽度和高度
         DisplayMetrics dm = getResources().getDisplayMetrics();
         variableHolder.setScreenW(dm.widthPixels);

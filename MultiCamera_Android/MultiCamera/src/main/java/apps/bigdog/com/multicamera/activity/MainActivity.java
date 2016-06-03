@@ -2,13 +2,10 @@ package apps.bigdog.com.multicamera.activity;
 
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -17,13 +14,13 @@ import org.xutils.view.annotation.ViewInject;
 
 import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.activity.base.BaseActivity;
+import apps.bigdog.com.multicamera.config.InterfaceGenerator;
+import apps.bigdog.com.multicamera.fragment.BaseFragment;
 import apps.bigdog.com.multicamera.fragment.HomeFourFragment;
 import apps.bigdog.com.multicamera.fragment.HomeOneFragment;
 import apps.bigdog.com.multicamera.fragment.HomeThreeFragment;
 import apps.bigdog.com.multicamera.fragment.HomeTwoFragment;
 import apps.bigdog.com.multicamera.util.LogUtil;
-
-import android.support.v4.app.FragmentTransaction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +42,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     @ViewInject(R.id.main_content_fgt)
     private ViewPager main_content_fgt;
 
-    private List<Fragment> fragments;
+    private List<BaseFragment> fragments;
 
     private HomeOneFragment one;
     private HomeTwoFragment two;
@@ -53,7 +50,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private HomeFourFragment four;
 
     // 选中的索引
-    private int chooseIndex = -1;
+    public static int chooseIndex = -1;
     private boolean isRecycled ;
 
     @Event(value = {R.id.radioBtn_home1, R.id.radioBtn_home2, R.id.radioBtn_home3, R.id.radioBtn_home4}, type = View.OnClickListener.class)
@@ -68,7 +65,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     protected void initParams() {
-        fragments = new ArrayList<Fragment>();
+        fragments = new ArrayList<BaseFragment>();
         radioBtn_home1.setChecked(true);
         main_botton_btns.setOnCheckedChangeListener(this);
         initFragments();
@@ -190,12 +187,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
             default:
                 break;
         }
-
-    }
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+        scanFragmentsCommunicatable();
     }
 
     @Override
@@ -204,25 +196,44 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 //        int position_t = position%(fragments.size());
         switch (position){
             case 0:
-                radioBtn_home1.setChecked(true);
+                if(!radioBtn_home1.isChecked())radioBtn_home1.setChecked(true);
                 chooseIndex = 0;
                 break;
             case 1:
-                radioBtn_home2.setChecked(true);
+                if(!radioBtn_home2.isChecked())radioBtn_home2.setChecked(true);
                 chooseIndex = 1;
                 break;
             case 2:
-                radioBtn_home3.setChecked(true);
+                if(!radioBtn_home3.isChecked())radioBtn_home3.setChecked(true);
                 chooseIndex = 2;
                 break;
             case 3:
-                radioBtn_home4.setChecked(true);
+                if(!radioBtn_home4.isChecked())radioBtn_home4.setChecked(true);
                 chooseIndex = 3;
                 break;
 
             default:
                 break;
         }
+        scanFragmentsCommunicatable();
+    }
+
+    private void scanFragmentsCommunicatable(){
+        if (fragments == null) {
+            return;
+        }
+        for (InterfaceGenerator.ICommunicatable comunicate: fragments) {
+            if(chooseIndex == comunicate.myIndex()){
+                comunicate.setCommunicatable(true);
+            }else {
+                comunicate.setCommunicatable(false);
+            }
+        }
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
     }
 
     @Override

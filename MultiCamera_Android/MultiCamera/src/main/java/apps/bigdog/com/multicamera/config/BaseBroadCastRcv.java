@@ -7,10 +7,17 @@ import android.content.Intent;
 
 import java.util.Set;
 
+import apps.bigdog.com.multicamera.app.LocalApplication;
+
 /**
  * Created by jw362j on 6/1/2016.
  */
-public abstract  class BaseBroadCastRcv  extends BroadcastReceiver {
+public abstract  class BaseBroadCastRcv  extends BroadcastReceiver implements InterfaceGenerator.AppLifeCycle{
+
+    public BaseBroadCastRcv() {
+        LocalApplication.getInstance().addAppLifeCycle(this);
+    }
+
     @Override
     public void onReceive(Context context, Intent intent) {
         //检测广播的发送方是否是我所认可的,如果是则调用onSafeReceive逻辑 否则丢弃

@@ -10,7 +10,7 @@ import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 /**
  * Created by jw362j on 6/1/2016.
  */
-public class SDCardLowerSizeCleaner extends BaseBroadCastRcv implements InterfaceGenerator.AppLifeCycle{
+public class SDCardLowerSizeCleaner extends BaseBroadCastRcv {
     public SDCardLowerSizeCleaner() {
         LocalApplication.addAppLifeCycle(this);
     }

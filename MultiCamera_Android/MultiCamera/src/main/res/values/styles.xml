@@ -28,4 +28,22 @@
         <item name="android:backgroundDimAmount">0.4</item>
     </style>
 
+    <style name="imageScaleRate">
+        <item name="android:scaleX">0.8</item>
+        <item name="android:scaleY">0.8</item>
+    </style>
+
+    <style name="tabs_radiobutton_styles">
+        <item name="android:scaleX">0.9</item>
+        <item name="android:scaleY">0.9</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:drawablePadding">@dimen/home_btn_padding</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@drawable/home_btn_text_color_selector</item>
+    </style>
+
 </resources>

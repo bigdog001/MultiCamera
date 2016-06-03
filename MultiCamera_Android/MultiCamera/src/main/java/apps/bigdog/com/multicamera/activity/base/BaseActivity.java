@@ -2,6 +2,7 @@ package apps.bigdog.com.multicamera.activity.base;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Window;
@@ -28,6 +29,11 @@ public abstract class BaseActivity extends FragmentActivity implements DialogMak
         setContentView(getLayoutId());
         x.view().inject(this);
         isCreate = true;
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration config) {
+//        super.onConfigurationChanged(config);
     }
 
     @Override

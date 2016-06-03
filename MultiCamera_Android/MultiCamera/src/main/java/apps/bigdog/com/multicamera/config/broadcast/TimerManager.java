@@ -43,4 +43,12 @@ public class TimerManager extends BaseBroadCastRcv {
         }
 
     }
+
+    @Override
+    public void OnStop() {
+        if (timerActions != null) {
+            timerActions.clear();
+            timerActions = null;
+        }
+    }
 }

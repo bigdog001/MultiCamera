@@ -24,4 +24,11 @@ public class InterfaceGenerator {
         public boolean isAllowedToExecute();
         public void onTime(Context c,int flag,Object data);
     }
+
+    public interface ICommunicatable{
+        public int myIndex();
+        public void setCommunicatable(boolean communicatable);
+        public void DataIn(Object data);
+        public Object DataOut();
+    }
 }

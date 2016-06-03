@@ -16,16 +16,25 @@ import apps.bigdog.com.multicamera.view.DialogMaker;
 /**
  * Created by jw362j on 6/2/2016.
  */
-public abstract class BaseFragment  extends Fragment implements InterfaceGenerator.AppLifeCycle{
+public abstract class BaseFragment  extends Fragment implements InterfaceGenerator.AppLifeCycle,InterfaceGenerator.ICommunicatable{
     public FragmentActivity mActivity;
     protected Dialog dialog;
     private View mView;
     private boolean injected = false;
+    protected boolean isCommunicatable ;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         LocalApplication.addAppLifeCycle(this);
+        LocalApplication.getInstance().getVariableHolder().communicatables.add(this);
+    }
+
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+
         mActivity = getActivity();
         if (mView == null && getActivity() != null)
         {
@@ -54,6 +63,17 @@ public abstract class BaseFragment  extends Fragment implements InterfaceGenerat
         if (!injected) {
             x.view().inject(this, this.getView());
         }
+    }
+
+    @Override
+    public void setCommunicatable(boolean communicatable) {
+        this.isCommunicatable = communicatable;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LocalApplication.getInstance().getVariableHolder().communicatables.remove(this);
     }
 
     /**

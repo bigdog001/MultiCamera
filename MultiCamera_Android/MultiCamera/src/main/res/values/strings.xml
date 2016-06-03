@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Multicamera</string>
+    <string name="app_name">MultiCamera</string>
+    <string name="app_name_title_text">MultiCamera</string>
+    <string name="home_tab_btn_text1">Profile</string>
+    <string name="home_record_status_tips_text_enable">当前正在录制</string>
+    <string name="home_record_status_tips_text_disable">当前正在录制</string>
+    <string name="home_tab_settings_text">设置</string>
 </resources>

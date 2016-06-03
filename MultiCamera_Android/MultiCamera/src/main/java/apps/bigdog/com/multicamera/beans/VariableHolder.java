@@ -2,6 +2,10 @@ package apps.bigdog.com.multicamera.beans;
 
 import android.content.SharedPreferences;
 
+import java.util.List;
+
+import apps.bigdog.com.multicamera.config.InterfaceGenerator;
+
 /**
  * Created by jw362j on 6/1/2016.
  */
@@ -17,6 +21,8 @@ public class VariableHolder {
     private int screenW = 0;
     private int screenH = 0;
     private SharedPreferences sp;
+
+    public List<InterfaceGenerator.ICommunicatable> communicatables;
 
     public SharedPreferences getSp() {
         return sp;
