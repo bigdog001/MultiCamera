@@ -10,5 +10,6 @@
     <color name="home1_bgcolor">#EBEBEB</color>
     <color name="home_titlebar_bgcolor">#393A3F</color>
     <color name="red_dark">#ffb52121</color>
+    <color name="record_bg">#3F51B5</color>
 
 </resources>
