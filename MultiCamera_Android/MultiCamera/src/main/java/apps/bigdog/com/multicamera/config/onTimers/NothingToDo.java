@@ -13,7 +13,7 @@ import apps.bigdog.com.multicamera.util.LogUtil;
  */
 public class NothingToDo implements InterfaceGenerator.timerAction {
     private long lastEventTime;
-    private long myDelta = 1000 * 1;//10 seconds
+    private long myDelta = 1000 * 10;//10 seconds
 
     @Override
     public boolean isAllowedToExecute() {

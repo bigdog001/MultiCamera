@@ -46,7 +46,7 @@
             android:id="@+id/radioBtn_home2"
             style="@style/tabs_radiobutton_styles"
             android:drawableTop="@drawable/ic_home_2_selector"
-            android:text="Home2"></RadioButton>
+            android:text="@string/home_tab_btn_text2"></RadioButton>
 
         <RadioButton
             android:id="@+id/radioBtn_home3"

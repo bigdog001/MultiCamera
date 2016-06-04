@@ -1,13 +1,17 @@
 package apps.bigdog.com.multicamera.fragment;
 
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
 import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.activity.MainActivity;
 import apps.bigdog.com.multicamera.app.LocalApplication;
+import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.util.LogUtil;
 
 /**
@@ -15,13 +19,40 @@ import apps.bigdog.com.multicamera.util.LogUtil;
  */
 @ContentView(R.layout.fragment_home1)
 public class HomeOneFragment extends BaseFragment {
-    @ViewInject(R.id.id_home_record_status)
-    private TextView test1;
-
-
+    @ViewInject(R.id.toggle_btn_autolaunch_switcher)
+    private ImageView toggle_btn_autolaunch_switcher;
+    private boolean isAutoStart;
 
     @Override
     protected void initParams() {
+        isAutoStart = LocalApplication.getInstance().getVariableHolder().getSp().getBoolean(VariableHolder.Constants.APP_AUTOSTART_SP_FLAG,false);
+        if (isAutoStart) {
+            toggle_btn_autolaunch_switcher.setImageResource(R.drawable.toggle_btn_autolaunch_on);
+        }
+    }
+
+    @Event(value = {R.id.toggle_btn_autolaunch_switcher}, type = View.OnClickListener.class)
+    private void ItemOnclick(View v) {
+        switch (v.getId()) {
+            case R.id.toggle_btn_autolaunch_switcher:
+                DoAutoLaunchSwitcher();
+                break;
+
+
+            default:
+                break;
+        }
+    }
+
+    private void DoAutoLaunchSwitcher(){
+        isAutoStart = !isAutoStart;
+        LogUtil.log("isAutoStart:"+isAutoStart);
+        if (isAutoStart) {
+            toggle_btn_autolaunch_switcher.setImageResource(R.drawable.toggle_btn_autolaunch_on);
+        }else {
+            toggle_btn_autolaunch_switcher.setImageResource(R.drawable.toggle_btn_autolaunch_off);
+        }
+        LocalApplication.getInstance().getVariableHolder().getSp().edit().putBoolean(VariableHolder.Constants.APP_AUTOSTART_SP_FLAG,isAutoStart).commit();
     }
 
     @Override

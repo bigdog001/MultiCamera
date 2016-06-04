@@ -1,11 +1,13 @@
 package apps.bigdog.com.multicamera.config;
 
 import android.content.Context;
+import android.content.Intent;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import apps.bigdog.com.multicamera.beans.VariableHolder;
+import apps.bigdog.com.multicamera.config.broadcast.BatteryStatusListener;
 import apps.bigdog.com.multicamera.config.broadcast.SDCardLowerSizeCleaner;
 import apps.bigdog.com.multicamera.config.broadcast.TimerManager;
 
@@ -30,6 +32,12 @@ public class BroadCastManager extends AppObject implements InterfaceGenerator.Ap
         intents4Timer.add(VariableHolder.Constants.TIMER_BROADCAST_UNIT_NAME);
         broadcastReceiverModules.add(new BroadcastReceiverModule(new TimerManager(),intents4Timer,0));
 
+        List<String> intents4Battery = new ArrayList<String>();
+        intents4Battery.add(Intent.ACTION_BATTERY_CHANGED);
+        intents4Battery.add(Intent.ACTION_POWER_CONNECTED);
+        intents4Battery.add(Intent.ACTION_POWER_DISCONNECTED);
+        broadcastReceiverModules.add(new BroadcastReceiverModule(new BatteryStatusListener(),intents4Battery,0));
+
 
         regist();
     }
@@ -41,7 +49,13 @@ public class BroadCastManager extends AppObject implements InterfaceGenerator.Ap
     }
     @Override
     public void OnStop() {
-        broadcastReceiverModules.clear();
-        broadcastReceiverModules = null;
+        if (broadcastReceiverModules != null) {
+            for(BroadcastReceiverModule brm:broadcastReceiverModules){
+                 mContext.unregisterReceiver(brm.getBr());
+            }
+            broadcastReceiverModules.clear();
+            broadcastReceiverModules = null;
+        }
+
     }
 }

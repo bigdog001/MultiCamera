@@ -7,11 +7,7 @@
     android:background="@color/home1_bgcolor"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@android:color/white">
+    <RelativeLayout style="@style/homeone_content_item">
 
         <ImageView
             style="@style/imageScaleRate"
@@ -37,39 +33,27 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@android:color/white">
-
-        <ImageView
-            style="@style/imageScaleRate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_home_1_selected" />
-
+        style="@style/homeone_content_item">
         <TextView
             android:id="@+id/id_home_record_status_"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
-            android:text="@string/home_record_status_tips_text_enable"
+            android:text="@string/home_autolaunch_tips_text"
             android:textColor="@android:color/black" />
 
         <ImageView
+            android:id="@+id/toggle_btn_autolaunch_switcher"
             style="@style/imageScaleRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_home_1_selected" />
+            android:src="@drawable/toggle_btn_autolaunch_off" />
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@android:color/white">
+        style="@style/homeone_content_item">
 
         <ImageView
             style="@style/imageScaleRate"

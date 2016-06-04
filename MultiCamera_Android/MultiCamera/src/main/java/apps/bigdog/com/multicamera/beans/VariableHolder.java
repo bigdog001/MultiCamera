@@ -17,6 +17,7 @@ public class VariableHolder {
         public static final String APP_SH_NAME = "MultiCameraSp";
         public static final String MP4_FILE_STORAGED_IN_SP = "MP4_FILE_STORAGE_DIR";
         public static final String MP4_FILE_STORAGE_DIR_DEFAULT = "MP4_RECORD";
+        public static final String APP_AUTOSTART_SP_FLAG = "isautostart";
     }
     private int screenW = 0;
     private int screenH = 0;
