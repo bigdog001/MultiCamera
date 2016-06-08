@@ -27,7 +27,7 @@ public abstract class BaseFragment  extends Fragment implements InterfaceGenerat
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         LocalApplication.addAppLifeCycle(this);
-        LocalApplication.getInstance().getVariableHolder().communicatables.add(this);
+        LocalApplication.getInstance().getVariableHolder().getCommunicatables().add(this);
     }
 
 
@@ -73,7 +73,7 @@ public abstract class BaseFragment  extends Fragment implements InterfaceGenerat
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LocalApplication.getInstance().getVariableHolder().communicatables.remove(this);
+        LocalApplication.getInstance().getVariableHolder().getCommunicatables().remove(this);
     }
 
     /**

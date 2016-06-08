@@ -1,11 +1,13 @@
 package apps.bigdog.com.multicamera.activity;
 
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -41,6 +43,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private RadioButton radioBtn_home4;
     @ViewInject(R.id.main_content_fgt)
     private ViewPager main_content_fgt;
+    @ViewInject(R.id.home_menu_main_menu)
+    private ImageView home_menu_main_menu;
 
     private List<BaseFragment> fragments;
 
@@ -53,13 +57,24 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     public static int chooseIndex = -1;
     private boolean isRecycled ;
 
-    @Event(value = {R.id.radioBtn_home1, R.id.radioBtn_home2, R.id.radioBtn_home3, R.id.radioBtn_home4}, type = View.OnClickListener.class)
+    @Event(value = {R.id.home_menu_main_menu, R.id.radioBtn_home2, R.id.radioBtn_home3, R.id.radioBtn_home4}, type = View.OnClickListener.class)
     private void ItemOnclick(View v) {
+        switch (v.getId()){
+            case R.id.home_menu_main_menu:
+                showPopupWindow(v);
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    private void showPopupWindow(View parent) {
 
     }
 
 
-    protected int getLayoutId() {
+        protected int getLayoutId() {
         return R.layout.activity_main;
     }
 
@@ -73,6 +88,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
 
     private void initViewPager() {
+        main_content_fgt.setOffscreenPageLimit(fragments.size()-1);
         main_content_fgt.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {

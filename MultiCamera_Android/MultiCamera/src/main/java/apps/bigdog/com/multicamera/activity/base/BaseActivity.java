@@ -1,6 +1,4 @@
 package apps.bigdog.com.multicamera.activity.base;
-
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.res.Configuration;
 import android.os.Bundle;

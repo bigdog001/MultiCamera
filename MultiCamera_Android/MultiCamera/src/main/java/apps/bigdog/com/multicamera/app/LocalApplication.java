@@ -2,14 +2,17 @@ package apps.bigdog.com.multicamera.app;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.xutils.BuildConfig;
 import org.xutils.x;
 
 import apps.bigdog.com.multicamera.beans.VariableHolder;
@@ -53,7 +56,9 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
     private void initVariables() {
         instance = this;
         variableHolder = new VariableHolder();
-        variableHolder.communicatables = new ArrayList<InterfaceGenerator.ICommunicatable>();
+        variableHolder.setCommunicatables( new ArrayList<InterfaceGenerator.ICommunicatable>());
+        variableHolder.setInflater((LayoutInflater) getApplicationContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE));
         // 得到屏幕的宽度和高度
         DisplayMetrics dm = getResources().getDisplayMetrics();
         variableHolder.setScreenW(dm.widthPixels);
@@ -65,7 +70,8 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
 
     private void initXUtil() {
         x.Ext.init(this);
-        x.Ext.setDebug( true);
+        x.Ext.setDebug(BuildConfig.DEBUG); // 开启debug会影响性能
+//        x.Ext.setDebug( true);
     }
 
     private void setUpInitializers(){

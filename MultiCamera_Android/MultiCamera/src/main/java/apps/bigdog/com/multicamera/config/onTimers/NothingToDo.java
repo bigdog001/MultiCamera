@@ -25,9 +25,9 @@ public class NothingToDo implements InterfaceGenerator.timerAction {
 
     @Override
     public void onTime(Context c, int flag, Object data) {
-        if (LocalApplication.getInstance().getVariableHolder().communicatables != null) {
-            LogUtil.log("the length of communicatables is :"+ LocalApplication.getInstance().getVariableHolder().communicatables.size());
-            for (InterfaceGenerator.ICommunicatable cx: LocalApplication.getInstance().getVariableHolder().communicatables) {
+        if (LocalApplication.getInstance().getVariableHolder().getCommunicatables() != null) {
+            LogUtil.log("the length of communicatables is :"+ LocalApplication.getInstance().getVariableHolder().getCommunicatables().size());
+            for (InterfaceGenerator.ICommunicatable cx: LocalApplication.getInstance().getVariableHolder().getCommunicatables()) {
                 if( cx != null )cx.DataIn("...");
             }
         }

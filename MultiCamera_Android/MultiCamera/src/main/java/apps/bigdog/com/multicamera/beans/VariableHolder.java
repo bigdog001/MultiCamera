@@ -1,6 +1,7 @@
 package apps.bigdog.com.multicamera.beans;
 
 import android.content.SharedPreferences;
+import android.view.LayoutInflater;
 
 import java.util.List;
 
@@ -22,8 +23,9 @@ public class VariableHolder {
     private int screenW = 0;
     private int screenH = 0;
     private SharedPreferences sp;
+    private LayoutInflater inflater ;
 
-    public List<InterfaceGenerator.ICommunicatable> communicatables;
+    private List<InterfaceGenerator.ICommunicatable> communicatables;
 
     public SharedPreferences getSp() {
         return sp;
@@ -47,5 +49,21 @@ public class VariableHolder {
 
     public void setScreenH(int screenH) {
         this.screenH = screenH;
+    }
+
+    public LayoutInflater getInflater() {
+        return inflater;
+    }
+
+    public void setInflater(LayoutInflater inflater) {
+        this.inflater = inflater;
+    }
+
+    public List<InterfaceGenerator.ICommunicatable> getCommunicatables() {
+        return communicatables;
+    }
+
+    public void setCommunicatables(List<InterfaceGenerator.ICommunicatable> communicatables) {
+        this.communicatables = communicatables;
     }
 }
