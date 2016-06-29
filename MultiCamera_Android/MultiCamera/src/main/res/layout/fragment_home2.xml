@@ -23,9 +23,6 @@
             android:layout_height="wrap_content" />
     </RelativeLayout>
 
-    <apps.bigdog.com.multicamera.view.MySurfaceView
-        android:id="@+id/mySurfaceView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    
 
 </LinearLayout>
