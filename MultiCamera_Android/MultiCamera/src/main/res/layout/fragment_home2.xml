@@ -15,11 +15,17 @@
         >
         <Button
             android:id="@+id/preview_top_btn_record"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
             android:text="@string/home_tab_btn_top_record_start"
             android:background="@drawable/shape_recoed_btn"
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <apps.bigdog.com.multicamera.view.MySurfaceView
+            android:id="@+id/mySurfaceView"
+            android:layout_below="@id/preview_top_btn_record"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RelativeLayout>
 
