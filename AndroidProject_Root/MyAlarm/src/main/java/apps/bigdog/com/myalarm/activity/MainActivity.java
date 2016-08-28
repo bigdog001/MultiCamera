@@ -14,15 +14,15 @@ import android.widget.RadioGroup;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
-import apps.bigdog.com.multicamera.R;
-import apps.bigdog.com.multicamera.activity.base.BaseActivity;
-import apps.bigdog.com.multicamera.config.InterfaceGenerator;
-import apps.bigdog.com.multicamera.fragment.BaseFragment;
-import apps.bigdog.com.multicamera.fragment.HomeFourFragment;
-import apps.bigdog.com.multicamera.fragment.HomeOneFragment;
-import apps.bigdog.com.multicamera.fragment.HomeThreeFragment;
-import apps.bigdog.com.multicamera.fragment.HomeTwoFragment;
-import apps.bigdog.com.multicamera.util.LogUtil;
+import apps.bigdog.com.myalarm.activity.base.BaseActivity;
+import apps.bigdog.com.myalarm.R;
+import apps.bigdog.com.myalarm.config.InterfaceGenerator;
+import apps.bigdog.com.myalarm.fragment.BaseFragment;
+import apps.bigdog.com.myalarm.fragment.HomeFourFragment;
+import apps.bigdog.com.myalarm.fragment.HomeOneFragment;
+import apps.bigdog.com.myalarm.fragment.HomeThreeFragment;
+import apps.bigdog.com.myalarm.fragment.HomeTwoFragment;
+import apps.bigdog.com.myalarm.util.LogUtil;
 
 import java.util.ArrayList;
 import java.util.List;

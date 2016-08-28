@@ -1,14 +1,14 @@
-package apps.bigdog.com.multicamera.activity.base;
+package apps.bigdog.com.myalarm.activity.base;
 import android.app.Dialog;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Window;
 
-import apps.bigdog.com.multicamera.app.LocalApplication;
-import apps.bigdog.com.multicamera.config.InterfaceGenerator;
-import apps.bigdog.com.multicamera.util.ActivityStack;
-import apps.bigdog.com.multicamera.view.DialogMaker;
+import apps.bigdog.com.myalarm.app.LocalApplication;
+import apps.bigdog.com.myalarm.config.InterfaceGenerator;
+import apps.bigdog.com.myalarm.util.ActivityStack;
+import apps.bigdog.com.myalarm.view.DialogMaker;
 import org.xutils.x;
 /**
  * Created by jw362j on 6/1/2016.
