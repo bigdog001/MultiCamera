@@ -8,6 +8,7 @@ import java.util.List;
 
 import apps.bigdog.com.myalarm.beans.VariableHolder;
 import apps.bigdog.com.myalarm.config.broadcast.BatteryStatusListener;
+import apps.bigdog.com.myalarm.config.broadcast.PowerKeyClick;
 import apps.bigdog.com.myalarm.config.broadcast.SDCardLowerSizeCleaner;
 import apps.bigdog.com.myalarm.config.broadcast.TimerManager;
 
@@ -39,6 +40,11 @@ public class BroadCastManager extends AppObject implements InterfaceGenerator.Ap
         broadcastReceiverModules.add(new BroadcastReceiverModule(new BatteryStatusListener(),intents4Battery,0));
 
 
+        //PowerKeyClick
+        List<String> intents4PowerKeyUD = new ArrayList<String>();
+        intents4PowerKeyUD.add(Intent.ACTION_SCREEN_OFF);
+        intents4PowerKeyUD.add(Intent.ACTION_SCREEN_ON);
+        broadcastReceiverModules.add(new BroadcastReceiverModule(new PowerKeyClick(),intents4PowerKeyUD,0));
         regist();
     }
 

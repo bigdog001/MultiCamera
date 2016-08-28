@@ -65,7 +65,7 @@ public class LocalFileHandler extends BaseExceptionHandler
 	{
 		try
 		{
-			File errorFile = new File(JFileKit.getDiskCacheDir(context) + "/log/crash-multicamera.log");
+			File errorFile = new File(JFileKit.getDiskCacheDir(context) + File.separator+"log"+File.separator+"crash-myalarm.log");
 
 			if (!errorFile.exists())
 			{

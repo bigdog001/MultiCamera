@@ -22,7 +22,7 @@
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <apps.bigdog.com.multicamera.view.MySurfaceView
+        <apps.bigdog.com.myalarm.view.MySurfaceView
             android:id="@+id/mySurfaceView"
             android:layout_below="@id/preview_top_btn_record"
             android:layout_width="match_parent"

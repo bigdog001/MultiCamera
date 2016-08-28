@@ -24,8 +24,7 @@ public abstract class BaseApplication extends Application {
         if (getDefaultUncaughtExceptionHandler() == null)
         {
             Thread.setDefaultUncaughtExceptionHandler(new LocalFileHandler(applicationContext));
-        } else
-        {
+        }else{
             Thread.setDefaultUncaughtExceptionHandler(getDefaultUncaughtExceptionHandler());
         }
     }
