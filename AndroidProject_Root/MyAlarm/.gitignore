@@ -5,5 +5,5 @@
 gradlew
 gradlew.bat
 /gradlew.bat
-/MultiCamera.iml
-MultiCamera.iml
+/*.iml
+MyAlarm.iml
