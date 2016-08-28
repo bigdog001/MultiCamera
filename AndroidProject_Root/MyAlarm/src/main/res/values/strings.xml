@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">小丑人儿</string>
+    <string name="app_name_title_text">MultiCamera</string>
+    <string name="home_tab_btn_text1">Profile</string>
+    <string name="home_tab_btn_text2">预览</string>
+    <string name="home_tab_btn_top_record_start">开始录制</string>
+    <string name="home_tab_btn_top_record_stop">停止录制</string>
+    <string name="home_record_status_tips_text_enable">当前正在录制</string>
+    <string name="home_autolaunch_tips_text">是否开机自动启动</string>
+    <string name="home_tab_settings_text">设置</string>
+    <string name="home_tab_settings_item_exit">退出程序</string>
+    <string name="home_tab_settings_item_exit_title_text">退出</string>
+    <string name="home_tab_settings_item_exit_content_text">您确定退出程序吗?</string>
+</resources>

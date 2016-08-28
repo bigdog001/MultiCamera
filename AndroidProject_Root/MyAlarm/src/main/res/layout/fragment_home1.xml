@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@color/home1_bgcolor"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/homeone_content_item">
+
+        <ImageView
+            style="@style/imageScaleRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_home_1_selected" />
+
+        <TextView
+            android:id="@+id/id_home_record_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/home_record_status_tips_text_enable"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            style="@style/imageScaleRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_home_1_selected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/homeone_content_item">
+        <TextView
+            android:id="@+id/id_home_record_status_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="@string/home_autolaunch_tips_text"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/toggle_btn_autolaunch_switcher"
+            style="@style/imageScaleRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/toggle_btn_autolaunch_off" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/homeone_content_item">
+
+        <ImageView
+            style="@style/imageScaleRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_home_1_selected" />
+
+        <TextView
+            android:id="@+id/id_home_record_status_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="小丑人儿"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            style="@style/imageScaleRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_home_1_selected" />
+    </RelativeLayout>
+
+
+</LinearLayout>

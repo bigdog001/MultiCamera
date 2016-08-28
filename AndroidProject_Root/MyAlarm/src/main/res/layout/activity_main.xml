@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--<FrameLayout
+        android:id="@+id/main_content_fgt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/home_titlebar_bgcolor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/app_name_title_text"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/home_menu_main_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:layout_marginRight="9dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/home_top_bar_menu_bg_selector"
+            />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_content_fgt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/main_botton_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_tabs_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioBtn_home1"
+            style="@style/tabs_radiobutton_styles"
+            android:drawableTop="@drawable/ic_home_1_selector"
+            android:text="@string/home_tab_btn_text1"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioBtn_home2"
+            style="@style/tabs_radiobutton_styles"
+            android:drawableTop="@drawable/ic_home_2_selector"
+            android:text="@string/home_tab_btn_text2"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioBtn_home3"
+            style="@style/tabs_radiobutton_styles"
+            android:drawableTop="@drawable/ic_home_3_selector"
+            android:text="Home3"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioBtn_home4"
+            style="@style/tabs_radiobutton_styles"
+            android:drawableTop="@drawable/ic_home_4_selector"
+            android:text="@string/home_tab_settings_text"></RadioButton>
+    </RadioGroup>
+
+</LinearLayout>
