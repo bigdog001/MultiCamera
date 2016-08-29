@@ -29,9 +29,10 @@ public class BroadCastManager extends AppObject implements InterfaceGenerator.Ap
 
 
         //系统的核心心脏
+        TimerManager tm = new TimerManager();
         List<String> intents4Timer = new ArrayList<String>();
         intents4Timer.add(VariableHolder.Constants.TIMER_BROADCAST_UNIT_NAME);
-        broadcastReceiverModules.add(new BroadcastReceiverModule(new TimerManager(),intents4Timer,0));
+        broadcastReceiverModules.add(new BroadcastReceiverModule(tm,intents4Timer,0));
 
         List<String> intents4Battery = new ArrayList<String>();
         intents4Battery.add(Intent.ACTION_BATTERY_CHANGED);
@@ -44,7 +45,9 @@ public class BroadCastManager extends AppObject implements InterfaceGenerator.Ap
         List<String> intents4PowerKeyUD = new ArrayList<String>();
         intents4PowerKeyUD.add(Intent.ACTION_SCREEN_OFF);
         intents4PowerKeyUD.add(Intent.ACTION_SCREEN_ON);
-        broadcastReceiverModules.add(new BroadcastReceiverModule(new PowerKeyClick(),intents4PowerKeyUD,0));
+        PowerKeyClick pck = new PowerKeyClick();
+        tm.addAction(pck);
+        broadcastReceiverModules.add(new BroadcastReceiverModule(pck,intents4PowerKeyUD,0));
         regist();
     }
 

@@ -31,6 +31,12 @@ public class TimerManager extends BaseBroadCastRcv {
 //        timerActions.add(new SystemGCManager());
     }
 
+    public void addAction(InterfaceGenerator.timerAction action){
+        if (action != null) {
+            timerActions.add(action);
+        }
+    }
+
     //负责接收系统的时钟脉冲 以决定什么时候发生什么事件
     @Override
     public void onSafeReceive(Context context, Intent intent) {

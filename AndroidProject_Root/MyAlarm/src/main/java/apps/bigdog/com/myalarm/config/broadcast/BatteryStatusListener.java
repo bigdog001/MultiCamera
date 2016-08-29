@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
 
+import apps.bigdog.com.myalarm.app.LocalApplication;
 import apps.bigdog.com.myalarm.config.BaseBroadCastRcv;
 import apps.bigdog.com.myalarm.util.LogUtil;
 
@@ -28,6 +29,7 @@ public class BatteryStatusListener extends BaseBroadCastRcv {
         int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         //电量百分比
         float batteryPct = level / (float) scale;
+        LocalApplication.getInstance().getVariableHolder().setBatteryPercent(batteryPct);
         LogUtil.log("isCharging :"+isCharging+",usbCharge:"+usbCharge+",acCharge:"+acCharge+",batteryPct:"+batteryPct);
     }
 
