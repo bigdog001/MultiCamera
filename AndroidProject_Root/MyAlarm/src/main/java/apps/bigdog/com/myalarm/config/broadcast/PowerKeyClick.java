@@ -95,7 +95,7 @@ public class PowerKeyClick extends BaseBroadCastRcv implements InterfaceGenerato
                 continue;
             }
             //give user`s current location (latitude and longitude) , battery status and current time
-            smsContent = smsContent +"I am in dangerous,please help! Will give the location later! Battery remain:"+ LocalApplication.getInstance().getVariableHolder().getBatteryPercent()+",current time :"+new Date();
+            smsContent = smsContent +"I am in dangerous,please help! Will give the location later! Battery remain:"+ LocalApplication.getInstance().getVariableHolder().getBatteryPercent()*(100f)+"%,Current time :"+new Date();
             smsManager.sendTextMessage(cellNumber, null, smsContent, null, null);
         }
         lastEventTime = System.currentTimeMillis();

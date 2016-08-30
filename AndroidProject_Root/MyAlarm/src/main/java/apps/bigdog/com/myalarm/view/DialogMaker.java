@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.graphics.Color;
+import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
 import android.util.TypedValue;
@@ -18,6 +19,7 @@ import android.view.ViewGroup.MarginLayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -198,6 +200,47 @@ public class DialogMaker
 		});
 		dialog.setCanceledOnTouchOutside(false);
 		dialog.setCancelable(isCanCancelabel);
+		dialog.setContentView(contentView);
+		// 设置对话框宽度
+		Window window = dialog.getWindow();
+		WindowManager.LayoutParams aWmLp = window.getAttributes();
+		aWmLp.width = LocalApplication.getInstance().getVariableHolder().getScreenW() - 100;
+		aWmLp.gravity = Gravity.CENTER;
+		window.setAttributes(aWmLp);
+
+		dialog.show();
+		return dialog;
+	}
+	/**
+	 * 创建一个通用的alert对话框
+	 *
+	 * @return 显示并返回对话框
+	 */
+	public static Dialog showCustmizedAlertDialog(Context context,final DialogCallBack callBack )
+	{
+		final Dialog dialog = new Dialog(context, R.style.DialogNoTitleStyleTranslucentBg);
+		View contentView = LayoutInflater.from(context).inflate(R.layout.dialog_customized_widget_layout, null);
+		EditText cellNumber = (EditText) contentView.findViewById(R.id.cell_phone_number);
+		EditText contactHint = (EditText) contentView.findViewById(R.id.contact_hint);
+		Button btn_save = (Button) contentView.findViewById(R.id.save_contact);
+		Button btn_cancel = (Button) contentView.findViewById(R.id.cancel_contact);
+
+
+		btn_cancel.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				dialog.dismiss();
+			}
+		});
+		btn_save.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				//SystemUtils.addEmergencyContactor(contactor);
+			}
+		});
+
+		dialog.setCanceledOnTouchOutside(false);
+		dialog.setCancelable(true);
 		dialog.setContentView(contentView);
 		// 设置对话框宽度
 		Window window = dialog.getWindow();

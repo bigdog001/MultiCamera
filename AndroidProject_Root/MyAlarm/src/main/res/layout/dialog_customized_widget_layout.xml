@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="269.33dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_bg"
+    android:orientation="vertical" >
+    
+ 	<!-- Title -->
+    <TextView
+        android:id="@+id/dialog_title_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21.33dip"
+        android:gravity="center_horizontal"
+        android:paddingLeft="22dip"
+        android:paddingRight="22dip"
+        android:text="Add Contact"
+        android:textColor="@android:color/black"
+        android:textSize="16dip"
+        android:visibility="visible" />
+    
+    <!-- button pannel -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#b2b2b2" />
+
+    <LinearLayout
+        android:id="@+id/content_form_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cell Number:"
+                />
+            <EditText
+                android:id="@+id/cell_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hint:"
+                />
+            <EditText
+                android:id="@+id/contact_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/save_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:id="@+id/cancel_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

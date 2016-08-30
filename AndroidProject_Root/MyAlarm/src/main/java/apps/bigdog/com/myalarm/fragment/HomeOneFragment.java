@@ -1,5 +1,6 @@
 package apps.bigdog.com.myalarm.fragment;
 
+import android.app.Dialog;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.view.View;
@@ -13,11 +14,13 @@ import org.xutils.view.annotation.ViewInject;
 
 import apps.bigdog.com.myalarm.R;
 import apps.bigdog.com.myalarm.activity.MainActivity;
+import apps.bigdog.com.myalarm.adapter.MyAdaptor;
 import apps.bigdog.com.myalarm.app.LocalApplication;
 import apps.bigdog.com.myalarm.beans.EmergencyContactor;
 import apps.bigdog.com.myalarm.beans.VariableHolder;
 import apps.bigdog.com.myalarm.util.LogUtil;
 import apps.bigdog.com.myalarm.util.SystemUtils;
+import apps.bigdog.com.myalarm.view.DialogMaker;
 
 /**
  * Created by jw362j on 6/2/2016.
@@ -48,7 +51,7 @@ public class HomeOneFragment extends BaseFragment {
                 DoAutoLaunchSwitcher();
                 break;
             case R.id.home_add_contactor_icon:
-                addEmergencyContactor(new EmergencyContactor("7182199057",""));
+                addEmergencyContactor();
                 break;
 
 
@@ -57,8 +60,34 @@ public class HomeOneFragment extends BaseFragment {
         }
     }
 
-    private void addEmergencyContactor(EmergencyContactor contactor) {
-        SystemUtils.addEmergencyContactor(contactor);
+    private void addEmergencyContactor() {
+        DialogMaker.showCustmizedAlertDialog(mActivity,new DialogMaker.DialogCallBack(){
+
+            @Override
+            public void onButtonClicked(Dialog dialog, int position, Object tag) {
+                if (tag == null) {
+                    return;
+                }
+                if (tag instanceof String && "OK".equals((String)tag)) {
+                    reloadContactsList();
+                }
+            }
+
+            @Override
+            public void onCancelDialog(Dialog dialog, Object tag) {
+
+            }
+        });
+    }
+
+    private void reloadContactsList() {
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+//                lv_emergency_contactslist
+
+            }
+        });
     }
 
     private void DoAutoLaunchSwitcher(){
@@ -116,6 +145,7 @@ public class HomeOneFragment extends BaseFragment {
             tv_infor.setTextColor(Color.BLACK);
             lv_emergency_contactslist.addHeaderView(tv_infor);
         }
+        lv_emergency_contactslist.setAdapter(new MyAdaptor());
 
 
     }
