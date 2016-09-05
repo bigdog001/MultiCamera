@@ -68,7 +68,7 @@ public class PowerKeyClick extends BaseBroadCastRcv implements InterfaceGenerato
 
     @Override
     public void OnStop() {
-        vibrator.cancel();
+       if(vibrator != null) vibrator.cancel();
     }
 
     private void vibrate() {
