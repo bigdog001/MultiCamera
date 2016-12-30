@@ -1,4 +1,4 @@
-package apps.bigdog.com.multicamera.exception;
+package com.tool.mytool.lib.exceptions;
 
 /**
  * 自定义异常

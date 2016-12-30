@@ -4,8 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
 
+import com.tool.mytool.lib.util.LogUtil;
+
 import apps.bigdog.com.multicamera.config.BaseBroadCastRcv;
-import apps.bigdog.com.multicamera.util.LogUtil;
 
 /**
  * Created by jw362j on 6/3/2016.

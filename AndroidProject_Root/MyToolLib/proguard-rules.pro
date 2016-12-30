@@ -44,15 +44,16 @@
 
 
 
--keep class com.att.astb.lib.comm.util.beans.Token {
+-keep class com.tool.mytool.lib.util.MyUtil {
     <fields>;
     <methods>;
 }
 
--keepclasseswithmembers public class com.att.astb.lib.comm.util.beans.Token {
-    <fields>;
-    <methods>;
-}
+-keepclasseswithmembers public class  com.tool.mytool.lib.util.MyUtil {
+     <fields>;
+     <methods>;
+ }
+
 
 # Keep - Applications. Keep all application classes, along with their 'main'
 # methods.

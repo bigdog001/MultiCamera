@@ -1,9 +1,11 @@
 package apps.bigdog.com.multicamera.fragment;
 
+import com.tool.mytool.lib.util.LogUtil;
+
 import org.xutils.view.annotation.ContentView;
 
 import apps.bigdog.com.multicamera.R;
-import apps.bigdog.com.multicamera.util.LogUtil;
+
 
 /**
  * Created by jw362j on 6/2/2016.

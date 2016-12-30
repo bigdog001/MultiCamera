@@ -4,13 +4,14 @@ import android.app.Dialog;
 import android.view.View;
 import android.widget.Button;
 
+import com.tool.mytool.lib.util.LogUtil;
+
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
 import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.app.LocalApplication;
-import apps.bigdog.com.multicamera.util.LogUtil;
 import apps.bigdog.com.multicamera.view.DialogMaker;
 
 /**

@@ -1,4 +1,4 @@
-package com.att.astb.lib;
+package com.tool.mytool.lib;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

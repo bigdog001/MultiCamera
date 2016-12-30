@@ -21,10 +21,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.tool.mytool.lib.util.DisplayUtil;
+import com.tool.mytool.lib.util.JStringKit;
+
 import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.app.LocalApplication;
-import apps.bigdog.com.multicamera.util.DisplayUtil;
-import apps.bigdog.com.multicamera.util.JStringKit;
 
 
 /**

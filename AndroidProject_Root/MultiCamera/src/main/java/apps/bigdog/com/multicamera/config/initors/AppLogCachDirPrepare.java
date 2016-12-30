@@ -2,10 +2,11 @@ package apps.bigdog.com.multicamera.config.initors;
 
 import android.content.Context;
 
+import com.tool.mytool.lib.util.JFileKit;
+
 import java.io.File;
 
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
-import apps.bigdog.com.multicamera.util.JFileKit;
 
 /**
  * Created by jw362j on 6/1/2016.

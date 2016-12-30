@@ -22,7 +22,6 @@ import apps.bigdog.com.multicamera.config.initors.AppLogCachDirPrepare;
 import apps.bigdog.com.multicamera.config.initors.MP4FilesStorageDirInit;
 import apps.bigdog.com.multicamera.exception.BaseExceptionHandler;
 import apps.bigdog.com.multicamera.exception.LocalFileHandler;
-import apps.bigdog.com.multicamera.util.JFileKit;
 
 /**
  * Created by jw362j on 6/1/2016.
@@ -30,8 +29,6 @@ import apps.bigdog.com.multicamera.util.JFileKit;
 public class LocalApplication extends BaseApplication implements InterfaceGenerator.ApplicationGlobalHolder,InterfaceGenerator.AppLifeCycle{
     private static LocalApplication instance;
     private VariableHolder variableHolder;
-    private PendingIntent pi;
-    private AlarmManager alarmManager;
     private static List<InterfaceGenerator.AppLifeCycle> apps ;
     private List<InterfaceGenerator.Initializer> initializers;
 
@@ -45,7 +42,6 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
         initXUtil();
         initVariables();
         setUpInitializers();
-        initTimer();
         initBroadCastRcvs();
     }
 
@@ -90,17 +86,6 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
 
     }
 
-
-
-    private void initTimer(){
-        alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        Intent intent = new Intent();
-        intent.setAction(VariableHolder.Constants.TIMER_BROADCAST_UNIT_NAME);
-        pi = PendingIntent.getBroadcast(this, 0, intent, 0);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
-                0, VariableHolder.Constants.INTERVAL_UNIT, pi);
-    }
-
     public static LocalApplication getInstance()
     {
         return instance;
@@ -133,9 +118,7 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
 
     @Override
     public void OnStop() {
-        alarmManager.cancel(pi);
-        alarmManager = null;
-        pi = null;
+        stopMe();
     }
 
 

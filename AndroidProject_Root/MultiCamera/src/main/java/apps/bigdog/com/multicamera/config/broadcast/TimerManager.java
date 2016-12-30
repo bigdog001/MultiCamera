@@ -3,13 +3,14 @@ package apps.bigdog.com.multicamera.config.broadcast;
 import android.content.Context;
 import android.content.Intent;
 
+import com.tool.mytool.lib.util.LogUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import apps.bigdog.com.multicamera.config.BaseBroadCastRcv;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.config.onTimers.NothingToDo;
-import apps.bigdog.com.multicamera.util.LogUtil;
 
 /**
  * Created by jw362j on 6/1/2016.

@@ -1,4 +1,4 @@
-package apps.bigdog.com.multicamera.util;
+package com.tool.mytool.lib.util;
 
 import java.util.ArrayList;
 import java.util.Iterator;

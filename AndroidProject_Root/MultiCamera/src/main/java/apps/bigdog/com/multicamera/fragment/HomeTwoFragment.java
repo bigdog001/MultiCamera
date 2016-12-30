@@ -2,12 +2,13 @@ package apps.bigdog.com.multicamera.fragment;
 
 import android.view.View;
 
+import com.tool.mytool.lib.util.LogUtil;
+
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
 import apps.bigdog.com.multicamera.R;
-import apps.bigdog.com.multicamera.util.LogUtil;
 import apps.bigdog.com.multicamera.view.MySurfaceView;
 
 /**

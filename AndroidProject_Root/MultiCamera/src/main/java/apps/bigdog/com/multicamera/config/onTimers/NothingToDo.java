@@ -1,12 +1,12 @@
 package apps.bigdog.com.multicamera.config.onTimers;
 
 import android.content.Context;
-import android.provider.Settings;
+
+import com.tool.mytool.lib.util.LogUtil;
 
 import apps.bigdog.com.multicamera.app.LocalApplication;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.fragment.BaseFragment;
-import apps.bigdog.com.multicamera.util.LogUtil;
 
 /**
  * Created by jw362j on 6/1/2016.

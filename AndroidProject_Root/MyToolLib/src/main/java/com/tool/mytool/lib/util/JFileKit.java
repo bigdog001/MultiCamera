@@ -3,15 +3,13 @@
  * 
  * 手机内存一般存在/data/data/package/files目录下
  */
-package apps.bigdog.com.multicamera.util;
+package com.tool.mytool.lib.util;
 
 import java.io.File;
 
 import android.content.Context;
 import android.os.Environment;
-
-import apps.bigdog.com.multicamera.beans.VariableHolder;
-import apps.bigdog.com.multicamera.exception.BaseException;
+import com.tool.mytool.lib.exceptions.BaseException;
 
 
 /**
@@ -71,18 +69,21 @@ public class JFileKit
 
 	}
 
-	public static String getMp4FileStorageDir(Context context){
+	public static String getMp4FileStorageDir(Context context,String foldername){
+		if(foldername == null){
+			foldername = "MP4_RECORD";
+		}
 		String mp4Path;
 		File mp4_file_dir ;
 		if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) || !Environment.isExternalStorageRemovable()){
-			mp4Path = context.getExternalFilesDir(VariableHolder.Constants.MP4_FILE_STORAGE_DIR_DEFAULT).getAbsolutePath();
+			mp4Path = context.getExternalFilesDir(foldername).getAbsolutePath();
 			mp4_file_dir = new File(mp4Path);
 		} else{
 			mp4Path = context.getFilesDir().getAbsolutePath();
 			if(!mp4Path.endsWith(File.separator)){
 				mp4Path = mp4Path + File.separator;
 			}
-			mp4Path = mp4Path+VariableHolder.Constants.MP4_FILE_STORAGE_DIR_DEFAULT;
+			mp4Path = mp4Path+foldername;
 			mp4_file_dir = new File(mp4Path);
 		}
 		if(mp4_file_dir!= null && !mp4_file_dir.exists()){

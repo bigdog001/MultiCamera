@@ -8,6 +8,7 @@ if  "%1" == "" goto mymake
 if  %1 == clean goto myclean
 if  %1 == make goto mymake
 if  %1 == install goto myinstall
+if  %1 == run goto myrun
 
 
 
@@ -26,15 +27,15 @@ goto end
 
 rem install the new builded jar into the destination directory
 :myinstall
-echo "uninstall com.example.myapp"
-adb uninstall com.example.myapp
-echo "install %MYHOME%\TGuardSDKLibTestSampleApp\build\outputs\apk\TGuardSDKLibTestSampleApp-debug.apk"
-adb install   %MYHOME%\TGuardSDKLibTestSampleApp\build\outputs\apk\TGuardSDKLibTestSampleApp-debug.apk
+echo "uninstall apps.bigdog.com.multicamera.phone"
+adb uninstall apps.bigdog.com.multicamera.phone
+echo "install %MYHOME%\build\outputs\apk\MultiCamera-phone-debug.apk"
+adb install   %MYHOME%\build\outputs\apk\MultiCamera-phone-debug.apk
 goto end
 
 :myrun
-echo "running: com.example.myapp"
-adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.example.myapp/com.example.myapp.MyActivity
+echo "running: apps.bigdog.com.multicamera.phone"
+adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n apps.bigdog.com.multicamera.phone/apps.bigdog.com.multicamera.activity.MainActivity
 goto end
 
 

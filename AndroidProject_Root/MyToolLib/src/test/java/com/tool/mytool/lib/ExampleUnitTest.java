@@ -1,4 +1,4 @@
-package com.att.astb.lib;
+package com.tool.mytool.lib;
 
 import org.junit.Test;
 

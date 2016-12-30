@@ -4,7 +4,9 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-import apps.bigdog.com.multicamera.util.LogUtil;
+import com.tool.mytool.lib.util.LogUtil;
+
+
 public class RecordService extends Service{
 
     @Override
