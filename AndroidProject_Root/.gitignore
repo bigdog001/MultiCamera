@@ -9,3 +9,5 @@
 /MultiCamera/MultiCamera.iml
 /MultiCamera_Android.iml
 /*.iml
+*.iml
+./AndroidProject_Root.iml
