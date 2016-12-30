@@ -1,1 +1,1 @@
-include ':MultiCamera' , ":MyAlarm"
+include ':MultiCamera' , ':MyAlarm' ,':MyToolLib'

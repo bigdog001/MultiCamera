@@ -67,12 +67,10 @@ android {
             applicationIdSuffix '.monkey'
         }
     }
-
     productFlavors {
         phone {
             applicationId 'apps.bigdog.com.myalarm.phone'
         }
-
         pad {
             applicationId 'apps.bigdog.com.myalarm.hd'
         }
