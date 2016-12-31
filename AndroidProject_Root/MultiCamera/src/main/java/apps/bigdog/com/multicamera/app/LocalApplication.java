@@ -23,7 +23,6 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
     private static LocalApplication instance;
     private VariableHolder variableHolder;
     private static List<InterfaceGenerator.AppLifeCycle> apps ;
-    private List<InterfaceGenerator.Initializer> initializers;
 
     @Override
     public void onCreate() {
@@ -64,19 +63,15 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
     }
 
     private void setUpInitializers(){
-        initializers = new ArrayList<InterfaceGenerator.Initializer>();
-
-        initializers.add(new AppLogCachDirPrepare());
-        initializers.add(new MP4FilesStorageDirInit());
-        for (InterfaceGenerator.Initializer initializer:initializers) {
+        if(LoadInitializers() == null){
+            return;
+        }
+        for (InterfaceGenerator.Initializer initializer:LoadInitializers()) {
             if(initializer != null){
                 initializer.init(getApplicationContext());
                 initializer = null;
             }
         }
-        initializers.clear();
-        initializers = null;
-
     }
 
     public static LocalApplication getInstance()

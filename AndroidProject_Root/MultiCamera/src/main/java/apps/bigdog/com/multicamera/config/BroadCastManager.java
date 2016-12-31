@@ -8,6 +8,7 @@ import com.tool.mytool.lib.broadcast.BroadcastReceiverModule;
 import java.util.ArrayList;
 import java.util.List;
 
+import apps.bigdog.com.multicamera.app.LocalApplication;
 import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.config.broadcast.BatteryStatusListener;
 import apps.bigdog.com.multicamera.config.broadcast.TimerManager;
@@ -19,6 +20,7 @@ public class BroadCastManager extends AppObject {
     private static List<BroadcastReceiverModule> broadcastReceiverModules;
     private Context mContext;
     public BroadCastManager(Context c) {
+        LocalApplication.addAppLifeCycle(BroadCastManager.this);
         mContext = c;
         broadcastReceiverModules = new ArrayList<BroadcastReceiverModule>();
         InitBroadCast();

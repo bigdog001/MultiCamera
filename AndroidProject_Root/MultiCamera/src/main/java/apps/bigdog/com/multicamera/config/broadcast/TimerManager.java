@@ -9,6 +9,7 @@ import com.tool.mytool.lib.util.LogUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+import apps.bigdog.com.multicamera.app.LocalApplication;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.config.onTimers.NothingToDo;
 
@@ -19,6 +20,7 @@ public class TimerManager extends BaseBroadCastRcv implements InterfaceGenerator
     private List<InterfaceGenerator.timerAction> timerActions;
 
     public TimerManager() {
+        LocalApplication.addAppLifeCycle(TimerManager.this);
         timerActions = new ArrayList<InterfaceGenerator.timerAction>();
         initActions();
     }
