@@ -1,4 +1,4 @@
-package apps.bigdog.com.multicamera.exception;
+package com.tool.mytool.lib.exceptions;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.text.DateFormat;

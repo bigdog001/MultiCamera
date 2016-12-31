@@ -1,27 +1,20 @@
 package apps.bigdog.com.multicamera.app;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 
-import java.io.File;
+import com.tool.mytool.lib.exceptions.BaseExceptionHandler;
+import com.tool.mytool.lib.exceptions.LocalFileHandler;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.xutils.BuildConfig;
 import org.xutils.x;
-
 import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.config.BroadCastManager;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.config.initors.AppLogCachDirPrepare;
 import apps.bigdog.com.multicamera.config.initors.MP4FilesStorageDirInit;
-import apps.bigdog.com.multicamera.exception.BaseExceptionHandler;
-import apps.bigdog.com.multicamera.exception.LocalFileHandler;
 
 /**
  * Created by jw362j on 6/1/2016.

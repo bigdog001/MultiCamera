@@ -1,4 +1,4 @@
-package apps.bigdog.com.multicamera.exception;
+package com.tool.mytool.lib.exceptions;
 
 import java.io.File;
 import java.io.FileOutputStream;

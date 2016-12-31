@@ -5,6 +5,8 @@ import android.app.Application;
 import android.app.PendingIntent;
 import android.content.Intent;
 
+import com.tool.mytool.lib.exceptions.BaseExceptionHandler;
+import com.tool.mytool.lib.exceptions.LocalFileHandler;
 import com.tool.mytool.lib.util.JStringKit;
 import com.tool.mytool.lib.util.LogUtil;
 
@@ -18,7 +20,18 @@ public abstract class MyApplication extends Application {
     public void onCreate()
     {
         super.onCreate();
+        initExceptionHandler();
         initRTCTimer();
+    }
+
+    private void initExceptionHandler(){
+        if (getDefaultUncaughtExceptionHandler() == null)
+        {
+            Thread.setDefaultUncaughtExceptionHandler(new LocalFileHandler(getApplicationContext()));
+        } else
+        {
+            Thread.setDefaultUncaughtExceptionHandler(getDefaultUncaughtExceptionHandler());
+        }
     }
 
     private void initRTCTimer(){
@@ -48,6 +61,7 @@ public abstract class MyApplication extends Application {
         pi = null;
     }
 
+    public abstract BaseExceptionHandler getDefaultUncaughtExceptionHandler();
 
     public abstract String[]initRTC();//返回的第一个参数代表广播的action 第二个代表间隔时长
 }
