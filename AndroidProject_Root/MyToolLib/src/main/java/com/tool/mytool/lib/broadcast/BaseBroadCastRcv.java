@@ -1,4 +1,4 @@
-package apps.bigdog.com.multicamera.config;
+package com.tool.mytool.lib.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -7,15 +7,12 @@ import android.content.Intent;
 
 import java.util.Set;
 
-import apps.bigdog.com.multicamera.app.LocalApplication;
-
 /**
  * Created by jw362j on 6/1/2016.
  */
-public abstract  class BaseBroadCastRcv  extends BroadcastReceiver implements InterfaceGenerator.AppLifeCycle{
+public abstract  class BaseBroadCastRcv  extends BroadcastReceiver{
 
     public BaseBroadCastRcv() {
-        LocalApplication.getInstance().addAppLifeCycle(this);
     }
 
     @Override

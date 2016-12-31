@@ -3,19 +3,19 @@ package apps.bigdog.com.multicamera.config.broadcast;
 import android.content.Context;
 import android.content.Intent;
 
+import com.tool.mytool.lib.broadcast.BaseBroadCastRcv;
 import com.tool.mytool.lib.util.LogUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import apps.bigdog.com.multicamera.config.BaseBroadCastRcv;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.config.onTimers.NothingToDo;
 
 /**
  * Created by jw362j on 6/1/2016.
  */
-public class TimerManager extends BaseBroadCastRcv {
+public class TimerManager extends BaseBroadCastRcv implements InterfaceGenerator.AppLifeCycle{
     private List<InterfaceGenerator.timerAction> timerActions;
 
     public TimerManager() {

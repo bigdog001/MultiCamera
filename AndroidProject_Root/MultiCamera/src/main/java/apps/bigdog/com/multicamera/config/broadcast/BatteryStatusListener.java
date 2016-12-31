@@ -4,14 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
 
+import com.tool.mytool.lib.broadcast.BaseBroadCastRcv;
 import com.tool.mytool.lib.util.LogUtil;
 
-import apps.bigdog.com.multicamera.config.BaseBroadCastRcv;
+import apps.bigdog.com.multicamera.config.InterfaceGenerator;
+
 
 /**
  * Created by jw362j on 6/3/2016.
  */
-public class BatteryStatusListener extends BaseBroadCastRcv {
+public class BatteryStatusListener extends BaseBroadCastRcv implements InterfaceGenerator.AppLifeCycle{
     @Override
     public void onSafeReceive(Context context, Intent intent) {
 

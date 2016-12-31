@@ -12,8 +12,7 @@ public abstract class BaseApplication extends MyApplication {
     private String [] rtc_config;
 
     @Override
-    public void onCreate()
-    {
+    public void onCreate(){
         super.onCreate();
         applicationContext = getApplicationContext();
     }

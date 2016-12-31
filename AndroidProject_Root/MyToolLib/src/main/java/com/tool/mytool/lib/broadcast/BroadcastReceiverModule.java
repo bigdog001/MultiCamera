@@ -1,4 +1,4 @@
-package apps.bigdog.com.multicamera.config;
+package com.tool.mytool.lib.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
