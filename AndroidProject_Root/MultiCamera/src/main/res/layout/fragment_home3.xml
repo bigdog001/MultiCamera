@@ -19,12 +19,12 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_margin="8dp"
-            android:background="@android:color/holo_red_dark"
+            android:background="@color/red"
             android:padding="9dp"
             lee:percent_background_color="@color/gray"
-            lee:percent_circle_gravity="center"
+            lee:percent_circle_gravity="bottom"
             lee:percent_circle_progress="30"
-            lee:percent_circle_radius="30dp"
+            lee:percent_circle_radius="10dp"
             lee:percent_progress_color="@color/colorPrimary" />
 
 

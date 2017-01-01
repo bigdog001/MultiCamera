@@ -20,23 +20,52 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:text="@string/home_tab_settings_item_exit"
-            android:textSize="15sp"
+            android:textSize="10sp"
             android:background="@drawable/shape"
             android:gravity="center_horizontal|center_vertical"
             />
     </LinearLayout>
-    <apps.bigdog.com.multicamera.view.widget.XCRoundImageView
+    <!--<apps.bigdog.com.multicamera.view.widget.XCRoundImageView
         android:id="@+id/roundImageView"
         android:layout_centerInParent="true"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/download"
-        />
+        />-->
     <apps.bigdog.com.multicamera.view.widget.ImageViewPlus
         android:layout_centerInParent="true"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/download"
         />
+    <apps.bigdog.com.multicamera.view.widget.MyViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        >
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试一" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试二" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试三" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试四" />
+    </apps.bigdog.com.multicamera.view.widget.MyViewGroup>
 
 </LinearLayout>

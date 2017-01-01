@@ -86,8 +86,12 @@ public class PercentView  extends View {
             case MeasureSpec.UNSPECIFIED:
                 break;
         }
-        int with = getWidth();
-        int height = getHeight();
+
+       /* int with = getWidth();
+        int height = getHeight();*/
+        int with = getMeasuredWidth();
+        int height = getMeasuredHeight();
+
         LogUtil.log("the with:"+with+",the height:"+height);
         centerX = with / 2;
         centerY = with / 2;
@@ -95,34 +99,42 @@ public class PercentView  extends View {
         switch (gravity) {
             case LEFT:
                 centerX = radius + getPaddingLeft();
-                break;
-            case TOP:
                 centerY = radius + getPaddingTop();
                 break;
+            case TOP:
+                centerX = with/2;
+                centerY = radius ;
+                break;
             case CENTER:
+                centerX = with/2 ;
+                centerY = height/2 ;
                 break;
             case RIGHT:
                 centerX = with - radius - getPaddingRight();
+                centerY =  radius;
                 break;
             case BOTTOM:
-                centerY = height - radius - getPaddingBottom();
+                centerX = with/2 ;
+                centerY = height -  radius;
                 break;
         }
         LogUtil.log("the PaddingLeft:"+getPaddingLeft()+",the PaddingRight:"+getPaddingRight()+",PaddingTop:"+getPaddingTop()+",PaddingBottom:"+getPaddingBottom());
         LogUtil.log("the centerX1:"+centerX+",the centerY1:"+centerY);
         LogUtil.log("the dip to px is::"+ DisplayUtil.dip2px(getContext(),30));
-        float left = centerX - radius;
-        float top = centerY - radius;
-        float right = centerX + radius;
-        float bottom = centerY + radius;
-        LogUtil.log("the left:"+left+",the right:"+right+",top:"+top+",bottom:"+bottom);
-        rectF.set(left, top, right, bottom);
+        float left1 = centerX - radius;
+        float top1 = centerY - radius;
+        float right1 = centerX + radius;
+        float bottom1 = centerY + radius;
+        LogUtil.log("the left:"+left1+",the right:"+right1+",top:"+top1+",bottom:"+bottom1);
+        rectF.set(left1, top1, right1, bottom1);
+
     }
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
         LogUtil.log(TAG, "onLayout");
+
     }
 
     @Override

@@ -16,6 +16,7 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import com.tool.mytool.lib.util.DisplayUtil;
+import com.tool.mytool.lib.util.LogUtil;
 
 /**
  * Created by jw362j on 1/1/2017.
@@ -42,6 +43,7 @@ public class ImageViewPlus extends ImageView {
             int viewMinSize = Math.min(viewWidth, viewHeight);
             float dstWidth = viewMinSize;
             float dstHeight = viewMinSize;
+            LogUtil.log("in onDraw--->the viewWidth:"+viewWidth+",viewHeight:"+viewHeight+",dstWidth:"+dstWidth+",dstHeight:"+dstHeight);
             if (mShader == null || !rawBitmap.equals(mRawBitmap)) {
                 mRawBitmap = rawBitmap;
                 mShader = new BitmapShader(mRawBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
@@ -61,6 +63,18 @@ public class ImageViewPlus extends ImageView {
         } else {
             super.onDraw(canvas);
         }
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        LogUtil.log("in onMeasure--->the Width:"+getWidth()+",Height:"+getHeight());
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        LogUtil.log("in onLayout--->the Width:"+getWidth()+",Height:"+getHeight());
     }
 
     private Bitmap getBitmap(Drawable drawable) {
