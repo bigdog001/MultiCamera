@@ -37,13 +37,13 @@ public class MyViewGroup  extends ViewGroup {
         int parentHeight = getMeasuredHeight();
         int parentWidth = getMeasuredWidth();
         LogUtil.log("in MyViewGroup.onLayout,parentHeight:"+parentHeight+",parentWidth:"+parentWidth);
+        LogUtil.log("in MyViewGroup.onLayout,left:"+l+",top:"+t+",right:"+r+",bottom:"+b);
         // 获得子View个数
         int childCount = getChildCount();
         // 设置一个变量保存到父View左侧的距离
         int mLeft = 0;
         // 遍历子View
         for (int i = 0; i < childCount; i++) {
-
             View childView = getChildAt(i);
             // 获得子View的高度
             int childViewHeight = childView.getMeasuredHeight();
