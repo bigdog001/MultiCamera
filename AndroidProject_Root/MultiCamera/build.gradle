@@ -66,10 +66,10 @@ android {
         phone {
             applicationId 'apps.bigdog.com.multicamera.phone'
         }
-
+/*
         pad {
             applicationId 'apps.bigdog.com.multicamera.hd'
-        }
+        }*/
     }
 }
 

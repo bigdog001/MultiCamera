@@ -22,7 +22,7 @@
             android:background="@android:color/holo_red_dark"
             android:padding="9dp"
             lee:percent_background_color="@color/gray"
-            lee:percent_circle_gravity="left"
+            lee:percent_circle_gravity="center"
             lee:percent_circle_progress="30"
             lee:percent_circle_radius="30dp"
             lee:percent_progress_color="@color/colorPrimary" />
