@@ -1,0 +1,90 @@
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):the PaddingLeft:32,the PaddingRight:32,PaddingTop:32,PaddingBottom:32
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):the centerX1:137.0,the centerY1:0.0
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):the left:32.0,the right:242.0,top:-105.0,bottom:105.0
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):onMeasure--widthMode-->1073741824
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):onMeasure--widthSize-->700
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):onMeasure--heightMode-->1073741824
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):onMeasure--heightSize-->350
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):onDraw---->0*0
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):the with:0,the height:0
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):the centerX:0.0,the centerY:0.0
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):the PaddingLeft:32,the PaddingRight:32,PaddingTop:32,PaddingBottom:32
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):the centerX1:137.0,the centerY1:0.0
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):the left:32.0,the right:242.0,top:-105.0,bottom:105.0
+current time:Sun Jan 01 00:33:14 EST 2017(test tag time :,version:):onLayout
+current time:Sun Jan 01 00:33:15 EST 2017(test tag time :,version:):the selected is :2131492954
+current time:Sun Jan 01 00:33:15 EST 2017(test tag time :,version:):onPageSelected:2
+current time:Sun Jan 01 00:33:18 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:23 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:24 EST 2017(test tag time :,version:):脉冲到......
+current time:Sun Jan 01 00:33:24 EST 2017(test tag time :,version:):the length of communicatables is :4
+current time:Sun Jan 01 00:33:24 EST 2017(test tag time :,version:):HomeThreeFragment is DataIn...
+current time:Sun Jan 01 00:33:28 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:33 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:34 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:38 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:43 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:48 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:54 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:33:59 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:04 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:09 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:14 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:19 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:24 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:29 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:34 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:39 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:44 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the length of initRTC is:2
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the item(0)is:apps.bigdog.com.multicamera.android.TIMER_BROADCAST
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the item(1)is:3000
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the mp4 is:/storage/emulated/0/Android/data/apps.bigdog.com.multicamera.phone/files/MP4_RECORD
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the selected is :2131492952
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):backgroundColor:-9868951,progressColor:-12627531,radius:105.0,progress:30,gravity:0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):HomeOneFragment is onResume...
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):HomeTwoFragment is onResume...
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):HomeThreeFragment is onResume...
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):HomeFourFragment is onResume...
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):onMeasure--widthMode-->1073741824
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):onMeasure--widthMode:1073741824,onMeasure--widthSize:700,onMeasure--heightMode:1073741824,onMeasure--heightSize:350
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the with:0,the height:0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the centerX:0.0,the centerY:0.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the PaddingLeft:32,the PaddingRight:32,PaddingTop:32,PaddingBottom:32
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the centerX1:137.0,the centerY1:0.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the dip to px is::105
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the left:32.0,the right:242.0,top:-105.0,bottom:105.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):onMeasure--widthMode-->1073741824
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):onMeasure--widthMode:1073741824,onMeasure--widthSize:700,onMeasure--heightMode:1073741824,onMeasure--heightSize:350
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the with:0,the height:0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the centerX:0.0,the centerY:0.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the PaddingLeft:32,the PaddingRight:32,PaddingTop:32,PaddingBottom:32
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the centerX1:137.0,the centerY1:0.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the dip to px is::105
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the left:32.0,the right:242.0,top:-105.0,bottom:105.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):onMeasure--widthMode-->1073741824
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):onMeasure--widthMode:1073741824,onMeasure--widthSize:700,onMeasure--heightMode:1073741824,onMeasure--heightSize:350
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the with:0,the height:0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the centerX:0.0,the centerY:0.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the PaddingLeft:32,the PaddingRight:32,PaddingTop:32,PaddingBottom:32
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the centerX1:137.0,the centerY1:0.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the dip to px is::105
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):the left:32.0,the right:242.0,top:-105.0,bottom:105.0
+current time:Sun Jan 01 00:34:58 EST 2017(test tag time :,version:):onLayout
+current time:Sun Jan 01 00:34:59 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:00 EST 2017(test tag time :,version:):the selected is :2131492954
+current time:Sun Jan 01 00:35:00 EST 2017(test tag time :,version:):onPageSelected:2
+current time:Sun Jan 01 00:35:04 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:07 EST 2017(test tag time :,version:):脉冲到......
+current time:Sun Jan 01 00:35:07 EST 2017(test tag time :,version:):the length of communicatables is :4
+current time:Sun Jan 01 00:35:07 EST 2017(test tag time :,version:):HomeThreeFragment is DataIn...
+current time:Sun Jan 01 00:35:09 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:10 EST 2017(test tag time :,version:):脉冲到......
+current time:Sun Jan 01 00:35:14 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:19 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:24 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:29 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:34 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:34 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0
+current time:Sun Jan 01 00:35:39 EST 2017(test tag time :,version:):isCharging :true,usbCharge:true,acCharge:false,batteryPct:1.0

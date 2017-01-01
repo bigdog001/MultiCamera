@@ -9,6 +9,7 @@ if  %1 == clean goto myclean
 if  %1 == make goto mymake
 if  %1 == install goto myinstall
 if  %1 == run goto myrun
+if  %1 == log goto mylog
 
 
 
@@ -38,6 +39,9 @@ echo "running: apps.bigdog.com.multicamera.phone"
 adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n apps.bigdog.com.multicamera.phone/apps.bigdog.com.multicamera.activity.MainActivity
 goto end
 
+:mylog
+adb pull /sdcard/mylog/my_log.txt ./
+goto end
 
 
 rem end of the build script
