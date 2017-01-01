@@ -1,4 +1,4 @@
-package apps.bigdog.com.multicamera.fragment;
+package apps.bigdog.com.multicamera.view.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
