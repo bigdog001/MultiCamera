@@ -2,7 +2,9 @@ package apps.bigdog.com.multicamera.fragment;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -22,6 +24,7 @@ public class CustomTitleBar extends RelativeLayout{
     private AttributeSet mAttrs;
     public CustomTitleBar(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mPaint = new Paint();
         LayoutInflater.from(context).inflate(R.layout.custom_title_bar, this, true);
         mContext = context;
         mAttrs = attrs;
@@ -40,7 +43,7 @@ public class CustomTitleBar extends RelativeLayout{
             setBackgroundResource(titleBarBackGround);
             //先处理左边按钮
             //获取是否要显示左边按钮
-            boolean leftButtonVisible = attributes.getBoolean(R.styleable.CustomTitleBar_left_button_visible, false);
+            boolean leftButtonVisible = attributes.getBoolean(R.styleable.CustomTitleBar_left_button_visible, true);
             if (leftButtonVisible) {
                 titleBarLeftBtn.setVisibility(View.VISIBLE);
             } else {
@@ -101,6 +104,16 @@ public class CustomTitleBar extends RelativeLayout{
             }
             attributes.recycle();
         }
+    }
+
+    private Paint mPaint;
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        mPaint.setColor(Color.RED);
+        // FILL填充, STROKE描边,FILL_AND_STROKE填充和描边
+        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        canvas.drawCircle(15, 15, 15, mPaint);
     }
 
     public void setTitleClickListener(OnClickListener onClickListener) {
