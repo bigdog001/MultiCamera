@@ -127,7 +127,6 @@ public class PercentView  extends View {
         float bottom1 = centerY + radius;
         LogUtil.log("the left:"+left1+",the right:"+right1+",top:"+top1+",bottom:"+bottom1);
         rectF.set(left1, top1, right1, bottom1);
-
     }
 
     @Override

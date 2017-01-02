@@ -20,18 +20,18 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:text="@string/home_tab_settings_item_exit"
-            android:textSize="10sp"
+            android:textSize="15sp"
             android:background="@drawable/shape"
             android:gravity="center_horizontal|center_vertical"
             />
     </LinearLayout>
-    <!--<apps.bigdog.com.multicamera.view.widget.XCRoundImageView
+    <apps.bigdog.com.multicamera.view.widget.XCRoundImageView
         android:id="@+id/roundImageView"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/download"
-        />-->
+        />
     <apps.bigdog.com.multicamera.view.widget.ImageViewPlus
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"

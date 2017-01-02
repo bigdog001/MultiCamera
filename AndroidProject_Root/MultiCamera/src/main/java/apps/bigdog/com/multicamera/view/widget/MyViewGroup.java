@@ -52,7 +52,7 @@ public class MyViewGroup  extends ViewGroup {
             // 让子View在竖直方向上显示在屏幕的中间位置
             int height = sreenH / 3 - childViewHeight / 2;
             // 调用layout给每一个子View设定位置mLeft,mTop,mRight,mBottom.左上右下
-            childView.layout(mLeft, parentHeight/2-childViewHeight/2, mLeft + childViewWidth, parentHeight/2
+            childView.layout(mLeft, parentHeight/4-childViewHeight/2, mLeft + childViewWidth, parentHeight/4
                     + childViewHeight/2);
             // 改变下一个子View到父View左侧的距离
             mLeft += childViewWidth;
@@ -65,6 +65,7 @@ public class MyViewGroup  extends ViewGroup {
     public static int[] getScreenSize(Activity activity) {
         DisplayMetrics metrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        LogUtil.log("widthPixels:"+metrics.widthPixels+",heightPixels:"+metrics.heightPixels);
         return new int[] { metrics.widthPixels, metrics.heightPixels };
     }
 }

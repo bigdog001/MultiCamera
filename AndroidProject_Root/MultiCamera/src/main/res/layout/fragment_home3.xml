@@ -16,7 +16,7 @@
             android:layout_height="wrap_content" />
 
         <apps.bigdog.com.multicamera.view.widget.PercentView
-            android:layout_width="200dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="8dp"
             android:background="@color/red"
