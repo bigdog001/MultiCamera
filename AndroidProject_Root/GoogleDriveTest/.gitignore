@@ -1,0 +1,15 @@
+/build
+/build/
+/gradle
+/.gradle/
+/.gradle
+/.idea
+/gradlew
+gradlew
+gradlew.bat
+/gradlew.bat
+/GoogleDriveTest.iml
+GoogleDriveTest.iml
+my_log.txt
+./my_log.txt
+/my_log.txt
