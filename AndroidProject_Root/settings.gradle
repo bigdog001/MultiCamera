@@ -1,1 +1,1 @@
-include ':MultiCamera' , ':MyAlarm' ,':MyToolLib'
+include ':MultiCamera' , ':MyAlarm' ,':MyToolLib',':GoogleDriveTest'
