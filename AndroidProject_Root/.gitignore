@@ -19,4 +19,5 @@
 ./GoogleDriveTest/gradlew.bat
 ./GoogleDriveTest/gradlew
 ./GoogleDriveTest/build
+./GoogleDriveTest/build/
 
