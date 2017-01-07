@@ -14,6 +14,7 @@
 ./GoogleDriveTest/GoogleDriveTest.iml
 ./GoogleDriveTest/gradlew
 ./GoogleDriveTest/.gradle
+./GoogleDriveTest/.gradle/
 ./GoogleDriveTest/gradle
 ./GoogleDriveTest/gradlew.bat
 ./GoogleDriveTest/gradlew
