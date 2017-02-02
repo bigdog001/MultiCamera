@@ -20,4 +20,9 @@
 ./GoogleDriveTest/gradlew
 ./GoogleDriveTest/build
 ./GoogleDriveTest/build/
-
+./gradlew
+/gradlew
+gradlew
+./gradlew.bat
+/gradlew.bat
+gradlew.bat
