@@ -1,7 +1,7 @@
 @echo off
 doskey ls=dir $*
 set jarname=TGuardSDKLib_1.0.30_RELEASE.jar
-set MYHOME=C:\Users\jw362j\a\work\code\p\multicamera\MultiCamera\AndroidProject_Root\MyAlarm
+set MYHOME=C:\Users\jw362j\a\z_temp\MultiCamera\MultiCamera\AndroidProject_Root\MyAlarm
 
 
 if  "%1" == "" goto mymake

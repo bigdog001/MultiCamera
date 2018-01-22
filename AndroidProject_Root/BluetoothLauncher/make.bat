@@ -1,6 +1,6 @@
 @echo off
 doskey ls=dir $*
-set MYHOME=C:\Users\jw362j\a\work\code\p\gcm
+set MYHOME=C:\Users\jw362j\a\z_temp\MultiCamera\MultiCamera\AndroidProject_Root
 
 
 if  "%1" == "" goto mymake
