@@ -1,0 +1,625 @@
+2018-05-14 09:45:44    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 09:45:44    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 09:45:44    d        the akaenv is:PROD
+2018-05-14 09:45:44    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 09:45:44    d        in EPAKAAuthNFirstCall .....
+2018-05-14 09:45:44    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:45:44    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 09:45:44    d        ok,let`s use gzip...
+2018-05-14 09:45:44    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:45:44    d        http response status code:200
+2018-05-14 09:45:44    d        server response come back ---->[{"aka-challenge":"AQIAgBcBAAABBQAA+7Ur15Y4V25BIg0gk6bo/gIFAAB+Ym2v+b2AAahLV+uVsIPNhgEAAIEFAAAa2YvdABaskUoUNdlx2TueggkAAJKyX8qFlv82PKV+tr7WqAL6prWR/LKtcQSDglWec/nGCwUAAEYqEKZolDemMSA08qmGPgw=","message-id":1,"response-code":1003}]
+2018-05-14 09:45:44    d        here is the response from EPAKAAuthNFirstCall:[{"response-code":1003,"message-id":1,"aka-challenge":"AQIAgBcBAAABBQAA+7Ur15Y4V25BIg0gk6bo\/gIFAAB+Ym2v+b2AAahLV+uVsIPNhgEAAIEFAAAa2YvdABaskUoUNdlx2TueggkAAJKyX8qFlv82PKV+tr7WqAL6prWR\/LKtcQSDglWec\/nGCwUAAEYqEKZolDemMSA08qmGPgw="}]
+2018-05-14 09:45:44    d        here is the response_code:1003
+2018-05-14 09:45:44    d        here is the message_id:1
+2018-05-14 09:45:44    d        here is the aka_challenge:AQIAgBcBAAABBQAA+7Ur15Y4V25BIg0gk6bo/gIFAAB+Ym2v+b2AAahLV+uVsIPNhgEAAIEFAAAa2YvdABaskUoUNdlx2TueggkAAJKyX8qFlv82PKV+tr7WqAL6prWR/LKtcQSDglWec/nGCwUAAEYqEKZolDemMSA08qmGPgw=
+2018-05-14 09:45:44    d        the length of decoded is:128
+2018-05-14 09:45:44    d        new_challenge[0]:16
+2018-05-14 09:45:44    d        new_challenge[1]:-5
+2018-05-14 09:45:44    d        new_challenge[2]:-75
+2018-05-14 09:45:44    d        new_challenge[4]:-41
+2018-05-14 09:45:44    d        new_challenge[5]:-106
+2018-05-14 09:45:44    d        new_challenge[6]:56
+2018-05-14 09:45:44    d        new_challenge[7]:87
+2018-05-14 09:45:44    d        new_challenge[8]:110
+2018-05-14 09:45:44    d        new_challenge[9]:65
+2018-05-14 09:45:44    d        new_challenge[10]:34
+2018-05-14 09:45:44    d        new_challenge[11]:13
+2018-05-14 09:45:44    d        new_challenge[12]:32
+2018-05-14 09:45:44    d        new_challenge[13]:-109
+2018-05-14 09:45:44    d        new_challenge[14]:-90
+2018-05-14 09:45:44    d        new_challenge[15]:-24
+2018-05-14 09:45:44    d        new_challenge[16]:-2
+2018-05-14 09:45:44    d        new_challenge[17]:16
+2018-05-14 09:45:44    d        new_challenge[18]:126
+2018-05-14 09:45:44    d        new_challenge[19]:98
+2018-05-14 09:45:44    d        new_challenge[20]:109
+2018-05-14 09:45:44    d        new_challenge[21]:-81
+2018-05-14 09:45:44    d        new_challenge[22]:-7
+2018-05-14 09:45:44    d        new_challenge[23]:-67
+2018-05-14 09:45:44    d        new_challenge[3]:43
+2018-05-14 09:45:44    d        new_challenge[24]:-128
+2018-05-14 09:45:44    d        new_challenge[25]:1
+2018-05-14 09:45:44    d        new_challenge[26]:-88
+2018-05-14 09:45:44    d        new_challenge[28]:87
+2018-05-14 09:45:44    d        new_challenge[27]:75
+2018-05-14 09:45:44    d        new_challenge[29]:-21
+2018-05-14 09:45:44    d        new_challenge[30]:-107
+2018-05-14 09:45:44    d        new_challenge[31]:-80
+2018-05-14 09:45:44    d        new_challenge[32]:-125
+2018-05-14 09:45:44    d        the decoded value is:EPu1K9eWOFduQSINIJOm6P4QfmJtr/m9gAGoS1frlbCDzQ==
+2018-05-14 09:45:44    d        new_challenge[33]:-51
+2018-05-14 09:45:44    d        in MyMobileKeyBinder getIccAuthN...authType is:129,appType is:2,data:EPu1K9eWOFduQSINIJOm6P4QfmJtr/m9gAGoS1frlbCDzQ==
+2018-05-14 09:45:44    d        in MyMobileKeyBinder getIccAuthN...Build.VERSION.SDK_INT  is:24
+2018-05-14 09:45:44    d        going to run getIccAuthentication with aka-challenge:EPu1K9eWOFduQSINIJOm6P4QfmJtr/m9gAGoS1frlbCDzQ==
+2018-05-14 09:45:44    d        getIccAuthentication running is done,response_authentication is:2wg09J6F5fq4kxD353yRdJdSCJnhM17EYfDyEHuMdyxFWda7WXniTgC7towITPParfUUws0=,let`s build final SES response .......
+2018-05-14 09:45:44    d        the length of ck is:16
+2018-05-14 09:45:44    d        ===================ck==========================
+2018-05-14 09:45:44    d        ck[0]:-9
+2018-05-14 09:45:44    d        ck[1]:-25
+2018-05-14 09:45:44    d        ck[2]:124
+2018-05-14 09:45:44    d        ck[3]:-111
+2018-05-14 09:45:44    d        ck[4]:116
+2018-05-14 09:45:44    d        ck[5]:-105
+2018-05-14 09:45:44    d        ck[6]:82
+2018-05-14 09:45:44    d        ck[7]:8
+2018-05-14 09:45:44    d        ck[9]:-31
+2018-05-14 09:45:44    d        ck[10]:51
+2018-05-14 09:45:44    d        ck[11]:94
+2018-05-14 09:45:44    d        ck[12]:-60
+2018-05-14 09:45:44    d        ck[13]:97
+2018-05-14 09:45:44    d        ck[14]:-16
+2018-05-14 09:45:44    d        ck[8]:-103
+2018-05-14 09:45:44    d        ck[15]:-14
+2018-05-14 09:45:44    d        the length of ik is:16
+2018-05-14 09:45:44    d        ===================ck==========================
+2018-05-14 09:45:44    d        ===================ik==========================
+2018-05-14 09:45:44    d        ik[0]:123
+2018-05-14 09:45:44    d        ik[1]:-116
+2018-05-14 09:45:44    d        ik[3]:44
+2018-05-14 09:45:44    d        ik[4]:69
+2018-05-14 09:45:44    d        ik[2]:119
+2018-05-14 09:45:44    d        ik[5]:89
+2018-05-14 09:45:44    d        ik[6]:-42
+2018-05-14 09:45:44    d        ik[7]:-69
+2018-05-14 09:45:44    d        ik[8]:89
+2018-05-14 09:45:44    d        ik[9]:121
+2018-05-14 09:45:44    d        ik[10]:-30
+2018-05-14 09:45:44    d        ik[11]:78
+2018-05-14 09:45:44    d        ik[12]:0
+2018-05-14 09:45:44    d        ik[13]:-69
+2018-05-14 09:45:44    d        ik[14]:-74
+2018-05-14 09:45:44    d        ik[15]:-116
+2018-05-14 09:45:44    d        ===================ik==========================
+2018-05-14 09:45:44    d        the ck_hex is:0xf7e77c917497520899e1335ec461f0f2
+2018-05-14 09:45:44    d        the ik_hex is:0x7b8c772c4559d6bb5979e24e00bbb68c
+2018-05-14 09:45:44    d        the bufferB is:0x02020028170100000303004034f49e85e5fab8930b05000000000000000000000000000000000000
+2018-05-14 09:45:44    d        the length of read part is:16
+2018-05-14 09:45:44    d        readPart[0]:-7
+2018-05-14 09:45:44    d        readPart[1]:-61
+2018-05-14 09:45:44    d        readPart[2]:29
+2018-05-14 09:45:44    d        readPart[3]:2
+2018-05-14 09:45:44    d        readPart[4]:75
+2018-05-14 09:45:44    d        readPart[5]:87
+2018-05-14 09:45:44    d        readPart[6]:-10
+2018-05-14 09:45:44    d        readPart[7]:-38
+2018-05-14 09:45:44    d        readPart[8]:-29
+2018-05-14 09:45:44    d        readPart[9]:-123
+2018-05-14 09:45:44    d        readPart[10]:110
+2018-05-14 09:45:44    d        readPart[11]:97
+2018-05-14 09:45:44    d        readPart[12]:-1
+2018-05-14 09:45:44    d        readPart[13]:66
+2018-05-14 09:45:44    d        readPart[14]:68
+2018-05-14 09:45:44    d        readPart[15]:-30
+2018-05-14 09:45:44    d        finale value[0]:2
+2018-05-14 09:45:44    d        finale value[2]:0
+2018-05-14 09:45:44    d        finale value[3]:40
+2018-05-14 09:45:44    d        finale value[1]:2
+2018-05-14 09:45:44    d        finale value[4]:23
+2018-05-14 09:45:44    d        finale value[5]:1
+2018-05-14 09:45:44    d        finale value[6]:0
+2018-05-14 09:45:44    d        finale value[7]:0
+2018-05-14 09:45:44    d        finale value[8]:3
+2018-05-14 09:45:44    d        finale value[9]:3
+2018-05-14 09:45:44    d        finale value[11]:64
+2018-05-14 09:45:44    d        finale value[12]:52
+2018-05-14 09:45:44    d        finale value[10]:0
+2018-05-14 09:45:44    d        finale value[13]:-12
+2018-05-14 09:45:44    d        finale value[14]:-98
+2018-05-14 09:45:44    d        finale value[16]:-27
+2018-05-14 09:45:44    d        finale value[17]:-6
+2018-05-14 09:45:44    d        finale value[18]:-72
+2018-05-14 09:45:44    d        finale value[19]:-109
+2018-05-14 09:45:44    d        finale value[15]:-123
+2018-05-14 09:45:44    d        finale value[20]:11
+2018-05-14 09:45:44    d        finale value[22]:0
+2018-05-14 09:45:44    d        finale value[23]:0
+2018-05-14 09:45:44    d        finale value[21]:5
+2018-05-14 09:45:44    d        finale value[24]:-7
+2018-05-14 09:45:44    d        finale value[26]:29
+2018-05-14 09:45:44    d        finale value[25]:-61
+2018-05-14 09:45:44    d        finale value[27]:2
+2018-05-14 09:45:44    d        finale value[28]:75
+2018-05-14 09:45:44    d        finale value[29]:87
+2018-05-14 09:45:44    d        finale value[30]:-10
+2018-05-14 09:45:44    d        finale value[31]:-38
+2018-05-14 09:45:44    d        finale value[32]:-29
+2018-05-14 09:45:44    d        finale value[33]:-123
+2018-05-14 09:45:44    d        finale value[34]:110
+2018-05-14 09:45:44    d        finale value[35]:97
+2018-05-14 09:45:44    d        finale value[36]:-1
+2018-05-14 09:45:44    d        finale value[37]:66
+2018-05-14 09:45:44    d        finale value[38]:68
+2018-05-14 09:45:44    d        the final aka-challenge-resp is:AgIAKBcBAAADAwBANPSeheX6uJMLBQAA+cMdAktX9trjhW5h/0JE4g==
+2018-05-14 09:45:44    d        finale value[39]:-30
+2018-05-14 09:45:44    d        in MyMobileKeyBinder getIccAuthN,final SES response :AgIAKBcBAAADAwBANPSeheX6uJMLBQAA+cMdAktX9trjhW5h/0JE4g==
+2018-05-14 09:45:44    d        the final ses response_authentication value is:AgIAKBcBAAADAwBANPSeheX6uJMLBQAA+cMdAktX9trjhW5h/0JE4g==
+2018-05-14 09:45:44    d        in EPAKAAuthNSecondCall .....
+2018-05-14 09:45:44    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":2,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org","aka-challenge-rsp":"AgIAKBcBAAADAwBANPSeheX6uJMLBQAA+cMdAktX9trjhW5h/0JE4g=="}]
+2018-05-14 09:45:44    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:45:44    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:45:44    d        ok,let`s use gzip...
+2018-05-14 09:45:45    d        http response status code:200
+2018-05-14 09:45:45    d        here is the response from EPAKAAuthNSecondCall:[{"response-code":1000,"aka-token":"K\/hxTRPLwBWCpP0m57Bs7B8IoK\/QgdzKdNQtWC6DQpa5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0\/do1htAyd9gJ010Y=","message-id":2}]
+2018-05-14 09:45:45    d        here is the response_code:1000
+2018-05-14 09:45:45    d        here is the message_id:2
+2018-05-14 09:45:45    d        here is the aka-token:K/hxTRPLwBWCpP0m57Bs7B8IoK/QgdzKdNQtWC6DQpa5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=
+2018-05-14 09:45:45    d        delivery aka-token:K/hxTRPLwBWCpP0m57Bs7B8IoK/QgdzKdNQtWC6DQpa5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=
+2018-05-14 09:45:45    d        server response come back ---->[{"aka-token":"K/hxTRPLwBWCpP0m57Bs7B8IoK/QgdzKdNQtWC6DQpa5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=","message-id":2,"response-code":1000}]
+2018-05-14 09:50:05    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 09:50:05    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 09:50:05    d        the akaenv is:PROD
+2018-05-14 09:50:05    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 09:50:05    d        in EPAKAAuthNFirstCall .....
+2018-05-14 09:50:05    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:50:05    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 09:50:05    d        ok,let`s use gzip...
+2018-05-14 09:50:05    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:50:06    d        http response status code:200
+2018-05-14 09:50:06    d        server response come back ---->[{"aka-challenge":"AQIAgBcBAAABBQAAA2Pbadn377FIS9fFKracsAIFAAB21msrPIqAAf/ATJZy36XkhgEAAIEFAAAa2YvjAByh4R7/Fyh8mzxBggkAALAAebtRSiSSMO+OLG41qkSkk8s1PX/9lR+utk0eaPfJCwUAABdt3gd6RUjB6JwFloew4R8=","message-id":1,"response-code":1003}]
+2018-05-14 09:50:06    d        here is the response from EPAKAAuthNFirstCall:[{"response-code":1003,"message-id":1,"aka-challenge":"AQIAgBcBAAABBQAAA2Pbadn377FIS9fFKracsAIFAAB21msrPIqAAf\/ATJZy36XkhgEAAIEFAAAa2YvjAByh4R7\/Fyh8mzxBggkAALAAebtRSiSSMO+OLG41qkSkk8s1PX\/9lR+utk0eaPfJCwUAABdt3gd6RUjB6JwFloew4R8="}]
+2018-05-14 09:50:06    d        here is the response_code:1003
+2018-05-14 09:50:06    d        here is the aka_challenge:AQIAgBcBAAABBQAAA2Pbadn377FIS9fFKracsAIFAAB21msrPIqAAf/ATJZy36XkhgEAAIEFAAAa2YvjAByh4R7/Fyh8mzxBggkAALAAebtRSiSSMO+OLG41qkSkk8s1PX/9lR+utk0eaPfJCwUAABdt3gd6RUjB6JwFloew4R8=
+2018-05-14 09:50:06    d        the length of decoded is:128
+2018-05-14 09:50:06    d        new_challenge[0]:16
+2018-05-14 09:50:06    d        here is the message_id:1
+2018-05-14 09:50:06    d        new_challenge[1]:3
+2018-05-14 09:50:06    d        new_challenge[3]:-37
+2018-05-14 09:50:06    d        new_challenge[2]:99
+2018-05-14 09:50:06    d        new_challenge[5]:-39
+2018-05-14 09:50:06    d        new_challenge[6]:-9
+2018-05-14 09:50:06    d        new_challenge[7]:-17
+2018-05-14 09:50:06    d        new_challenge[8]:-79
+2018-05-14 09:50:06    d        new_challenge[9]:72
+2018-05-14 09:50:06    d        new_challenge[10]:75
+2018-05-14 09:50:06    d        new_challenge[11]:-41
+2018-05-14 09:50:06    d        new_challenge[12]:-59
+2018-05-14 09:50:06    d        new_challenge[13]:42
+2018-05-14 09:50:06    d        new_challenge[14]:-74
+2018-05-14 09:50:06    d        new_challenge[15]:-100
+2018-05-14 09:50:06    d        new_challenge[16]:-80
+2018-05-14 09:50:06    d        new_challenge[17]:16
+2018-05-14 09:50:06    d        new_challenge[18]:118
+2018-05-14 09:50:06    d        new_challenge[4]:105
+2018-05-14 09:50:06    d        new_challenge[20]:107
+2018-05-14 09:50:06    d        new_challenge[21]:43
+2018-05-14 09:50:06    d        new_challenge[22]:60
+2018-05-14 09:50:06    d        new_challenge[23]:-118
+2018-05-14 09:50:06    d        new_challenge[24]:-128
+2018-05-14 09:50:06    d        new_challenge[25]:1
+2018-05-14 09:50:06    d        new_challenge[26]:-1
+2018-05-14 09:50:06    d        new_challenge[27]:-64
+2018-05-14 09:50:06    d        new_challenge[28]:76
+2018-05-14 09:50:06    d        new_challenge[29]:-106
+2018-05-14 09:50:06    d        new_challenge[30]:114
+2018-05-14 09:50:06    d        new_challenge[31]:-33
+2018-05-14 09:50:06    d        new_challenge[32]:-91
+2018-05-14 09:50:06    d        new_challenge[33]:-28
+2018-05-14 09:50:06    d        the decoded value is:EANj22nZ9++xSEvXxSq2nLAQdtZrKzyKgAH/wEyWct+l5A==
+2018-05-14 09:50:06    d        in MyMobileKeyBinder getIccAuthN...authType is:129,appType is:2,data:EANj22nZ9++xSEvXxSq2nLAQdtZrKzyKgAH/wEyWct+l5A==
+2018-05-14 09:50:06    d        in MyMobileKeyBinder getIccAuthN...Build.VERSION.SDK_INT  is:24
+2018-05-14 09:50:06    d        going to run getIccAuthentication with aka-challenge:EANj22nZ9++xSEvXxSq2nLAQdtZrKzyKgAH/wEyWct+l5A==
+2018-05-14 09:50:06    d        new_challenge[19]:-42
+2018-05-14 09:50:06    d        getIccAuthentication running is done,response_authentication is:2wjKwP/zUU1rbBBzMbFZbPpIwYkmaTIjQwNcEMdBD78RFrXGEa2KCo7NOYYILPtd3tBix90=,let`s build final SES response .......
+2018-05-14 09:50:06    d        the length of ck is:16
+2018-05-14 09:50:06    d        ===================ck==========================
+2018-05-14 09:50:06    d        ck[0]:115
+2018-05-14 09:50:06    d        ck[1]:49
+2018-05-14 09:50:06    d        ck[2]:-79
+2018-05-14 09:50:06    d        ck[4]:108
+2018-05-14 09:50:06    d        ck[3]:89
+2018-05-14 09:50:06    d        ck[6]:72
+2018-05-14 09:50:06    d        ck[5]:-6
+2018-05-14 09:50:06    d        ck[7]:-63
+2018-05-14 09:50:06    d        ck[8]:-119
+2018-05-14 09:50:06    d        ck[10]:105
+2018-05-14 09:50:06    d        ck[9]:38
+2018-05-14 09:50:06    d        ck[11]:50
+2018-05-14 09:50:06    d        ck[12]:35
+2018-05-14 09:50:06    d        ck[13]:67
+2018-05-14 09:50:06    d        ck[14]:3
+2018-05-14 09:50:06    d        ck[15]:92
+2018-05-14 09:50:06    d        ===================ck==========================
+2018-05-14 09:50:06    d        the length of ik is:16
+2018-05-14 09:50:06    d        ===================ik==========================
+2018-05-14 09:50:06    d        ik[0]:-57
+2018-05-14 09:50:06    d        ik[1]:65
+2018-05-14 09:50:06    d        ik[2]:15
+2018-05-14 09:50:06    d        ik[3]:-65
+2018-05-14 09:50:06    d        ik[4]:17
+2018-05-14 09:50:06    d        ik[5]:22
+2018-05-14 09:50:06    d        ik[7]:-58
+2018-05-14 09:50:06    d        ik[6]:-75
+2018-05-14 09:50:06    d        ik[8]:17
+2018-05-14 09:50:06    d        ik[10]:-118
+2018-05-14 09:50:06    d        ik[11]:10
+2018-05-14 09:50:06    d        ik[12]:-114
+2018-05-14 09:50:06    d        ik[13]:-51
+2018-05-14 09:50:06    d        ik[14]:57
+2018-05-14 09:50:06    d        ik[9]:-83
+2018-05-14 09:50:06    d        ik[15]:-122
+2018-05-14 09:50:06    d        ===================ik==========================
+2018-05-14 09:50:06    d        the ck_hex is:0x7331b1596cfa48c1892669322343035c
+2018-05-14 09:50:06    d        the ik_hex is:0xc7410fbf1116b5c611ad8a0a8ecd3986
+2018-05-14 09:50:06    d        the bufferB is:0x020200281701000003030040cac0fff3514d6b6c0b05000000000000000000000000000000000000
+2018-05-14 09:50:06    d        the length of read part is:16
+2018-05-14 09:50:06    d        readPart[1]:70
+2018-05-14 09:50:06    d        readPart[2]:65
+2018-05-14 09:50:06    d        readPart[0]:-111
+2018-05-14 09:50:06    d        readPart[3]:72
+2018-05-14 09:50:06    d        readPart[5]:122
+2018-05-14 09:50:06    d        readPart[4]:101
+2018-05-14 09:50:06    d        readPart[7]:-93
+2018-05-14 09:50:06    d        readPart[6]:73
+2018-05-14 09:50:06    d        readPart[8]:78
+2018-05-14 09:50:06    d        readPart[9]:122
+2018-05-14 09:50:06    d        readPart[10]:30
+2018-05-14 09:50:06    d        readPart[11]:57
+2018-05-14 09:50:06    d        readPart[12]:37
+2018-05-14 09:50:06    d        readPart[13]:126
+2018-05-14 09:50:06    d        readPart[14]:43
+2018-05-14 09:50:06    d        readPart[15]:-91
+2018-05-14 09:50:06    d        finale value[0]:2
+2018-05-14 09:50:06    d        finale value[1]:2
+2018-05-14 09:50:06    d        finale value[2]:0
+2018-05-14 09:50:06    d        finale value[3]:40
+2018-05-14 09:50:06    d        finale value[4]:23
+2018-05-14 09:50:06    d        finale value[6]:0
+2018-05-14 09:50:06    d        finale value[7]:0
+2018-05-14 09:50:06    d        finale value[8]:3
+2018-05-14 09:50:06    d        finale value[9]:3
+2018-05-14 09:50:06    d        finale value[10]:0
+2018-05-14 09:50:06    d        finale value[11]:64
+2018-05-14 09:50:06    d        finale value[12]:-54
+2018-05-14 09:50:06    d        finale value[13]:-64
+2018-05-14 09:50:06    d        finale value[14]:-1
+2018-05-14 09:50:06    d        finale value[5]:1
+2018-05-14 09:50:06    d        finale value[15]:-13
+2018-05-14 09:50:06    d        finale value[16]:81
+2018-05-14 09:50:06    d        finale value[18]:107
+2018-05-14 09:50:06    d        finale value[19]:108
+2018-05-14 09:50:06    d        finale value[20]:11
+2018-05-14 09:50:06    d        finale value[21]:5
+2018-05-14 09:50:06    d        finale value[22]:0
+2018-05-14 09:50:06    d        finale value[17]:77
+2018-05-14 09:50:06    d        finale value[23]:0
+2018-05-14 09:50:06    d        finale value[24]:-111
+2018-05-14 09:50:06    d        finale value[25]:70
+2018-05-14 09:50:06    d        finale value[26]:65
+2018-05-14 09:50:06    d        finale value[27]:72
+2018-05-14 09:50:06    d        finale value[28]:101
+2018-05-14 09:50:06    d        finale value[29]:122
+2018-05-14 09:50:06    d        finale value[30]:73
+2018-05-14 09:50:06    d        finale value[32]:78
+2018-05-14 09:50:06    d        finale value[31]:-93
+2018-05-14 09:50:06    d        finale value[34]:30
+2018-05-14 09:50:06    d        finale value[35]:57
+2018-05-14 09:50:06    d        finale value[33]:122
+2018-05-14 09:50:06    d        finale value[37]:126
+2018-05-14 09:50:06    d        finale value[38]:43
+2018-05-14 09:50:06    d        finale value[39]:-91
+2018-05-14 09:50:06    d        the final aka-challenge-resp is:AgIAKBcBAAADAwBAysD/81FNa2wLBQAAkUZBSGV6SaNOeh45JX4rpQ==
+2018-05-14 09:50:06    d        finale value[36]:37
+2018-05-14 09:50:06    d        in MyMobileKeyBinder getIccAuthN,final SES response :AgIAKBcBAAADAwBAysD/81FNa2wLBQAAkUZBSGV6SaNOeh45JX4rpQ==
+2018-05-14 09:50:06    d        the final ses response_authentication value is:AgIAKBcBAAADAwBAysD/81FNa2wLBQAAkUZBSGV6SaNOeh45JX4rpQ==
+2018-05-14 09:50:06    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:50:06    d        in EPAKAAuthNSecondCall .....
+2018-05-14 09:50:06    d        ok,let`s use gzip...
+2018-05-14 09:50:06    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:50:06    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":2,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org","aka-challenge-rsp":"AgIAKBcBAAADAwBAysD/81FNa2wLBQAAkUZBSGV6SaNOeh45JX4rpQ=="}]
+2018-05-14 09:50:06    d        http response status code:200
+2018-05-14 09:50:06    d        here is the response from EPAKAAuthNSecondCall:[{"response-code":1000,"aka-token":"K\/hxTRPLwBWCpP0m57Bs7NboaPyJtumWgt+7KUzX2LW5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0\/do1htAyd9gJ010Y=","message-id":2}]
+2018-05-14 09:50:06    d        here is the response_code:1000
+2018-05-14 09:50:06    d        here is the message_id:2
+2018-05-14 09:50:06    d        here is the aka-token:K/hxTRPLwBWCpP0m57Bs7NboaPyJtumWgt+7KUzX2LW5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=
+2018-05-14 09:50:06    d        delivery aka-token:K/hxTRPLwBWCpP0m57Bs7NboaPyJtumWgt+7KUzX2LW5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=
+2018-05-14 09:50:06    d        server response come back ---->[{"aka-token":"K/hxTRPLwBWCpP0m57Bs7NboaPyJtumWgt+7KUzX2LW5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=","message-id":2,"response-code":1000}]
+2018-05-14 09:53:03    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 09:53:03    d        the akaenv is:PROD
+2018-05-14 09:53:03    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 09:53:03    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 09:53:03    d        in EPAKAAuthNFirstCall .....
+2018-05-14 09:53:03    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:53:03    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 09:53:03    d        ok,let`s use gzip...
+2018-05-14 09:53:03    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:53:04    d        http response status code:200
+2018-05-14 09:53:04    d        server response come back ---->[{"aka-challenge":"AQIAgBcBAAABBQAAaK0rL3BaC9Q7giC+iEMMDwIFAAD+EqIMuOCAAf8RfP/Oc8MnhgEAAIEFAAAa2YvbABg/0l92AVwC0MxlggkAAG38UU70Y727zOOc4xUWJ7+LHeA4oJVFQyhIUtv2Zxa3CwUAAHgvsh4yROt8mVqEWUIA4Ng=","message-id":1,"response-code":1003}]
+2018-05-14 09:53:04    d        here is the response from EPAKAAuthNFirstCall:[{"response-code":1003,"message-id":1,"aka-challenge":"AQIAgBcBAAABBQAAaK0rL3BaC9Q7giC+iEMMDwIFAAD+EqIMuOCAAf8RfP\/Oc8MnhgEAAIEFAAAa2YvbABg\/0l92AVwC0MxlggkAAG38UU70Y727zOOc4xUWJ7+LHeA4oJVFQyhIUtv2Zxa3CwUAAHgvsh4yROt8mVqEWUIA4Ng="}]
+2018-05-14 09:53:04    d        here is the response_code:1003
+2018-05-14 09:53:04    d        here is the message_id:1
+2018-05-14 09:53:04    d        here is the aka_challenge:AQIAgBcBAAABBQAAaK0rL3BaC9Q7giC+iEMMDwIFAAD+EqIMuOCAAf8RfP/Oc8MnhgEAAIEFAAAa2YvbABg/0l92AVwC0MxlggkAAG38UU70Y727zOOc4xUWJ7+LHeA4oJVFQyhIUtv2Zxa3CwUAAHgvsh4yROt8mVqEWUIA4Ng=
+2018-05-14 09:53:04    d        the length of decoded is:128
+2018-05-14 09:53:04    d        new_challenge[0]:16
+2018-05-14 09:53:04    d        new_challenge[1]:104
+2018-05-14 09:53:04    d        new_challenge[2]:-83
+2018-05-14 09:53:04    d        new_challenge[3]:43
+2018-05-14 09:53:04    d        new_challenge[4]:47
+2018-05-14 09:53:04    d        new_challenge[5]:112
+2018-05-14 09:53:04    d        new_challenge[6]:90
+2018-05-14 09:53:04    d        new_challenge[7]:11
+2018-05-14 09:53:04    d        new_challenge[8]:-44
+2018-05-14 09:53:04    d        new_challenge[9]:59
+2018-05-14 09:53:04    d        new_challenge[10]:-126
+2018-05-14 09:53:04    d        new_challenge[11]:32
+2018-05-14 09:53:04    d        new_challenge[13]:-120
+2018-05-14 09:53:04    d        new_challenge[14]:67
+2018-05-14 09:53:04    d        new_challenge[15]:12
+2018-05-14 09:53:04    d        new_challenge[16]:15
+2018-05-14 09:53:04    d        new_challenge[17]:16
+2018-05-14 09:53:04    d        new_challenge[18]:-2
+2018-05-14 09:53:04    d        new_challenge[19]:18
+2018-05-14 09:53:04    d        new_challenge[20]:-94
+2018-05-14 09:53:04    d        new_challenge[21]:12
+2018-05-14 09:53:04    d        new_challenge[22]:-72
+2018-05-14 09:53:04    d        new_challenge[23]:-32
+2018-05-14 09:53:04    d        new_challenge[24]:-128
+2018-05-14 09:53:04    d        new_challenge[25]:1
+2018-05-14 09:53:04    d        new_challenge[26]:-1
+2018-05-14 09:53:04    d        new_challenge[27]:17
+2018-05-14 09:53:04    d        new_challenge[28]:124
+2018-05-14 09:53:04    d        new_challenge[29]:-1
+2018-05-14 09:53:04    d        new_challenge[12]:-66
+2018-05-14 09:53:04    d        new_challenge[31]:115
+2018-05-14 09:53:04    d        new_challenge[32]:-61
+2018-05-14 09:53:04    d        new_challenge[33]:39
+2018-05-14 09:53:04    d        the decoded value is:EGitKy9wWgvUO4IgvohDDA8Q/hKiDLjggAH/EXz/znPDJw==
+2018-05-14 09:53:04    d        in MyMobileKeyBinder getIccAuthN...authType is:129,appType is:2,data:EGitKy9wWgvUO4IgvohDDA8Q/hKiDLjggAH/EXz/znPDJw==
+2018-05-14 09:53:04    d        in MyMobileKeyBinder getIccAuthN...Build.VERSION.SDK_INT  is:24
+2018-05-14 09:53:04    d        going to run getIccAuthentication with aka-challenge:EGitKy9wWgvUO4IgvohDDA8Q/hKiDLjggAH/EXz/znPDJw==
+2018-05-14 09:53:04    d        new_challenge[30]:-50
+2018-05-14 09:53:04    d        getIccAuthentication running is done,response_authentication is:2wgdjhg65v3k2hAk4rtI/LQ7UPpegbv4/rU+EMLcTdXK+fnIp1lSKAJCALYIuzklDszxdxA=,let`s build final SES response .......
+2018-05-14 09:53:04    d        the length of ck is:16
+2018-05-14 09:53:04    d        ===================ck==========================
+2018-05-14 09:53:04    d        ck[0]:36
+2018-05-14 09:53:04    d        ck[2]:-69
+2018-05-14 09:53:04    d        ck[1]:-30
+2018-05-14 09:53:04    d        ck[3]:72
+2018-05-14 09:53:04    d        ck[4]:-4
+2018-05-14 09:53:04    d        ck[5]:-76
+2018-05-14 09:53:04    d        ck[7]:80
+2018-05-14 09:53:04    d        ck[6]:59
+2018-05-14 09:53:04    d        ck[8]:-6
+2018-05-14 09:53:04    d        ck[9]:94
+2018-05-14 09:53:04    d        ck[10]:-127
+2018-05-14 09:53:04    d        ck[11]:-69
+2018-05-14 09:53:04    d        ck[12]:-8
+2018-05-14 09:53:04    d        ck[13]:-2
+2018-05-14 09:53:04    d        ck[14]:-75
+2018-05-14 09:53:04    d        ck[15]:62
+2018-05-14 09:53:04    d        ===================ck==========================
+2018-05-14 09:53:04    d        the length of ik is:16
+2018-05-14 09:53:04    d        ===================ik==========================
+2018-05-14 09:53:04    d        ik[0]:-62
+2018-05-14 09:53:04    d        ik[1]:-36
+2018-05-14 09:53:04    d        ik[2]:77
+2018-05-14 09:53:04    d        ik[3]:-43
+2018-05-14 09:53:04    d        ik[4]:-54
+2018-05-14 09:53:04    d        ik[5]:-7
+2018-05-14 09:53:04    d        ik[6]:-7
+2018-05-14 09:53:04    d        ik[7]:-56
+2018-05-14 09:53:04    d        ik[8]:-89
+2018-05-14 09:53:04    d        ik[9]:89
+2018-05-14 09:53:04    d        ik[10]:82
+2018-05-14 09:53:04    d        ik[11]:40
+2018-05-14 09:53:04    d        ik[12]:2
+2018-05-14 09:53:04    d        ik[13]:66
+2018-05-14 09:53:04    d        ik[14]:0
+2018-05-14 09:53:04    d        ik[15]:-74
+2018-05-14 09:53:04    d        ===================ik==========================
+2018-05-14 09:53:04    d        the ck_hex is:0x24e2bb48fcb43b50fa5e81bbf8feb53e
+2018-05-14 09:53:04    d        the ik_hex is:0xc2dc4dd5caf9f9c8a7595228024200b6
+2018-05-14 09:53:04    d        the bufferB is:0x0202002817010000030300401d8e183ae6fde4da0b05000000000000000000000000000000000000
+2018-05-14 09:53:04    d        the length of read part is:16
+2018-05-14 09:53:04    d        readPart[0]:48
+2018-05-14 09:53:04    d        readPart[1]:26
+2018-05-14 09:53:04    d        readPart[3]:123
+2018-05-14 09:53:04    d        readPart[4]:-111
+2018-05-14 09:53:04    d        readPart[5]:27
+2018-05-14 09:53:04    d        readPart[6]:13
+2018-05-14 09:53:04    d        readPart[7]:68
+2018-05-14 09:53:04    d        readPart[8]:14
+2018-05-14 09:53:04    d        readPart[9]:2
+2018-05-14 09:53:04    d        readPart[10]:43
+2018-05-14 09:53:04    d        readPart[2]:-21
+2018-05-14 09:53:04    d        readPart[12]:26
+2018-05-14 09:53:04    d        readPart[13]:110
+2018-05-14 09:53:04    d        readPart[14]:-11
+2018-05-14 09:53:04    d        readPart[15]:83
+2018-05-14 09:53:04    d        finale value[0]:2
+2018-05-14 09:53:04    d        finale value[1]:2
+2018-05-14 09:53:04    d        finale value[2]:0
+2018-05-14 09:53:04    d        finale value[3]:40
+2018-05-14 09:53:04    d        finale value[4]:23
+2018-05-14 09:53:04    d        finale value[5]:1
+2018-05-14 09:53:04    d        readPart[11]:65
+2018-05-14 09:53:04    d        finale value[6]:0
+2018-05-14 09:53:04    d        finale value[7]:0
+2018-05-14 09:53:04    d        finale value[9]:3
+2018-05-14 09:53:04    d        finale value[10]:0
+2018-05-14 09:53:04    d        finale value[8]:3
+2018-05-14 09:53:04    d        finale value[11]:64
+2018-05-14 09:53:04    d        finale value[13]:-114
+2018-05-14 09:53:04    d        finale value[14]:24
+2018-05-14 09:53:04    d        finale value[15]:58
+2018-05-14 09:53:04    d        finale value[16]:-26
+2018-05-14 09:53:04    d        finale value[17]:-3
+2018-05-14 09:53:04    d        finale value[18]:-28
+2018-05-14 09:53:04    d        finale value[19]:-38
+2018-05-14 09:53:04    d        finale value[20]:11
+2018-05-14 09:53:04    d        finale value[21]:5
+2018-05-14 09:53:04    d        finale value[22]:0
+2018-05-14 09:53:04    d        finale value[12]:29
+2018-05-14 09:53:04    d        finale value[23]:0
+2018-05-14 09:53:04    d        finale value[24]:48
+2018-05-14 09:53:04    d        finale value[25]:26
+2018-05-14 09:53:04    d        finale value[26]:-21
+2018-05-14 09:53:04    d        finale value[27]:123
+2018-05-14 09:53:04    d        finale value[29]:27
+2018-05-14 09:53:04    d        finale value[30]:13
+2018-05-14 09:53:04    d        finale value[31]:68
+2018-05-14 09:53:04    d        finale value[32]:14
+2018-05-14 09:53:04    d        finale value[28]:-111
+2018-05-14 09:53:04    d        finale value[33]:2
+2018-05-14 09:53:04    d        finale value[35]:65
+2018-05-14 09:53:04    d        finale value[36]:26
+2018-05-14 09:53:04    d        finale value[37]:110
+2018-05-14 09:53:04    d        finale value[38]:-11
+2018-05-14 09:53:04    d        finale value[39]:83
+2018-05-14 09:53:04    d        finale value[34]:43
+2018-05-14 09:53:04    d        the final aka-challenge-resp is:AgIAKBcBAAADAwBAHY4YOub95NoLBQAAMBrre5EbDUQOAitBGm71Uw==
+2018-05-14 09:53:04    d        in MyMobileKeyBinder getIccAuthN,final SES response :AgIAKBcBAAADAwBAHY4YOub95NoLBQAAMBrre5EbDUQOAitBGm71Uw==
+2018-05-14 09:53:04    d        the final ses response_authentication value is:AgIAKBcBAAADAwBAHY4YOub95NoLBQAAMBrre5EbDUQOAitBGm71Uw==
+2018-05-14 09:53:04    d        in EPAKAAuthNSecondCall .....
+2018-05-14 09:53:04    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":2,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org","aka-challenge-rsp":"AgIAKBcBAAADAwBAHY4YOub95NoLBQAAMBrre5EbDUQOAitBGm71Uw=="}]
+2018-05-14 09:53:04    d        ok,let`s use gzip...
+2018-05-14 09:53:04    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:53:04    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 09:53:04    d        server response come back ---->[{"aka-token":"K/hxTRPLwBWCpP0m57Bs7KKML40TfOPVzd4jUo/JbYC5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=","message-id":2,"response-code":1000}]
+2018-05-14 09:53:04    d        http response status code:200
+2018-05-14 09:53:04    d        here is the response from EPAKAAuthNSecondCall:[{"response-code":1000,"aka-token":"K\/hxTRPLwBWCpP0m57Bs7KKML40TfOPVzd4jUo\/JbYC5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0\/do1htAyd9gJ010Y=","message-id":2}]
+2018-05-14 09:53:04    d        here is the response_code:1000
+2018-05-14 09:53:04    d        here is the message_id:2
+2018-05-14 09:53:04    d        here is the aka-token:K/hxTRPLwBWCpP0m57Bs7KKML40TfOPVzd4jUo/JbYC5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=
+2018-05-14 09:53:04    d        delivery aka-token:K/hxTRPLwBWCpP0m57Bs7KKML40TfOPVzd4jUo/JbYC5gxXyAIowRNDy4epPhavBvBE5sROVfE2RU+ZrsklYuaD5t2vXLkXXFVVKc9joSkpqXFC9726asSua2Du9T6BCMZYVF7j+eEIVq6h3Yi+FkuTBZI0/do1htAyd9gJ010Y=
+2018-05-14 10:23:51    d        the akaenv is:PROD
+2018-05-14 10:23:51    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:23:51    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:23:51    d        in EPAKAAuthNFirstCall .....
+2018-05-14 10:23:51    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 10:23:51    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:23:51    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 10:23:51    d        ok,let`s use gzip...
+2018-05-14 10:23:51    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:25:59    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:25:59    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-14 10:25:59    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:26:57    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:26:57    d        the akaenv is:PROD
+2018-05-14 10:26:57    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:26:57    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 10:26:57    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:26:57    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 10:26:57    d        ok,let`s use gzip...
+2018-05-14 10:26:57    d        in EPAKAAuthNFirstCall .....
+2018-05-14 10:26:57    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:29:05    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-14 10:29:05    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:29:05    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:29:28    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:29:28    d        the akaenv is:PROD
+2018-05-14 10:29:28    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:29:28    d        in EPAKAAuthNFirstCall .....
+2018-05-14 10:29:28    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:29:28    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 10:29:28    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 10:29:28    d        ok,let`s use gzip...
+2018-05-14 10:29:28    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:31:35    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-14 10:31:35    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:31:35    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:37:57    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:37:57    d        the akaenv is:PROD
+2018-05-14 10:37:57    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 10:37:57    d        in EPAKAAuthNFirstCall .....
+2018-05-14 10:37:57    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:37:57    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 10:37:57    d        ok,let`s use gzip...
+2018-05-14 10:37:57    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:37:57    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:40:04    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:40:04    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-14 10:40:04    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:46:58    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:46:58    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 10:46:58    d        the akaenv is:PROD
+2018-05-14 10:46:58    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 10:46:58    d        in EPAKAAuthNFirstCall .....
+2018-05-14 10:46:58    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:46:58    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 10:46:58    d        ok,let`s use gzip...
+2018-05-14 10:46:58    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 10:49:06    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 10:49:06    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-14 10:49:06    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 14:00:57    d        the akaenv is:PROD
+2018-05-14 14:00:57    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 14:00:57    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 14:00:57    d        in EPAKAAuthNFirstCall .....
+2018-05-14 14:00:57    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 14:00:57    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 14:00:57    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 14:00:57    d        ok,let`s use gzip...
+2018-05-14 14:00:57    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 14:03:04    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 14:03:04    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-14 14:03:04    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 14:08:05    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 14:08:05    d        the akaenv is:PROD
+2018-05-14 14:08:05    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-14 14:08:05    d        in EPAKAAuthNFirstCall .....
+2018-05-14 14:08:05    d        start to send EPAKAAuthNFirstCall....
+2018-05-14 14:08:05    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-14 14:08:05    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-14 14:08:05    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-14 14:08:05    d        ok,let`s use gzip...
+2018-05-14 14:10:13    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-14 14:10:13    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 14:10:13    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-14 14:58:56    d    MyCCIDApplication    initializers:[com.att.ccid.application.MyCCIDApplication$2@65df7b0]
+2018-05-14 14:58:56    d    MyCCIDApplication    initializers length:1
+2018-05-14 14:58:56    d    MyCCIDApplication    invoking initializer:com.att.ccid.application.MyCCIDApplication$2@65df7b0
+2018-05-14 14:58:56    d    MyCCIDApplication    scanners:[]
+2018-05-14 14:58:56    d    MyCCIDApplication    invoking initializer:com.att.ccid.application.MyCCIDApplication$2@65df7b0 done!
+2018-05-14 14:58:56    d    BaseActivity    initializers:[]
+2018-05-14 14:58:56    d    BaseActivity    scanners:[]
+2018-05-14 14:58:56    d    AccessTokenManager    access_token expired,just remove it !
+2018-05-14 14:58:56    d    WelcomeActivity    the oauthToken:null
+2018-05-14 14:58:56    d    WelcomeActivity    no accessToken ,go login and get accessToken
+2018-05-14 14:58:58    d    BaseActivity    initializers:[]
+2018-05-14 14:58:58    d    BaseActivity    scanners:[]
+2018-05-14 14:58:58    d    AccessTokenManager    access_token expired,just remove it !
+2018-05-14 14:58:58    d    MyCCIDLoginActivity    the version:0
+2018-05-14 14:58:58    d    BaseActivity    cleaners:[com.mycomm.itool.listener.T.MyTListener$2@4827130]
+2018-05-14 14:58:58    d    BaseActivity    cleaners length:1
+2018-05-14 14:58:58    d    BaseActivity    invoking cleaner:com.mycomm.itool.listener.T.MyTListener$2@4827130
+2018-05-14 14:58:58    d    BaseActivity    invoking cleaner:com.mycomm.itool.listener.T.MyTListener$2@4827130 done!
+2018-05-14 15:02:30    d    MyCCIDApplication    initializers length:1
+2018-05-14 15:02:30    d    MyCCIDApplication    invoking initializer:com.att.ccid.application.MyCCIDApplication$2@65df7b0
+2018-05-14 15:02:30    d    MyCCIDApplication    invoking initializer:com.att.ccid.application.MyCCIDApplication$2@65df7b0 done!
+2018-05-14 15:02:30    d    MyCCIDApplication    initializers:[com.att.ccid.application.MyCCIDApplication$2@65df7b0]
+2018-05-14 15:02:30    d    MyCCIDApplication    scanners:[]
+2018-05-14 15:02:30    d    BaseActivity    scanners:[]
+2018-05-14 15:02:30    d    BaseActivity    initializers:[]
+2018-05-14 15:02:30    d    AccessTokenManager    access_token expired,just remove it !
+2018-05-14 15:02:30    d    WelcomeActivity    the oauthToken:null
+2018-05-14 15:02:30    d    WelcomeActivity    no accessToken ,go login and get accessToken
+2018-05-14 15:02:32    d    BaseActivity    initializers:[]
+2018-05-14 15:02:32    d    BaseActivity    scanners:[]
+2018-05-14 15:02:32    d    AccessTokenManager    access_token expired,just remove it !
+2018-05-14 15:02:32    d    MyCCIDLoginActivity    the version:2.1.0
+2018-05-14 15:02:32    d    MyCCIDLoginActivity    the v===>1
+2018-05-14 15:02:33    d    BaseActivity    cleaners:[com.mycomm.itool.listener.T.MyTListener$2@4827130]
+2018-05-14 15:02:33    d    BaseActivity    cleaners length:1
+2018-05-14 15:02:33    d    BaseActivity    invoking cleaner:com.mycomm.itool.listener.T.MyTListener$2@4827130
+2018-05-14 15:02:33    d    BaseActivity    invoking cleaner:com.mycomm.itool.listener.T.MyTListener$2@4827130 done!

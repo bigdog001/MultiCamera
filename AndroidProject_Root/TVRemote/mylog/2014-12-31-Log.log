@@ -1,0 +1,33 @@
+2014-12-31 19:00:42    d    LocalApplication    initializers:[com.android.sony.tv.app.LocalApplication$3@2d211d2, com.android.sony.tv.config.inits.DeviceStatistics@f4bc2a3, com.android.sony.tv.config.inits.TVServiceStart@5a1b9a0, com.android.sony.tv.config.inits.HealthTVUDPServer@e2af959]
+2014-12-31 19:00:42    e    LocalApplication    the interval is invalid :com.android.sony.tv.app.LocalApplication$2@c76745d
+2014-12-31 19:00:42    d    LocalApplication    initializers length:4
+2014-12-31 19:00:42    d    LocalApplication    invoking initializer:com.android.sony.tv.app.LocalApplication$3@2d211d2
+2014-12-31 19:00:42    d    LocalApplication    invoking initializer:com.android.sony.tv.app.LocalApplication$3@2d211d2 done!
+2014-12-31 19:00:42    d    LocalApplication    invoking initializer:com.android.sony.tv.config.inits.DeviceStatistics@f4bc2a3
+2014-12-31 19:00:42    d    DeviceStatistics    Build.MANUFACTURER:Sony
+2014-12-31 19:00:42    d    DeviceStatistics    Build.BOOTLOADER:unknown
+2014-12-31 19:00:42    d    DeviceStatistics    Build.HARDWARE:mt5891
+2014-12-31 19:00:42    d    DeviceStatistics    Build.BRAND:Sony
+2014-12-31 19:00:42    d    DeviceStatistics    Build.DEVICE:BRAVIA_ATV2
+2014-12-31 19:00:42    d    DeviceStatistics    Build.FINGERPRINT:Sony/BRAVIA_ATV2_UC/BRAVIA_ATV2:7.0/NRD91N.S86/1.6.0.26.69.1.00:user/release-keys
+2014-12-31 19:00:42    d    DeviceStatistics    Build.HOST:BuildHost66
+2014-12-31 19:00:42    d    DeviceStatistics    Build.ID:NRD91N.S86
+2014-12-31 19:00:42    d    DeviceStatistics    Build.MODEL:BRAVIA 4K GB
+2014-12-31 19:00:42    d    DeviceStatistics    Build.PRODUCT:BRAVIA_ATV2_UC
+2014-12-31 19:00:42    d    DeviceStatistics    Build.DISPLAY:BRAVIA_ATV2_UC-user 7.0 NRD91N.S86 1.6.0.26.69.1.00 release-keys
+2014-12-31 19:00:42    d    DeviceStatistics    Build.SERIAL:3cc11f014135791
+2014-12-31 19:00:42    d    DeviceStatistics    Build.VERSION.SDK_INT:24
+2014-12-31 19:00:42    d    LocalApplication    invoking initializer:com.android.sony.tv.config.inits.DeviceStatistics@f4bc2a3 done!
+2014-12-31 19:00:42    d    LocalApplication    invoking initializer:com.android.sony.tv.config.inits.TVServiceStart@5a1b9a0 done!
+2014-12-31 19:00:42    d    LocalApplication    invoking initializer:com.android.sony.tv.config.inits.TVServiceStart@5a1b9a0
+2014-12-31 19:00:42    d    HealthTVUDPServer    onInit in  HealthTV UDP Server18888
+2014-12-31 19:00:42    d    LocalApplication    invoking initializer:com.android.sony.tv.config.inits.HealthTVUDPServer@e2af959
+2014-12-31 19:00:42    d    LocalApplication    invoking initializer:com.android.sony.tv.config.inits.HealthTVUDPServer@e2af959 done!
+2014-12-31 19:00:42    d    LocalApplication    scanners:[]
+2014-12-31 19:00:42    d    BootBroadcastReceiver    TV start in BootBroadcastReceiver......
+2014-12-31 19:00:42    d    TVService    TVService started....
+2014-12-31 19:00:42    d    TVService    TVService onStartCommand....
+2014-12-31 19:00:42    d    TVService    TVService is not started yet,let me start it now....
+2014-12-31 19:00:42    d        UDP is waiting for client's request at:18888
+2014-12-31 19:00:42    d        Start UDP Server at: 18888
+2014-12-31 19:00:42    d    TVService    TVService onStartCommand....

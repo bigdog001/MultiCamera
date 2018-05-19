@@ -3,7 +3,7 @@ package apps.bigdog.com.multicamera.config.broadcast;
 import android.content.Context;
 import android.content.Intent;
 
-import com.tool.mytool.lib.broadcast.BaseBroadCastRcv;
+import com.hadoopz.MyDroidLib.broadcast.BaseBroadCastRcv;
 
 import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;

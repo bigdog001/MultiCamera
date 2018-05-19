@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Window;
 
-import com.tool.mytool.lib.util.ActivityStack;
+import com.hadoopz.MyDroidLib.util.ActivityStack;
 
 import apps.bigdog.com.multicamera.app.LocalApplication;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;

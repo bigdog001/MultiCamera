@@ -1,9 +1,7 @@
 package apps.bigdog.com.multicamera.fragment;
-
-import com.tool.mytool.lib.util.LogUtil;
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
 
 import org.xutils.view.annotation.ContentView;
-
 import apps.bigdog.com.multicamera.R;
 
 
@@ -32,13 +30,13 @@ public class HomeThreeFragment extends BaseFragment {
         if (!isCommunicatable || data == null) {
             return;
         }
-        LogUtil.log("HomeThreeFragment is DataIn...");
+        MyLogUtil.LogMe("HomeThreeFragment is DataIn...");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.log("HomeThreeFragment is onResume...");
+        MyLogUtil.LogMe("HomeThreeFragment is onResume...");
     }
 
     @Override

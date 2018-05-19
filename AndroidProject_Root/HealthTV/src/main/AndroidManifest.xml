@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.sony.tv">
+
+    <uses-feature android:name="android.software.leanback" android:required="true"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <application
+        android:name=".app.LocalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/Theme.Leanback">
+        <activity android:name=".activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboard"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"
+            android:theme="@android:style/Theme.NoTitleBar"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.HealthChecker"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboard"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"></activity>
+
+        <receiver android:name=".config.broadcast.TimerManager">
+            <intent-filter>
+                <action android:name="com.android.sony.tv.monitor"></action>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".config.broadcast.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <data android:scheme="file">
+                </data>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".config.TVService"/>
+
+
+
+    </application>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+</manifest>

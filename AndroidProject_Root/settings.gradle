@@ -1,1 +1,7 @@
-include ':MultiCamera' , ':MyAlarm' ,':MyToolLib',':GoogleDriveTest',':BluetoothLauncher'
+include ':MultiCamera'
+include ':MyAlarm'
+include ':GoogleDriveTest'
+include ':BluetoothLauncher'
+include ':androidActivityAnim'
+include ':HealthTV'
+include ':TVRemote'

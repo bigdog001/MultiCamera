@@ -21,8 +21,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.tool.mytool.lib.util.DisplayUtil;
-import com.tool.mytool.lib.util.JStringKit;
+import com.hadoopz.MyDroidLib.util.DisplayUtil;
+import com.hadoopz.MyDroidLib.util.JStringKit;
 
 import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.app.LocalApplication;

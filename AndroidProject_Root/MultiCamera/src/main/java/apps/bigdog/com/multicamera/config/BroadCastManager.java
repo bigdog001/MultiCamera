@@ -3,7 +3,7 @@ package apps.bigdog.com.multicamera.config;
 import android.content.Context;
 import android.content.Intent;
 
-import com.tool.mytool.lib.broadcast.BroadcastReceiverModule;
+import com.hadoopz.MyDroidLib.broadcast.BroadcastReceiverModule;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,7 @@
 package apps.bigdog.com.myalarm.util;
 
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
+
 import java.util.Set;
 
 import apps.bigdog.com.myalarm.app.LocalApplication;
@@ -56,7 +58,7 @@ public class SystemUtils {
     }
 
     public static void addEmergencyContactor(EmergencyContactor contactor){
-        LogUtil.log("add the emergency contactor:"+contactor.getCellPhoneNumber());
+        MyLogUtil.LogMe("add the emergency contactor:"+contactor.getCellPhoneNumber());
         //LocalApplication.getInstance().getVariableHolder().getSp().getStringSet(VariableHolder.Constants.APP_EMERGENCYCONTACTORS_NAME, null);
         LocalApplication.getInstance().getVariableHolder().getContactors().put(contactor.getCellPhoneNumber(),contactor);
         LocalApplication.getInstance().getVariableHolder().getSp().edit().putStringSet(VariableHolder.Constants.APP_EMERGENCYCONTACTORS_NAME,LocalApplication.getInstance().getVariableHolder().getContactors().keySet());

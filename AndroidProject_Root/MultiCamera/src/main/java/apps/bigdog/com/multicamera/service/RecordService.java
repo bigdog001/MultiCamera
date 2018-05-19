@@ -4,7 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-import com.tool.mytool.lib.util.LogUtil;
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
 
 
 public class RecordService extends Service{
@@ -12,18 +12,18 @@ public class RecordService extends Service{
     @Override
     public void onCreate(){
         super.onCreate();
-        LogUtil.log( "RecordService-->onCreate");
+        MyLogUtil.LogMe( "RecordService-->onCreate");
     }
 
     @Override
     public void onDestroy(){
         super.onDestroy();
-        LogUtil.log( "RecordService-->onDestroy");
+        MyLogUtil.LogMe( "RecordService-->onDestroy");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId){
-        LogUtil.log( "RecordService-->onStartCommand");
+        MyLogUtil.LogMe( "RecordService-->onStartCommand");
         return super.onStartCommand(intent, flags, startId);
     }
 

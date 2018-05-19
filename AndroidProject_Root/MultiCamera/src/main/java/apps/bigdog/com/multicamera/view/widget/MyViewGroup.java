@@ -7,7 +7,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tool.mytool.lib.util.LogUtil;
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
 
 /**
  * Created by jw362j on 1/1/2017.
@@ -36,8 +36,8 @@ public class MyViewGroup  extends ViewGroup {
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         int parentHeight = getMeasuredHeight();
         int parentWidth = getMeasuredWidth();
-        LogUtil.log("in MyViewGroup.onLayout,parentHeight:"+parentHeight+",parentWidth:"+parentWidth);
-        LogUtil.log("in MyViewGroup.onLayout,left:"+l+",top:"+t+",right:"+r+",bottom:"+b);
+        MyLogUtil.LogMe("in MyViewGroup.onLayout,parentHeight:"+parentHeight+",parentWidth:"+parentWidth);
+        MyLogUtil.LogMe("in MyViewGroup.onLayout,left:"+l+",top:"+t+",right:"+r+",bottom:"+b);
         // 获得子View个数
         int childCount = getChildCount();
         // 设置一个变量保存到父View左侧的距离
@@ -65,7 +65,7 @@ public class MyViewGroup  extends ViewGroup {
     public static int[] getScreenSize(Activity activity) {
         DisplayMetrics metrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        LogUtil.log("widthPixels:"+metrics.widthPixels+",heightPixels:"+metrics.heightPixels);
+        MyLogUtil.LogMe("widthPixels:"+metrics.widthPixels+",heightPixels:"+metrics.heightPixels);
         return new int[] { metrics.widthPixels, metrics.heightPixels };
     }
 }

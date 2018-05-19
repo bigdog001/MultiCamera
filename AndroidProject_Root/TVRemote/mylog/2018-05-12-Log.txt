@@ -1,0 +1,45 @@
+2018-05-12 01:16:45    d        the akaenv is:PROD
+2018-05-12 01:16:45    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-12 01:16:45    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-12 01:16:45    d        start to send EPAKAAuthNFirstCall....
+2018-05-12 01:16:45    d        in EPAKAAuthNFirstCall .....
+2018-05-12 01:16:45    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-12 01:16:45    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-12 01:16:45    d        ok,let`s use gzip...
+2018-05-12 01:16:45    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-12 01:18:52    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-12 01:18:52    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-12 01:18:52    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-12 01:21:04    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-12 01:21:04    d        the akaenv is:PROD
+2018-05-12 01:21:04    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-12 01:21:04    d        start to send EPAKAAuthNFirstCall....
+2018-05-12 01:21:04    d        in EPAKAAuthNFirstCall .....
+2018-05-12 01:21:04    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-12 01:21:04    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-12 01:21:04    d        ok,let`s use gzip...
+2018-05-12 01:21:04    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-12 01:23:11    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-12 01:23:11    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-12 01:23:11    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-12 12:48:48    d        the akaenv is:PROD
+2018-05-12 12:48:48    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-12 12:48:48    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-12 12:48:48    d        start to send EPAKAAuthNFirstCall....
+2018-05-12 12:48:48    d        in EPAKAAuthNFirstCall .....
+2018-05-12 12:48:48    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-12 12:48:48    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-12 12:48:48    d        ok,let`s use gzip...
+2018-05-12 12:48:48    d        https connect to : https://sentitlement2.mobile.att.net/WFC
+2018-05-12 12:50:55    d        here is the response from EPAKAAuthNFirstCall:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-12 12:50:55    d        delivery error_msg:{"errorcode":"Connection to https:\/\/sentitlement2.mobile.att.net refused"}
+2018-05-12 12:50:55    d        Connection to https://sentitlement2.mobile.att.net refused
+2018-05-12 13:18:02    d        the action is:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-12 13:18:02    d        the akaenv is:PROD
+2018-05-12 13:18:02    d        the action in MyBroadcastReceiver:BRC_DELIVERY_EAP_AKA_TOKEN
+2018-05-12 13:18:02    d        start to send EPAKAAuthNFirstCall....
+2018-05-12 13:18:02    d        in EPAKAAuthNFirstCall .....
+2018-05-12 13:18:02    d        connect to :https://sentitlement2.mobile.att.net/WFC
+2018-05-12 13:18:02    d        request data is:[{"os-type":0,"device-id":"MzU1OTg2MDg0OTUyNzYy","method":"3gppAuthentication","message-id":1,"device-name":"samsung","device-type":0,"imsi-eap":"0310410492527132@nai.epc.mnc410.mcc310.3gppnetwork.org"}]
+2018-05-12 13:18:02    d        ok,let`s use gzip...
+2018-05-12 13:18:02    d        https connect to : https://sentitlement2.mobile.att.net/WFC

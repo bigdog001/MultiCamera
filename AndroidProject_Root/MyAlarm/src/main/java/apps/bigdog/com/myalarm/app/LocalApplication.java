@@ -23,9 +23,9 @@ import apps.bigdog.com.myalarm.config.BroadCastManager;
 import apps.bigdog.com.myalarm.config.InterfaceGenerator;
 import apps.bigdog.com.myalarm.config.initors.AppLogCachDirPrepare;
 import apps.bigdog.com.myalarm.config.initors.MP4FilesStorageDirInit;
-import apps.bigdog.com.myalarm.exception.BaseExceptionHandler;
-import apps.bigdog.com.myalarm.exception.LocalFileHandler;
-import apps.bigdog.com.myalarm.util.JFileKit;
+import com.hadoopz.MyDroidLib.exceptions.BaseExceptionHandler;
+import com.hadoopz.MyDroidLib.exceptions.LocalFileHandler;
+import com.hadoopz.MyDroidLib.util.JFileKit;
 import apps.bigdog.com.myalarm.util.SystemUtils;
 
 /**

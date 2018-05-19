@@ -4,14 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
 
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
+
 import apps.bigdog.com.myalarm.app.LocalApplication;
-import apps.bigdog.com.myalarm.config.BaseBroadCastRcv;
-import apps.bigdog.com.myalarm.util.LogUtil;
+import apps.bigdog.com.myalarm.config.InterfaceGenerator;
+
+import com.hadoopz.MyDroidLib.broadcast.BaseBroadCastRcv;
 
 /**
  * Created by jw362j on 6/3/2016.
  */
-public class BatteryStatusListener extends BaseBroadCastRcv {
+public class BatteryStatusListener extends BaseBroadCastRcv  implements InterfaceGenerator.AppLifeCycle{
     @Override
     public void onSafeReceive(Context context, Intent intent) {
 
@@ -30,7 +33,7 @@ public class BatteryStatusListener extends BaseBroadCastRcv {
         //电量百分比
         float batteryPct = level / (float) scale;
         LocalApplication.getInstance().getVariableHolder().setBatteryPercent(batteryPct);
-        LogUtil.log("isCharging :"+isCharging+",usbCharge:"+usbCharge+",acCharge:"+acCharge+",batteryPct:"+batteryPct);
+        MyLogUtil.LogMe("isCharging :"+isCharging+",usbCharge:"+usbCharge+",acCharge:"+acCharge+",batteryPct:"+batteryPct);
     }
 
     @Override

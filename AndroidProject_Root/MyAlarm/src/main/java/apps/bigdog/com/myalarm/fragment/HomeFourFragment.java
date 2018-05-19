@@ -4,13 +4,12 @@ import android.app.Dialog;
 import android.view.View;
 import android.widget.Button;
 
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
-
 import apps.bigdog.com.myalarm.R;
 import apps.bigdog.com.myalarm.app.LocalApplication;
-import apps.bigdog.com.myalarm.util.LogUtil;
 import apps.bigdog.com.myalarm.view.DialogMaker;
 
 /**
@@ -73,13 +72,13 @@ public class HomeFourFragment extends BaseFragment {
         if (!isCommunicatable || data == null) {
             return;
         }
-        LogUtil.log("HomeFourFragment is DataIn...");
+        MyLogUtil.LogMe("HomeFourFragment is DataIn...");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.log("HomeFourFragment is onResume...");
+        MyLogUtil.LogMe("HomeFourFragment is onResume...");
     }
 
     @Override

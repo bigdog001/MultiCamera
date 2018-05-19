@@ -4,8 +4,8 @@ import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 
-import com.tool.mytool.lib.exceptions.BaseExceptionHandler;
-import com.tool.mytool.lib.exceptions.LocalFileHandler;
+import com.hadoopz.MyDroidLib.exceptions.BaseExceptionHandler;
+import com.hadoopz.MyDroidLib.exceptions.LocalFileHandler;
 import java.util.ArrayList;
 import java.util.List;
 import org.xutils.BuildConfig;
@@ -13,9 +13,6 @@ import org.xutils.x;
 import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.config.BroadCastManager;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
-import apps.bigdog.com.multicamera.config.initors.AppLogCachDirPrepare;
-import apps.bigdog.com.multicamera.config.initors.MP4FilesStorageDirInit;
-
 /**
  * Created by jw362j on 6/1/2016.
  */

@@ -2,7 +2,7 @@ package apps.bigdog.com.multicamera.config.initors;
 
 import android.content.Context;
 
-import com.tool.mytool.lib.util.JFileKit;
+import com.hadoopz.MyDroidLib.util.JFileKit;
 
 import java.io.File;
 

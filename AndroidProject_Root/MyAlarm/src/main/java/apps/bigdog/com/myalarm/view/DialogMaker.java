@@ -25,8 +25,8 @@ import android.widget.TextView;
 
 import apps.bigdog.com.myalarm.R;
 import apps.bigdog.com.myalarm.app.LocalApplication;
-import apps.bigdog.com.myalarm.util.DisplayUtil;
-import apps.bigdog.com.myalarm.util.JStringKit;
+import com.hadoopz.MyDroidLib.util.DisplayUtil;
+import com.hadoopz.MyDroidLib.util.JStringKit;
 
 
 /**

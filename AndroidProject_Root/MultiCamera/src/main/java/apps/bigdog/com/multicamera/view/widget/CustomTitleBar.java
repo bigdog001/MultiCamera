@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.tool.mytool.lib.util.LogUtil;
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
 
 import apps.bigdog.com.multicamera.R;
 /**
@@ -128,17 +128,17 @@ public class CustomTitleBar extends RelativeLayout{
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        LogUtil.log("in CustomTitleBar.onLayout,parentHeight:"+getMeasuredHeight()+",parentWidth:"+getMeasuredWidth());
-        LogUtil.log("in CustomTitleBar.onLayout,left:"+l+",top:"+t+",right:"+r+",bottom:"+b);
+        MyLogUtil.LogMe("in CustomTitleBar.onLayout,parentHeight:"+getMeasuredHeight()+",parentWidth:"+getMeasuredWidth());
+        MyLogUtil.LogMe("in CustomTitleBar.onLayout,left:"+l+",top:"+t+",right:"+r+",bottom:"+b);
         int childCount = getChildCount();
-        LogUtil.log("in CustomTitleBar.childCount:"+childCount);
+        MyLogUtil.LogMe("in CustomTitleBar.childCount:"+childCount);
         // 设置一个变量保存到父View左侧的距离
         int mLeft = 0;
         // 遍历子View
         for (int i = 0; i < childCount; i++) {
             View childView = getChildAt(i);
             if(childView instanceof TextView){
-                LogUtil.log("in CustomTitleBar.TextView("+i+"),"+((TextView)childView).getText());
+                MyLogUtil.LogMe("in CustomTitleBar.TextView("+i+"),"+((TextView)childView).getText());
             }
         }
         super.onLayout(changed,l,t,r,b);

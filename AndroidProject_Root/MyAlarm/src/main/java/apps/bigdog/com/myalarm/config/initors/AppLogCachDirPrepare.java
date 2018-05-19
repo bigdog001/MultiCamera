@@ -5,7 +5,7 @@ import android.content.Context;
 import java.io.File;
 
 import apps.bigdog.com.myalarm.config.InterfaceGenerator;
-import apps.bigdog.com.myalarm.util.JFileKit;
+import com.hadoopz.MyDroidLib.util.JFileKit;
 
 /**
  * Created by jw362j on 6/1/2016.

@@ -1,6 +1,6 @@
 @echo off
 doskey ls=dir $*
-set MYHOME=C:\Users\jw362j\a\work\code\p\multicamera\MultiCamera\AndroidProject_Root\
+set MYHOME=C:\Users\jw362j\a\z_temp\MultiCamera\MultiCamera\AndroidProject_Root\
 if  "%1" == "" goto end
 if  %1 == 1 goto one
 if  %1 == 2 goto two

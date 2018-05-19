@@ -38,6 +38,18 @@ MyToolLib/build
 MyToolLib/build/
 MyToolLib/build/*
 MyToolLib/*.iml
+androidActivityAnim/
+androidActivityAnim
+HealthTV/*.log
+HealthTV/build
+HealthTV/build/
+HealthTV/build/*
+HealthTV/*.iml
+TVRemote/*.log
+TVRemote/build
+TVRemote/build/
+TVRemote/build/*
+TVRemote/*.iml
 
 
 

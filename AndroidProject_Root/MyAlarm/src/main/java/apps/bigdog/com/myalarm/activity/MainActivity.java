@@ -22,7 +22,7 @@ import apps.bigdog.com.myalarm.fragment.HomeFourFragment;
 import apps.bigdog.com.myalarm.fragment.HomeOneFragment;
 import apps.bigdog.com.myalarm.fragment.HomeThreeFragment;
 import apps.bigdog.com.myalarm.fragment.HomeTwoFragment;
-import apps.bigdog.com.myalarm.util.LogUtil;
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -172,7 +172,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
-        LogUtil.log("the selected is :" + i);
+        MyLogUtil.LogMe("the selected is :" + i);
         switch (i) {
             case R.id.radioBtn_home1:
                 if (chooseIndex != 0) {
@@ -208,7 +208,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     public void onPageSelected(int position) {
-        LogUtil.log("onPageSelected:"+position);
+        MyLogUtil.LogMe("onPageSelected:"+position);
 //        int position_t = position%(fragments.size());
         switch (position){
             case 0:

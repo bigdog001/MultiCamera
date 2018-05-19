@@ -1,7 +1,7 @@
 package apps.bigdog.com.multicamera.app;
 
 import android.content.Context;
-import com.tool.mytool.lib.app.MyApplication;
+import com.hadoopz.MyDroidLib.app.MyApplication;
 import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.config.initors.AppLogCachDirPrepare;

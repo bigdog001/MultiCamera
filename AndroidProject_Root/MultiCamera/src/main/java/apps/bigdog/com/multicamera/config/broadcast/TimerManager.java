@@ -3,8 +3,8 @@ package apps.bigdog.com.multicamera.config.broadcast;
 import android.content.Context;
 import android.content.Intent;
 
-import com.tool.mytool.lib.broadcast.BaseBroadCastRcv;
-import com.tool.mytool.lib.util.LogUtil;
+import com.hadoopz.MyDroidLib.broadcast.BaseBroadCastRcv;
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class TimerManager extends BaseBroadCastRcv implements InterfaceGenerator
     @Override
     public void onSafeReceive(Context context, Intent intent) {
 
-        LogUtil.log("脉冲到......");
+        MyLogUtil.LogMe("脉冲到......");
         for (InterfaceGenerator.timerAction action : timerActions) {
             if (action != null && action.isAllowedToExecute()) {
                 action.onTime(context, 0, null);

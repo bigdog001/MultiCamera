@@ -40,7 +40,7 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 goto end
 
 :mylog
-adb pull /sdcard/mylog/my_log.txt ./
+adb pull /sdcard/mylog/log_holder.log
 goto end
 
 

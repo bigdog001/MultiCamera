@@ -7,7 +7,7 @@ import android.view.Window;
 
 import apps.bigdog.com.myalarm.app.LocalApplication;
 import apps.bigdog.com.myalarm.config.InterfaceGenerator;
-import apps.bigdog.com.myalarm.util.ActivityStack;
+import com.hadoopz.MyDroidLib.util.ActivityStack;
 import apps.bigdog.com.myalarm.view.DialogMaker;
 import org.xutils.x;
 /**

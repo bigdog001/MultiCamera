@@ -4,13 +4,14 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import apps.bigdog.com.myalarm.exception.BaseExceptionHandler;
-import apps.bigdog.com.myalarm.exception.LocalFileHandler;
+import com.hadoopz.MyDroidLib.app.MyApplication;
+import com.hadoopz.MyDroidLib.exceptions.BaseExceptionHandler;
+import com.hadoopz.MyDroidLib.exceptions.LocalFileHandler;
 
 /**
  * Created by jw362j on 6/1/2016.
  */
-public abstract class BaseApplication extends Application {
+public abstract class BaseApplication extends MyApplication {
     public static Context applicationContext;
 
 
@@ -27,6 +28,11 @@ public abstract class BaseApplication extends Application {
         }else{
             Thread.setDefaultUncaughtExceptionHandler(getDefaultUncaughtExceptionHandler());
         }
+    }
+
+    @Override
+    public String[] initRTC() {
+        return null;
     }
 
     public abstract BaseExceptionHandler getDefaultUncaughtExceptionHandler();

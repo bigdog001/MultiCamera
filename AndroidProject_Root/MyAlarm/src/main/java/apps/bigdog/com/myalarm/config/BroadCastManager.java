@@ -3,13 +3,12 @@ package apps.bigdog.com.myalarm.config;
 import android.content.Context;
 import android.content.Intent;
 
+import com.hadoopz.MyDroidLib.broadcast.BroadcastReceiverModule;
 import java.util.ArrayList;
 import java.util.List;
-
 import apps.bigdog.com.myalarm.beans.VariableHolder;
 import apps.bigdog.com.myalarm.config.broadcast.BatteryStatusListener;
 import apps.bigdog.com.myalarm.config.broadcast.PowerKeyClick;
-import apps.bigdog.com.myalarm.config.broadcast.SDCardLowerSizeCleaner;
 import apps.bigdog.com.myalarm.config.broadcast.TimerManager;
 
 /**

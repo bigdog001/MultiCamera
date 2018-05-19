@@ -9,8 +9,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.tool.mytool.lib.util.DisplayUtil;
-import com.tool.mytool.lib.util.LogUtil;
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
+import com.hadoopz.MyDroidLib.util.DisplayUtil;
 import apps.bigdog.com.multicamera.R;
 
 public class PercentView  extends View {
@@ -64,7 +64,7 @@ public class PercentView  extends View {
             radius = typedArray.getDimension(R.styleable.PercentView_percent_circle_radius, 0);
             progress = typedArray.getInt(R.styleable.PercentView_percent_circle_progress, 0);
             gravity = typedArray.getInt(R.styleable.PercentView_percent_circle_gravity, CENTER);
-            LogUtil.log("backgroundColor:"+backgroundColor+",progressColor:"+progressColor+",radius:"+radius+",progress:"+progress+",gravity:"+gravity);
+            MyLogUtil.LogMe("backgroundColor:"+backgroundColor+",progressColor:"+progressColor+",radius:"+radius+",progress:"+progress+",gravity:"+gravity);
             typedArray.recycle();
         }
     }
@@ -76,8 +76,8 @@ public class PercentView  extends View {
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         int heightSize = MeasureSpec.getSize(heightMeasureSpec);
-        LogUtil.log(TAG, "onMeasure--widthMode-->" + widthMode);
-        LogUtil.log("onMeasure--widthMode:"+widthMode+",onMeasure--widthSize:"+widthSize+",onMeasure--heightMode:"+heightMode+",onMeasure--heightSize:"+heightSize);
+        MyLogUtil.LogMe(TAG, "onMeasure--widthMode-->" + widthMode);
+        MyLogUtil.LogMe("onMeasure--widthMode:"+widthMode+",onMeasure--widthSize:"+widthSize+",onMeasure--heightMode:"+heightMode+",onMeasure--heightSize:"+heightSize);
         switch (widthMode) {
             case MeasureSpec.EXACTLY://
                 break;
@@ -92,10 +92,10 @@ public class PercentView  extends View {
         int with = getMeasuredWidth();
         int height = getMeasuredHeight();
 
-        LogUtil.log("the with:"+with+",the height:"+height);
+        MyLogUtil.LogMe("the with:"+with+",the height:"+height);
         centerX = with / 2;
         centerY = with / 2;
-        LogUtil.log("the centerX:"+centerX+",the centerY:"+centerY);
+        MyLogUtil.LogMe("the centerX:"+centerX+",the centerY:"+centerY);
         switch (gravity) {
             case LEFT:
                 centerX = radius + getPaddingLeft();
@@ -118,21 +118,21 @@ public class PercentView  extends View {
                 centerY = height -  radius;
                 break;
         }
-        LogUtil.log("the PaddingLeft:"+getPaddingLeft()+",the PaddingRight:"+getPaddingRight()+",PaddingTop:"+getPaddingTop()+",PaddingBottom:"+getPaddingBottom());
-        LogUtil.log("the centerX1:"+centerX+",the centerY1:"+centerY);
-        LogUtil.log("the dip to px is::"+ DisplayUtil.dip2px(getContext(),30));
+        MyLogUtil.LogMe("the PaddingLeft:"+getPaddingLeft()+",the PaddingRight:"+getPaddingRight()+",PaddingTop:"+getPaddingTop()+",PaddingBottom:"+getPaddingBottom());
+        MyLogUtil.LogMe("the centerX1:"+centerX+",the centerY1:"+centerY);
+        MyLogUtil.LogMe("the dip to px is::"+ DisplayUtil.dip2px(getContext(),30));
         float left1 = centerX - radius;
         float top1 = centerY - radius;
         float right1 = centerX + radius;
         float bottom1 = centerY + radius;
-        LogUtil.log("the left:"+left1+",the right:"+right1+",top:"+top1+",bottom:"+bottom1);
+        MyLogUtil.LogMe("the left:"+left1+",the right:"+right1+",top:"+top1+",bottom:"+bottom1);
         rectF.set(left1, top1, right1, bottom1);
     }
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
-        LogUtil.log(TAG, "onLayout");
+        MyLogUtil.LogMe(TAG, "onLayout");
 
     }
 

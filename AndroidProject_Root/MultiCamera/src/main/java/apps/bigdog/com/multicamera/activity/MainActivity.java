@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.tool.mytool.lib.util.LogUtil;
+import com.hadoopz.MyDroidLib.util.MyLogUtil;
 
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -173,7 +173,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
-        LogUtil.log("the selected is :" + i);
+        MyLogUtil.LogMe("the selected is :" + i);
         switch (i) {
             case R.id.radioBtn_home1:
                 if (chooseIndex != 0) {
@@ -209,7 +209,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     public void onPageSelected(int position) {
-        LogUtil.log("onPageSelected:"+position);
+        MyLogUtil.LogMe("onPageSelected:"+position);
 //        int position_t = position%(fragments.size());
         switch (position){
             case 0:
