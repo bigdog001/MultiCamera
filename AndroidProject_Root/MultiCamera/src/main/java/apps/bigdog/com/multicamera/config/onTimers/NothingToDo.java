@@ -3,7 +3,7 @@ package apps.bigdog.com.multicamera.config.onTimers;
 import android.content.Context;
 
 
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 
 import apps.bigdog.com.multicamera.app.LocalApplication;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
@@ -26,7 +26,7 @@ public class NothingToDo implements InterfaceGenerator.timerAction {
     @Override
     public void onTime(Context c, int flag, Object data) {
         if (LocalApplication.getInstance().getVariableHolder().getCommunicatables() != null) {
-            MyLogUtil.LogMe("the length of communicatables is :"+ LocalApplication.getInstance().getVariableHolder().getCommunicatables().size());
+            DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"the length of communicatables is :"+ LocalApplication.getInstance().getVariableHolder().getCommunicatables().size());
             for (InterfaceGenerator.ICommunicatable cx: LocalApplication.getInstance().getVariableHolder().getCommunicatables()) {
                 if( cx != null )cx.DataIn("...");
             }

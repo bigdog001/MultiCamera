@@ -1,28 +1,20 @@
 package apps.bigdog.com.multicamera.fragment;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
-
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
-
 import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.view.MySurfaceView;
-
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 import com.mycomm.YesHttp.core.FileUploadRequest;
 import com.mycomm.YesHttp.core.Request;
 import com.mycomm.YesHttp.core.Response;
-import com.mycomm.YesHttp.core.StringRequest;
 import com.mycomm.YesHttp.core.TextBaseResponseListener;
 import com.mycomm.YesHttp.core.YesHttpEngine;
 import com.mycomm.YesHttp.core.YesHttpError;
-
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -46,7 +38,6 @@ public class HomeTwoFragment extends BaseFragment {
     private void ItemOnclick(View v) {
         switch (v.getId()) {
             case R.id.preview_top_btn_record:
-                Toast.makeText(getContext(),"start yesHttp..",Toast.LENGTH_SHORT).show();
                 new Thread(new Runnable(){
                     @Override
                     public void run() {
@@ -65,24 +56,44 @@ public class HomeTwoFragment extends BaseFragment {
     private void SendNetWorkRequest(){
         Request.YesLog yeslog = new Request.YesLog() {
             @Override
-            public void LogMe(String msg) {
-                MyLogUtil.LogMe("the log :" + msg);
+            public void w(String s) {
+                DefaultLogUtil.getInstance().v(getClass().getSimpleName(),"the log :" + s);
+            }
+
+            @Override
+            public void e(String s) {
+                DefaultLogUtil.getInstance().e(getClass().getSimpleName(),"the log :" + s);
+            }
+
+            @Override
+            public void d(String s) {
+                DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"the log :" + s);
+            }
+
+            @Override
+            public void i(String s) {
+                DefaultLogUtil.getInstance().i(getClass().getSimpleName(),"the log :" + s);
+            }
+
+            @Override
+            public void v(String s) {
+                DefaultLogUtil.getInstance().v(getClass().getSimpleName(),"the log :" + s);
             }
         };
         String url = "http://192.168.0.102:8082/testFileUpload.xhtml";
         Request request = new FileUploadRequest(url, new TextBaseResponseListener() {
             @Override
             public void responseMe(String msg) {
-                MyLogUtil.LogMe("FileUploadRequest.responseMe:" + msg);
+                DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"FileUploadRequest.responseMe:" + msg);
             }
         }, null, new Response.ErrorListener() {
             public void onErrorResponse(YesHttpError error) {
-                MyLogUtil.LogMe("Response.ErrorListener.onErrorResponse:" + error.getMessage());
+                DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"Response.ErrorListener.onErrorResponse:" + error.getMessage());
             }
 
         }, yeslog, Request.Protocol.HTTP, new Response.DownLoadUpLoadListener() {
             public void onProgressing(float rate) {
-                MyLogUtil.LogMe("DownLoadUpLoadListener rate:" + rate);
+                DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"DownLoadUpLoadListener rate:" + rate);
             }
         }) {
             @Override
@@ -99,7 +110,6 @@ public class HomeTwoFragment extends BaseFragment {
 
         };
         YesHttpEngine.getYesHttpEngine().send(request);
-        MyLogUtil.ForceFlushLog();
     }
 
     @Override
@@ -117,13 +127,13 @@ public class HomeTwoFragment extends BaseFragment {
         if (!isCommunicatable || data == null) {
             return;
         }
-        MyLogUtil.LogMe("HomeTwoFragment is DataIn...");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeTwoFragment is DataIn...");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        MyLogUtil.LogMe("HomeTwoFragment is onResume...");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeTwoFragment is onResume...");
     }
 
     @Override

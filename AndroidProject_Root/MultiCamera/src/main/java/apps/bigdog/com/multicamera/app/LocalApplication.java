@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 
 import com.hadoopz.MyDroidLib.exceptions.BaseExceptionHandler;
 import com.hadoopz.MyDroidLib.exceptions.LocalFileHandler;
+import com.hadoopz.MyDroidLib.util.TimeInterval;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.xutils.BuildConfig;
@@ -79,6 +81,16 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
     @Override
     public BaseExceptionHandler getDefaultUncaughtExceptionHandler() {
         return new LocalFileHandler(applicationContext);
+    }
+
+    @Override
+    public TimeInterval initRTC() {
+        return null;
+    }
+
+    @Override
+    public void onTimer(Context context) {
+
     }
 
     public static void addAppLifeCycle(InterfaceGenerator.AppLifeCycle app) {

@@ -1,7 +1,6 @@
 package apps.bigdog.com.multicamera.activity;
 
 
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -10,12 +9,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
-
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
-
 import apps.bigdog.com.multicamera.R;
 import apps.bigdog.com.multicamera.activity.base.BaseActivity;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
@@ -104,7 +100,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
             }
         });
         main_content_fgt.setCurrentItem(0);
-        main_content_fgt.addOnPageChangeListener(this);
+        main_content_fgt.setOnPageChangeListener(this);
     }
 
     private void initFragments() {
@@ -173,7 +169,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
-        MyLogUtil.LogMe("the selected is :" + i);
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"the selected is :" + i);
         switch (i) {
             case R.id.radioBtn_home1:
                 if (chooseIndex != 0) {
@@ -209,7 +205,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     public void onPageSelected(int position) {
-        MyLogUtil.LogMe("onPageSelected:"+position);
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"onPageSelected:"+position);
 //        int position_t = position%(fragments.size());
         switch (position){
             case 0:

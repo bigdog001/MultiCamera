@@ -2,13 +2,10 @@ package apps.bigdog.com.myalarm.config.broadcast;
 
 import android.content.Context;
 import android.content.Intent;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import com.hadoopz.MyDroidLib.broadcast.BaseBroadCastRcv;
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
-
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 import apps.bigdog.com.myalarm.config.InterfaceGenerator;
 import apps.bigdog.com.myalarm.config.onTimers.NothingToDo;
 
@@ -42,7 +39,7 @@ public class TimerManager extends BaseBroadCastRcv implements InterfaceGenerator
     @Override
     public void onSafeReceive(Context context, Intent intent) {
 
-        MyLogUtil.LogMe("脉冲到......");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"脉冲到......");
         for (InterfaceGenerator.timerAction action : timerActions) {
             if (action != null && action.isAllowedToExecute()) {
                 action.onTime(context, 0, null);

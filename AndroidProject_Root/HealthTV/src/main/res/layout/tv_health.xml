@@ -16,8 +16,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:text="@string/tv_health_check_banner"
+                android:textColor="@color/red_dark"
+                android:textSize="@dimen/activity_horizontal_margin"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
                 android:text="@string/tv_health_check_tips"
-                android:textColor="@color/black"
+                android:textColor="@color/red_dark"
+                android:textSize="@dimen/activity_horizontal_margin"
                 />
             <EditText
                 android:id="@+id/tv_unlock_code"

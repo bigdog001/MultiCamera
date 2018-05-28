@@ -1,11 +1,12 @@
-package com.android.sony.tv.config.broadcast;
+package com.android.sony.tv.config.scanner;
 
 import android.content.Context;
-import android.content.Intent;
-
-import com.android.sony.tv.activity.HealthChecker;
+import com.android.sony.tv.activity.HealthCheckerActivity;
+import com.android.sony.tv.beans.TimeCounter;
+import com.android.sony.tv.beans.TimeRange;
 import com.android.sony.tv.beans.VariableHolder;
 import com.android.sony.tv.config.InterfaceGenerator;
+import com.android.sony.tv.utils.Utils;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -13,7 +14,6 @@ import java.util.GregorianCalendar;
 
 public class TVHealthLogic implements InterfaceGenerator.timerAction {
     public static long lock_extention;
-
     @Override
     public boolean isAllowedToExecute() {
         return true;
@@ -21,22 +21,21 @@ public class TVHealthLogic implements InterfaceGenerator.timerAction {
 
     @Override
     public void onTime(Context c, int flag, Object data) {
-
         Calendar calendar = new GregorianCalendar();
         int h = calendar.get(Calendar.HOUR_OF_DAY);
         int m = calendar.get(Calendar.MINUTE);
+        TimeCounter counter_now = new TimeCounter(h, m);
         VariableHolder.logProvider.d(getClass().getSimpleName(), "diff: "+(System.currentTimeMillis())/1000+",Current hour:" + h + ",mins:" + m);
-        if ((h >= 21 && m >= 30) || h < 5 ) {
+        if(Utils.isInLockInterval()){
             if (lock_extention > System.currentTimeMillis()) {
                 VariableHolder.logProvider.d(getClass().getSimpleName(), "Lock the tv later ,until :" + new Date(lock_extention));
-                return;
+               return;
             }
             lock_extention = 0;
             VariableHolder.logProvider.d(getClass().getSimpleName(), "it is "+new Date()+",disable the TV now!");
-//            Intent intent = new Intent(c, HealthChecker.class);
-//            c.startActivity(intent);
+            HealthCheckerActivity.startMe(c);
+        }else {
+            HealthCheckerActivity.tryToEnableTV();
         }
-
-
     }
 }

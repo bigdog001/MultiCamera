@@ -2,7 +2,6 @@ package apps.bigdog.com.multicamera.app;
 
 import android.content.Context;
 import com.hadoopz.MyDroidLib.app.MyApplication;
-import apps.bigdog.com.multicamera.beans.VariableHolder;
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 import apps.bigdog.com.multicamera.config.initors.AppLogCachDirPrepare;
 import apps.bigdog.com.multicamera.config.initors.MP4FilesStorageDirInit;
@@ -22,13 +21,7 @@ public abstract class BaseApplication extends MyApplication {
     }
 
 
-    @Override
-    public String[] initRTC() {
-        if(rtc_config == null){
-            rtc_config = new String[]{VariableHolder.Constants.TIMER_BROADCAST_UNIT_NAME,VariableHolder.Constants.INTERVAL_UNIT+""};
-        }
-        return rtc_config;
-    }
+
 
     protected InterfaceGenerator.Initializer[]LoadInitializers(){
         if (initializers == null) {

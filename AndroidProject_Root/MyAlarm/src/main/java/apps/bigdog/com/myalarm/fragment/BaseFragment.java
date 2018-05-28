@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import org.xutils.x;
-
 import apps.bigdog.com.myalarm.app.LocalApplication;
 import apps.bigdog.com.myalarm.config.InterfaceGenerator;
 import apps.bigdog.com.myalarm.view.DialogMaker;

@@ -53,8 +53,8 @@ goto end
 
 rem install the new builded jar into the destination directory
 :myinstall
-echo "install -r %MYHOME%\build\outputs\apk\HealthTV-debug.apk"
-adb install -r  %MYHOME%\build\outputs\apk\HealthTV-debug.apk
+echo "install -r %MYHOME%\build\outputs\apk\debug\HealthTV-debug.apk"
+adb install -r  %MYHOME%\build\outputs\apk\debug\HealthTV-debug.apk
 goto end
 
 :myrun

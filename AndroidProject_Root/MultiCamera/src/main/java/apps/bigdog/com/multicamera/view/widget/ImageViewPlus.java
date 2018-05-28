@@ -15,7 +15,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 import com.hadoopz.MyDroidLib.util.DisplayUtil;
 
 /**
@@ -43,7 +43,7 @@ public class ImageViewPlus extends ImageView {
             int viewMinSize = Math.min(viewWidth, viewHeight);
             float dstWidth = viewMinSize;
             float dstHeight = viewMinSize;
-            MyLogUtil.LogMe("in onDraw--->the viewWidth:"+viewWidth+",viewHeight:"+viewHeight+",dstWidth:"+dstWidth+",dstHeight:"+dstHeight);
+            DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"in onDraw--->the viewWidth:"+viewWidth+",viewHeight:"+viewHeight+",dstWidth:"+dstWidth+",dstHeight:"+dstHeight);
             if (mShader == null || !rawBitmap.equals(mRawBitmap)) {
                 mRawBitmap = rawBitmap;
                 mShader = new BitmapShader(mRawBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
@@ -68,13 +68,13 @@ public class ImageViewPlus extends ImageView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        MyLogUtil.LogMe("in onMeasure--->the Width:"+getWidth()+",Height:"+getHeight());
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"in onMeasure--->the Width:"+getWidth()+",Height:"+getHeight());
     }
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
-        MyLogUtil.LogMe("in onLayout--->the Width:"+getWidth()+",Height:"+getHeight());
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"in onLayout--->the Width:"+getWidth()+",Height:"+getHeight());
     }
 
     private Bitmap getBitmap(Drawable drawable) {

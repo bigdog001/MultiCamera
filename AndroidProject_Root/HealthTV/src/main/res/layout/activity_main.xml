@@ -8,11 +8,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
+            android:id="@+id/testcenter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="I am Serena,I am telling you,i can not watch TV now! "
-            android:textColor="@color/black"
             />
+        <Button
+            android:id="@+id/testseting"
+            android:textColor="@color/black"
+            android:text="test"
+            android:layout_below="@id/testcenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 </LinearLayout>

@@ -1,5 +1,7 @@
 package com.android.sony.tv.utils;
 
+import com.android.sony.tv.beans.VariableHolder;
+
 public enum Event {
     Event_OpenUrl("open_url"),
     Event_Echo("udp_echo");
@@ -19,11 +21,11 @@ public enum Event {
         }
 
         for (Event c : values()) {
-            System.out.println("DataTypeItem values:" + c);
+            VariableHolder.logProvider.d(Event.class.getSimpleName(),"DataTypeItem values:" + c);
             if (c.value.equals(v)) {
                 return c;
             }
         }
-        throw new IllegalArgumentException(v);
+        return null;
     }
 }

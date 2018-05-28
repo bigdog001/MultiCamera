@@ -1,8 +1,9 @@
-package com.android.sony.tv.config.udpLogic;
+package com.android.sony.tv.config.remoteLogic.impl;
 
 import android.content.Context;
 import android.widget.Toast;
 import com.android.sony.tv.beans.VariableHolder;
+import com.android.sony.tv.config.remoteLogic.DataProcesser;
 import com.android.sony.tv.utils.Event;
 import com.mycomm.MyConveyor.core.AbsTask;
 import com.mycomm.MyConveyor.core.MyConveyor;
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
+import java.util.Map;
 
 public class UDPEcho implements DataProcesser {
     private MulticastSocket sender;
@@ -23,35 +25,14 @@ public class UDPEcho implements DataProcesser {
     private Context mContext;
 
 
-    private String currentRemoteIp;
-    private String currentRemoteAddress;
-    private String currentRemoteHostname;
-
-
     @Override
-    public void process(Context context, JSONObject jsonObjectd) {
+    public void process(Context context, Map<String,String> data) {
         mContext = context;
-        initVars(jsonObjectd);
         VariableHolder.logProvider.d(getClass().getSimpleName(), "UDPEcho :The TV status:OK");
 //        sendUrlToTv();
     }
 
-    void initVars(JSONObject jsonObject) {
-        try {
-            if (jsonObject.has("currentRemoteIp")) {
-                currentRemoteIp = jsonObject.getString("currentRemoteIp");
-            }
-            if (jsonObject.has("currentRemoteAddress")) {
-                currentRemoteAddress = jsonObject.getString("currentRemoteAddress");
-            }
-            if (jsonObject.has("currentRemoteHostname")) {
-                currentRemoteHostname = jsonObject.getString("currentRemoteHostname");
-            }
-        } catch (JSONException e) {
-            VariableHolder.logProvider.e(getClass().getSimpleName(), "JSONException in initVars:" + e.getMessage());
-        }
-        VariableHolder.logProvider.d(getClass().getSimpleName(), "currentRemoteIp:" + currentRemoteIp +",currentRemoteAddress:"+currentRemoteAddress+",currentRemoteHostname:"+currentRemoteHostname);
-    }
+
 
 
     @Override
@@ -88,7 +69,9 @@ public class UDPEcho implements DataProcesser {
                 };
             }
         });
-
     }
 
+    public String toString() {
+        return "UDPEcho class";
+    }
 }

@@ -1,11 +1,7 @@
 package apps.bigdog.com.myalarm.fragment;
-
-import android.view.View;
-
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 
 import org.xutils.view.annotation.ContentView;
-import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
 import apps.bigdog.com.myalarm.R;
@@ -53,13 +49,13 @@ public class HomeTwoFragment extends BaseFragment {
         if (!isCommunicatable || data == null) {
             return;
         }
-        MyLogUtil.LogMe("HomeTwoFragment is DataIn...");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeTwoFragment is DataIn...");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        MyLogUtil.LogMe("HomeTwoFragment is onResume...");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeTwoFragment is onResume...");
     }
 
     @Override

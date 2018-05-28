@@ -30,10 +30,6 @@ public abstract class BaseApplication extends MyApplication {
         }
     }
 
-    @Override
-    public String[] initRTC() {
-        return null;
-    }
 
     public abstract BaseExceptionHandler getDefaultUncaughtExceptionHandler();
 }

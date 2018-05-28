@@ -53,14 +53,14 @@ goto end
 
 rem install the new builded jar into the destination directory
 :myinstall
-echo "install -r %MYHOME%\build\outputs\apk\TVRemote-debug.apk"
-adb -s 98882947303045444c install -r  %MYHOME%\build\outputs\apk\TVRemote-debug.apk
+echo "install -r %MYHOME%\build\outputs\apk\debug\TVRemote-debug.apk"
+adb -s 98882947303045444c install -r  %MYHOME%\build\outputs\apk\debug\TVRemote-debug.apk
 rem adb install -r  %MYHOME%\build\outputs\apk\TVRemote-debug.apk
 goto end
 
 :myrun
 echo "running: com.android.sony.tv"
-adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.android.sony.tv/com.android.sony.tv.activity.MainActivity
+adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n com.android.sony.tvremote/com.android.sony.tvremote.activity.MainActivity
 goto end
 
 :mylog

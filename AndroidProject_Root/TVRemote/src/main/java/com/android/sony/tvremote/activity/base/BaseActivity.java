@@ -62,6 +62,7 @@ public abstract class BaseActivity extends FragmentActivity  {
 
     @Override
     public void onConfigurationChanged(Configuration config) {
+        super.onConfigurationChanged(config);
     }
 
     @Override

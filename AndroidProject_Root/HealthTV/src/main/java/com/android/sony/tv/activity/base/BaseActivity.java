@@ -65,6 +65,7 @@ public abstract class BaseActivity extends FragmentActivity implements DialogMak
 
     @Override
     public void onConfigurationChanged(Configuration config) {
+        super.onConfigurationChanged(config);
     }
 
     @Override

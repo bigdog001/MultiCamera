@@ -2,8 +2,9 @@ package com.android.sony.tv.app;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
-import android.view.LayoutInflater;
-import com.android.sony.tv.config.inits.HealthTVUDPServer;
+import android.util.Log;
+
+import com.android.sony.tv.config.inits.TVCodeHandler;
 import com.android.sony.tv.config.inits.TVServiceStart;
 import com.android.sony.tv.config.inits.DeviceStatistics;
 import com.hadoopz.MyDroidLib.app.MyApplication;
@@ -15,6 +16,7 @@ import com.hadoopz.MyDroidLib.inject.y;
 import com.android.sony.tv.beans.VariableHolder;
 import com.android.sony.tv.config.InterfaceGenerator;
 import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
+import com.hadoopz.MyDroidLib.util.DroidLogProvider;
 import com.hadoopz.MyDroidLib.util.TimeInterval;
 import com.mycomm.itool.listener.T.MyLifeCycle;
 import com.mycomm.itool.listener.T.MyTListener;
@@ -26,7 +28,6 @@ import com.mycomm.itool.logs.TheLogger;
 public class LocalApplication extends MyApplication implements MyLifeCycle<Context> {
     private TimeInterval timeInterval ;
     private static LocalApplication instance;
-    private VariableHolder variableHolder;
     private static List<InterfaceGenerator.AppLifeCycle> apps ;
     private TheLogger theLogger = new TheLogger() {
         @Override
@@ -46,6 +47,32 @@ public class LocalApplication extends MyApplication implements MyLifeCycle<Conte
     };
     @Override
     public void onCreate() {
+        y.logProvider = new DroidLogProvider() {
+            @Override
+            public void w(String tag, String text) {
+                Log.w(tag,text);
+            }
+
+            @Override
+            public void e(String tag, String text) {
+                Log.e(tag,text);
+            }
+
+            @Override
+            public void d(String tag, String text) {
+                Log.d(tag,text);
+            }
+
+            @Override
+            public void i(String tag, String text) {
+                Log.i(tag,text);
+            }
+
+            @Override
+            public void v(String tag, String text) {
+                Log.v(tag,text);
+            }
+        };
         VariableHolder.logProvider = DefaultLogUtil.getInstance();
         super.onCreate();
         MyTListener<Context> myTListener = new MyTListener<>(LocalApplication.this);
@@ -108,21 +135,17 @@ public class LocalApplication extends MyApplication implements MyLifeCycle<Conte
                 y.init(LocalApplication.this);
 
                 instance = LocalApplication.this;
-                variableHolder = new VariableHolder();
-                variableHolder.setCommunicatables( new ArrayList<InterfaceGenerator.ICommunicatable>());
-                variableHolder.setInflater((LayoutInflater) getApplicationContext()
-                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE));
                 // 得到屏幕的宽度和高度
                 DisplayMetrics dm = getResources().getDisplayMetrics();
                 VariableHolder.screenW = dm.widthPixels;
-                variableHolder.setScreenH(dm.heightPixels);
+                VariableHolder.screenH = dm.heightPixels;
                 apps = new ArrayList<>();
 
             }
         });
         tInitializers.add(new DeviceStatistics());
         tInitializers.add(new TVServiceStart());
-        tInitializers.add(new HealthTVUDPServer());
+        tInitializers.add(new TVCodeHandler());
     }
 
     @Override

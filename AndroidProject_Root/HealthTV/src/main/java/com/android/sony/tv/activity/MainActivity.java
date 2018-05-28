@@ -1,18 +1,23 @@
 package com.android.sony.tv.activity;
 
 
-import android.content.pm.ActivityInfo;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import com.android.sony.tv.activity.base.BaseActivity;
+import com.android.sony.tv.activity.ui.SettingsActivity;
 import com.android.sony.tv.beans.VariableHolder;
 import com.android.sony.tv.R;
 import com.hadoopz.MyDroidLib.inject.annotation.ContentView;
 import com.hadoopz.MyDroidLib.inject.annotation.Event;
+import com.hadoopz.MyDroidLib.inject.annotation.ViewInject;
 //import com.hadoopz.MyDroidLib.inject.annotation.ViewInject;
 
 @ContentView(value = R.layout.activity_main)
 public class MainActivity extends BaseActivity{
+    @ViewInject(value = R.id.testseting)
+    private Button testseting ;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,10 +27,15 @@ public class MainActivity extends BaseActivity{
 
     }
 
-
-    @Event(value = {},type = View.OnClickListener.class)
+    @Event(value = {R.id.testseting},type = View.OnClickListener.class)
     private void allListener(View view) {
         VariableHolder.logProvider.d(getClass().getSimpleName(), "the id in allListener:" + view.getId());
+        switch (view.getId()){
+            case R.id.testseting:
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 
     @Override
@@ -41,7 +51,6 @@ public class MainActivity extends BaseActivity{
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putBoolean("isRecycled", true);
     }
 
     @Override

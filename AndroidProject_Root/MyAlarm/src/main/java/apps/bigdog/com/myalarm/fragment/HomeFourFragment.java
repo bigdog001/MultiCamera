@@ -4,7 +4,8 @@ import android.app.Dialog;
 import android.view.View;
 import android.widget.Button;
 
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
+
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -72,13 +73,13 @@ public class HomeFourFragment extends BaseFragment {
         if (!isCommunicatable || data == null) {
             return;
         }
-        MyLogUtil.LogMe("HomeFourFragment is DataIn...");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeFourFragment is DataIn...");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        MyLogUtil.LogMe("HomeFourFragment is onResume...");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeFourFragment is onResume...");
     }
 
     @Override

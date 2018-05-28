@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.os.BatteryManager;
 
 import com.hadoopz.MyDroidLib.broadcast.BaseBroadCastRcv;
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
+
 
 import apps.bigdog.com.multicamera.config.InterfaceGenerator;
 
@@ -31,7 +32,7 @@ public class BatteryStatusListener extends BaseBroadCastRcv implements Interface
         int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         //电量百分比
         float batteryPct = level / (float) scale;
-        MyLogUtil.LogMe("isCharging :"+isCharging+",usbCharge:"+usbCharge+",acCharge:"+acCharge+",batteryPct:"+batteryPct);
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"isCharging :"+isCharging+",usbCharge:"+usbCharge+",acCharge:"+acCharge+",batteryPct:"+batteryPct);
     }
 
     @Override

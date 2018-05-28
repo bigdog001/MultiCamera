@@ -12,8 +12,7 @@ import apps.bigdog.com.myalarm.app.LocalApplication;
 import apps.bigdog.com.myalarm.beans.EmergencyContactor;
 import apps.bigdog.com.myalarm.beans.VariableHolder;
 import com.hadoopz.MyDroidLib.broadcast.BaseBroadCastRcv;
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
-
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 import apps.bigdog.com.myalarm.config.InterfaceGenerator;
 import apps.bigdog.com.myalarm.util.SystemUtils;
 
@@ -35,7 +34,7 @@ public class PowerKeyClick extends BaseBroadCastRcv implements InterfaceGenerato
             vibrator = (Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE);
         }
         final String action = intent.getAction();
-        MyLogUtil.LogMe("get power key click :"+action);
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"get power key click :"+action);
 
         runLogic(intent);
     }
@@ -45,7 +44,7 @@ public class PowerKeyClick extends BaseBroadCastRcv implements InterfaceGenerato
         if ( (System.currentTimeMillis() - previousClick) < 2000 && !isAlarmOnGoing) {
             //ready,then check the logic chain...
             clickCounter ++;
-            MyLogUtil.LogMe("ok,just double click the power key.....");
+            DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"ok,just double click the power key.....");
             if (clickCounter >= 3) {
                 LocalApplication.getInstance().getVariableHolder().getSp().edit().putBoolean(VariableHolder.Constants.APP_ISINEMERGENCYMODEl_NAME,true);
                 clickCounter = 0;
@@ -81,7 +80,7 @@ public class PowerKeyClick extends BaseBroadCastRcv implements InterfaceGenerato
         if (smsManager == null) {
             smsManager = SmsManager.getDefault();
         }
-        MyLogUtil.LogMe("ok========================================================================================.....");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"ok========================================================================================.....");
         Map<String,EmergencyContactor> contactors = LocalApplication.getInstance().getVariableHolder().getContactors();
         if (contactors == null || contactors.size() <= 0) {
             //do not have any emergency contactors,please give ....

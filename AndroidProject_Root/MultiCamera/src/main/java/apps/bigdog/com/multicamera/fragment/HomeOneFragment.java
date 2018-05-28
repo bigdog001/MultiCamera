@@ -2,16 +2,11 @@ package apps.bigdog.com.multicamera.fragment;
 
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
-
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
-
 import apps.bigdog.com.multicamera.R;
-import apps.bigdog.com.multicamera.activity.MainActivity;
 import apps.bigdog.com.multicamera.app.LocalApplication;
 import apps.bigdog.com.multicamera.beans.VariableHolder;
 
@@ -47,7 +42,7 @@ public class HomeOneFragment extends BaseFragment {
 
     private void DoAutoLaunchSwitcher(){
         isAutoStart = !isAutoStart;
-        MyLogUtil.LogMe("isAutoStart:"+isAutoStart);
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"isAutoStart:"+isAutoStart);
         if (isAutoStart) {
             toggle_btn_autolaunch_switcher.setImageResource(R.drawable.toggle_btn_autolaunch_on);
         }else {
@@ -67,7 +62,7 @@ public class HomeOneFragment extends BaseFragment {
         if (!isCommunicatable || data == null) {
             return;
         }
-        MyLogUtil.LogMe("HomeOneFragment is DataIn...");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeOneFragment is DataIn...");
     }
 
     @Override
@@ -75,14 +70,7 @@ public class HomeOneFragment extends BaseFragment {
         return null;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (MainActivity.chooseIndex == 0) {
-            MyLogUtil.LogMe("HomeOneFragment is onResume...");
-            isCommunicatable = true;
-        }
-    }
+
 
     @Override
     public void OnStop() {

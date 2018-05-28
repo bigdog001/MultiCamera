@@ -26,6 +26,8 @@ import apps.bigdog.com.myalarm.config.initors.MP4FilesStorageDirInit;
 import com.hadoopz.MyDroidLib.exceptions.BaseExceptionHandler;
 import com.hadoopz.MyDroidLib.exceptions.LocalFileHandler;
 import com.hadoopz.MyDroidLib.util.JFileKit;
+import com.hadoopz.MyDroidLib.util.TimeInterval;
+
 import apps.bigdog.com.myalarm.util.SystemUtils;
 
 /**
@@ -118,6 +120,16 @@ public class LocalApplication extends BaseApplication implements InterfaceGenera
     @Override
     public BaseExceptionHandler getDefaultUncaughtExceptionHandler() {
         return new LocalFileHandler(applicationContext);
+    }
+
+    @Override
+    public TimeInterval initRTC() {
+        return null;
+    }
+
+    @Override
+    public void onTimer(Context context) {
+
     }
 
     public static void addAppLifeCycle(InterfaceGenerator.AppLifeCycle app) {

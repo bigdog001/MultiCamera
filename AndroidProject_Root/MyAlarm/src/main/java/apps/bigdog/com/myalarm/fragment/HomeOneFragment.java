@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.hadoopz.MyDroidLib.util.MyLogUtil;
+import com.hadoopz.MyDroidLib.util.DefaultLogUtil;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
@@ -93,7 +93,7 @@ public class HomeOneFragment extends BaseFragment {
 
     private void DoAutoLaunchSwitcher(){
         isAutoStart = !isAutoStart;
-        MyLogUtil.LogMe("isAutoStart:"+isAutoStart);
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"isAutoStart:"+isAutoStart);
         if (isAutoStart) {
             toggle_btn_autolaunch_switcher.setImageResource(R.drawable.toggle_btn_autolaunch_on);
         }else {
@@ -113,7 +113,7 @@ public class HomeOneFragment extends BaseFragment {
         if (!isCommunicatable || data == null) {
             return;
         }
-        MyLogUtil.LogMe("HomeOneFragment is DataIn...");
+        DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeOneFragment is DataIn...");
     }
 
     @Override
@@ -125,7 +125,7 @@ public class HomeOneFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         if (MainActivity.chooseIndex == 0) {
-            MyLogUtil.LogMe("HomeOneFragment is onResume...");
+            DefaultLogUtil.getInstance().d(getClass().getSimpleName(),"HomeOneFragment is onResume...");
             isCommunicatable = true;
         }
     }

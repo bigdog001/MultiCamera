@@ -11,5 +11,6 @@
     <string name="home_tab_settings_item_exit">退出程序</string>
     <string name="home_tab_settings_item_exit_title_text">退出</string>
     <string name="home_tab_settings_item_exit_content_text">您确定退出程序吗?</string>
+    <string name="tv_health_check_banner">Specialize in all kinds of dissatisfaction</string>
     <string name="tv_health_check_tips">TV is unavailable after 21:30 !</string>
 </resources>

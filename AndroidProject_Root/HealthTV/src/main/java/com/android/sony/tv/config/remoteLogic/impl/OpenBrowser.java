@@ -1,31 +1,24 @@
-package com.android.sony.tv.config.udpLogic;
+package com.android.sony.tv.config.remoteLogic.impl;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import com.android.sony.tv.beans.VariableHolder;
+import com.android.sony.tv.config.remoteLogic.DataProcesser;
 import com.android.sony.tv.utils.Event;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.util.Map;
 
 public class OpenBrowser implements DataProcesser {
     private Context mContext;
 
     @Override
-    public void process(Context context, JSONObject obj_tmp) {
+    public void process(Context context, Map<String,String> data) {
         mContext = context;
-        if(obj_tmp == null){
+        if(data == null){
             VariableHolder.logProvider.d(getClass().getSimpleName(), "obj_tmp is null in  OpenBrowser");
             return;
         }
-        String url4open = null;
-        if (obj_tmp.has("url4open")) {
-            try {
-                url4open = obj_tmp.getString("url4open");
-            } catch (JSONException e) {
-                VariableHolder.logProvider.e(getClass().getSimpleName(), "OpenBrowser error:"+e.getMessage());
-            }
-        }
+        String url4open =  data.get("url4open");
         if(url4open == null || "".equals(url4open)){
             VariableHolder.logProvider.d(getClass().getSimpleName(), "url4open is null in  OpenBrowser");
             return;
@@ -38,5 +31,10 @@ public class OpenBrowser implements DataProcesser {
     @Override
     public Event getEvent() {
         return Event.Event_OpenUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "OpenBrowser class";
     }
 }
