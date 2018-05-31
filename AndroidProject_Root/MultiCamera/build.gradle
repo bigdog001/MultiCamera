@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion "$buildToolsVersion"
 
     lintOptions {
         abortOnError false
@@ -10,8 +10,8 @@ android {
 
     defaultConfig {
         applicationId "apps.bigdog.com.multicamera"
-        minSdkVersion 21
-        targetSdkVersion 23
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -31,10 +31,10 @@ dependencies {
     implementation 'org.xutils:xutils:3.3.34'
     implementation 'com.alibaba:fastjson:1.1.52.android'
     // =====================those dependencies not required ,only for log debug and network=======================
-    implementation 'com.hadoopz:IDroid:1.0.34'
-    implementation 'com.hadoopz:YesHttp:1.0.26'
-    implementation 'com.hadoopz:IConveyor:1.0.1'
-    implementation 'com.hadoopz:ITools:1.0.5'
+    implementation "com.hadoopz:IDroid:$idroid_version"
+    implementation "com.hadoopz:YesHttp:$yeshttp_version"
+    implementation "com.hadoopz:IConveyor:$iconveyor_version"
+    implementation "com.hadoopz:ITools:$itools_version"
     // =====================those dependencies not required ,only for log debug and network=======================
     testImplementation 'junit:junit:4.12'
 }
